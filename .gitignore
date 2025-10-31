@@ -7,7 +7,7 @@ backup
 lib
 bin
 debug
-*.res
+#*.res
 *.lrt
 *.o
 *.ppu
