@@ -1,4 +1,4 @@
-unit SenhaForm_U;
+unit passwords;
 
 {$MODE Delphi}
 
@@ -21,7 +21,7 @@ uses
   UCBase;
 
 type
-  TSenhaForm = class(TForm)
+  TPasswordForm = class(TForm)
     edtSenha: TEdit;
     edtConfirmaSenha: TEdit;
     btnOK: TBitBtn;
@@ -45,7 +45,7 @@ implementation
 {$R *.lfm}
 { TForm1 }
 
-function TSenhaForm.CompararSenhas(Senha, ConfirmaSenha: String): Boolean;
+function TPasswordForm.CompararSenhas(Senha, ConfirmaSenha: String): Boolean;
 begin
   Result := False;
   With fUserControl do
@@ -70,12 +70,12 @@ begin
   End;
 end;
 
-procedure TSenhaForm.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TPasswordForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
 end;
 
-procedure TSenhaForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+procedure TPasswordForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   if not(ModalResult = mrCancel) then
   begin
@@ -85,13 +85,13 @@ begin
   end;
 end;
 
-procedure TSenhaForm.FormCreate(Sender: TObject);
+procedure TPasswordForm.FormCreate(Sender: TObject);
 begin
   edtSenha.Clear;
   edtConfirmaSenha.Clear;
 end;
 
-procedure TSenhaForm.FormShow(Sender: TObject);
+procedure TPasswordForm.FormShow(Sender: TObject);
 begin
   edtSenha.CharCase := fUserControl.Login.CharCasePass;
   edtConfirmaSenha.CharCase := fUserControl.Login.CharCasePass;

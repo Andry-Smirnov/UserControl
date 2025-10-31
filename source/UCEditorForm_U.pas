@@ -1,5 +1,7 @@
 unit UCEditorForm_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -167,21 +169,19 @@ type
     { Private declarations }
     FUserControl: TUserControl;
   public
-    constructor Create(AOwner: TComponent; UserControl: TUserControl);
-      reintroduce;
+    constructor Create(AOwner: TComponent; UserControl: TUserControl); reintroduce;
   end;
 
 implementation
 
 uses
-  LoginWindow_U,
-  ShellAPI,
+  loginwindow,
   SysUtils,
   UcConsts_Language,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   UCMessages;
 
-{$R *.dfm}
+  {$R *.lfm}
 
 procedure TUCEditorForm.edtTableRightsChange(Sender: TObject);
 begin
@@ -221,12 +221,10 @@ begin
     cbUserAction.ItemIndex := -1;
 
   // Combo USERPROFILE
-  if (Sender = cbUserProfileAction) and
-    (cbUserProfileAction.ItemIndex >= 0) then
+  if (Sender = cbUserProfileAction) and (cbUserProfileAction.ItemIndex >= 0) then
     cbUserProfileMenuItem.ItemIndex := -1;
 
-  if (Sender = cbUserProfileMenuItem) and
-    (cbUserProfileMenuItem.ItemIndex >= 0) then
+  if (Sender = cbUserProfileMenuItem) and (cbUserProfileMenuItem.ItemIndex >= 0) then
     cbUserProfileAction.ItemIndex := -1;
 
   // Combo USERPASSWORDCHANGE
@@ -242,8 +240,7 @@ begin
   if (Sender = cbLogControlAction) and (cbLogControlAction.ItemIndex >= 0) then
     cbLogControlMenuItem.ItemIndex := -1;
 
-  if (Sender = cbLogControlMenuItem) and
-    (cbLogControlMenuItem.ItemIndex >= 0) then
+  if (Sender = cbLogControlMenuItem) and (cbLogControlMenuItem.ItemIndex >= 0) then
     cbLogControlAction.ItemIndex := -1;
 end;
 
@@ -296,7 +293,7 @@ end;
 
 procedure TUCEditorForm.FormCreate(Sender: TObject);
 var
-  I: Integer;
+  I: integer;
   Formulario: TForm;
 begin
   lblInitialRights.Caption := 'Initial  ' + #13 + 'Rights :';
@@ -312,8 +309,8 @@ begin
     edtTableUsers.Text := TableUsers.TableName;
     ckActionVisible.Checked := NotAllowedItems.ActionVisible;
     ckMenuVisible.Checked := NotAllowedItems.MenuVisible;
-    cbCriptografia.ItemIndex := Integer(Criptografia);
-    cbLoginMode.ItemIndex := Integer(LoginMode);
+    cbCriptografia.ItemIndex := integer(Criptografia);
+    cbLoginMode.ItemIndex := integer(LoginMode);
   end;
 
   Formulario := TForm(FUserControl.Owner);
@@ -326,7 +323,7 @@ begin
       cbUserProfileAction.Items.Add(TAction(Formulario.Components[I]).Name);
       cbLogControlAction.Items.Add(TAction(Formulario.Components[I]).Name);
       cbUserPasswordChangeAction.Items.Add
-        (TAction(Formulario.Components[I]).Name);
+      (TAction(Formulario.Components[I]).Name);
     end;
 
     if Formulario.Components[I] is TMenuItem then
@@ -391,13 +388,13 @@ begin
   // Action e MenuItem USERPASSWORDCHANGE
   if Assigned(FUserControl.UserPasswordChange.Action) then
     cbUserPasswordChangeAction.ItemIndex :=
-      (cbUserPasswordChangeAction.Items.IndexOf
-      (FUserControl.UserPasswordChange.Action.Name));
+      (cbUserPasswordChangeAction.Items.IndexOf(
+      FUserControl.UserPasswordChange.Action.Name));
 
   if Assigned(FUserControl.UserPasswordChange.MenuItem) then
     cbUserPasswordChangeMenuItem.ItemIndex :=
-      (cbUserPasswordChangeMenuItem.Items.IndexOf
-      (FUserControl.UserPasswordChange.MenuItem.Name));
+      (cbUserPasswordChangeMenuItem.Items.IndexOf(
+      FUserControl.UserPasswordChange.MenuItem.Name));
 
   // Action e MenuItem LOGCONTROL
   { if Assigned(FUserControl.LogControl.Action) then
@@ -421,7 +418,7 @@ begin
 
   // Login
   spedtMaxLoginAttempts.Value := FUserControl.Login.MaxLoginAttempts;
-  cbGetLoginName.ItemIndex := Integer(FUserControl.Login.GetLoginName);
+  cbGetLoginName.ItemIndex := integer(FUserControl.Login.GetLoginName);
   // login inicial
   edtInitialLoginUser.Text := FUserControl.Login.InitialLogin.User;
   edtInitialLoginPassword.Text := FUserControl.Login.InitialLogin.Password;
@@ -436,34 +433,33 @@ begin
   // Figuras
   imgTop.Picture.Bitmap := FUserControl.UserSettings.Login.TopImage.Bitmap;
   imgLeft.Picture.Bitmap := FUserControl.UserSettings.Login.LeftImage.Bitmap;
-  imgBottom.Picture.Bitmap := FUserControl.UserSettings.Login.
-    BottomImage.Bitmap;
+  imgBottom.Picture.Bitmap := FUserControl.UserSettings.Login.BottomImage.Bitmap;
 end;
 
 procedure TUCEditorForm.SpeedButton1Click(Sender: TObject);
 var
-  frmLogin: TfrmLoginWindow;
+  LoginForm: TLoginForm;
 begin
   try
-    frmLogin := TfrmLoginWindow.Create(nil);
-    with frmLogin do
-    begin
-      FUserControl := Self.FUserControl;
-      btOK.onClick := BotoesClickVisualizacao;
-      BtCancela.onClick := BotoesClickVisualizacao;
-      Caption := Self.FUserControl.UserSettings.Login.WindowCaption;
-      LbUsuario.Caption := Self.FUserControl.UserSettings.Login.LabelUser;
-      LbSenha.Caption := Self.FUserControl.UserSettings.Login.LabelPassword;
-      imgTop.Picture := Self.imgTop.Picture;
-      imgLeft.Picture := Self.imgLeft.Picture;
-      imgBottom.Picture := Self.imgBottom.Picture;
-      btOK.Caption := Self.FUserControl.UserSettings.Login.btOK;
-      BtCancela.Caption := Self.FUserControl.UserSettings.Login.BtCancel;
-      Position := Self.FUserControl.UserSettings.WindowsPosition;
-      ShowModal;
-    end;
+    LoginForm := TLoginForm.Create(nil);
+    with LoginForm do
+      begin
+        FUserControl := Self.FUserControl;
+        btOK.onClick := BotoesClickVisualizacao;
+        BtCancela.onClick := BotoesClickVisualizacao;
+        Caption := Self.FUserControl.UserSettings.Login.WindowCaption;
+        LbUsuario.Caption := Self.FUserControl.UserSettings.Login.LabelUser;
+        LbSenha.Caption := Self.FUserControl.UserSettings.Login.LabelPassword;
+        imgTop.Picture := Self.imgTop.Picture;
+        imgLeft.Picture := Self.imgLeft.Picture;
+        imgBottom.Picture := Self.imgBottom.Picture;
+        btOK.Caption := Self.FUserControl.UserSettings.Login.btOK;
+        BtCancela.Caption := Self.FUserControl.UserSettings.Login.BtCancel;
+        Position := Self.FUserControl.UserSettings.WindowsPosition;
+        ShowModal;
+      end;
   finally
-    SysUtils.FreeAndNil(frmLogin);
+    SysUtils.FreeAndNil(LoginForm);
   end;
 end;
 
@@ -484,16 +480,12 @@ end;
 
 procedure TUCEditorForm.SpeedButton5Click(Sender: TObject);
 begin
-  Case TSpeedButton(Sender).Tag of
-    0:
-      cbActionList.ItemIndex := -1;
-    1:
-      cbActionMainMenuBar.ItemIndex := -1;
-    2:
-      cbActionManager.ItemIndex := -1;
-    3:
-      cbMainMenu.ItemIndex := -1;
-  End;
+  case TSpeedButton(Sender).Tag of
+    0: cbActionList.ItemIndex := -1;
+    1: cbActionMainMenuBar.ItemIndex := -1;
+    2: cbActionManager.ItemIndex := -1;
+    3: cbMainMenu.ItemIndex := -1;
+  end;
 end;
 
 end.

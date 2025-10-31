@@ -1,12 +1,12 @@
 object Form1: TForm1
-  Left = 255
+  Left = 717
   Height = 292
-  Top = 194
+  Top = 377
   Width = 465
   Caption = 'Form1'
   Menu = MainMenu1
+  LCLVersion = '4.2.0.0'
   OnCreate = FormCreate
-  LCLVersion = '1.4.2.0'
   object UserControl1: TUserControl
     ApplicationID = 'ProjetoNovo'
     ControlRight.MainMenu = MainMenu1
@@ -50,24 +50,24 @@ object Form1: TForm1
     TableUsersLogged.FieldData = 'UCData'
     TableUsersLogged.TableName = 'UCTabUsersLogged'
     DataConnector = UCSQLdbConn1
-    left = 31
-    top = 43
+    Left = 31
+    Top = 43
   end
   object UCSQLdbConn1: TUCSQLdbConn
     Connection = SQLite3Connection1
-    left = 144
-    top = 48
+    Left = 144
+    Top = 48
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
     Action = caCommit
     Database = SQLite3Connection1
-    left = 256
-    top = 104
+    Left = 256
+    Top = 104
   end
   object MainMenu1: TMainMenu
-    left = 48
-    top = 184
+    Left = 48
+    Top = 184
     object MenuItem1: TMenuItem
       Caption = 'Sistema'
       object MenuItem2: TMenuItem
@@ -93,8 +93,8 @@ object Form1: TForm1
     AppMessages.MsgsForm_ColDate = 'Data'
     AppMessages.MsgsForm_PromptDelete = 'Confirma excluir as mensagens selecionadas ?'
     AppMessages.MsgsForm_PromptDelete_WindowCaption = 'Apagar mensagens'
-    AppMessages.MsgsForm_NoMessagesSelected = 'Não existem mensagens selecionadas'
-    AppMessages.MsgsForm_NoMessagesSelected_WindowCaption = 'Informação'
+    AppMessages.MsgsForm_NoMessagesSelected = 'NÃ£o existem mensagens selecionadas'
+    AppMessages.MsgsForm_NoMessagesSelected_WindowCaption = 'InformaÃ§Ã£o'
     AppMessages.MsgRec_BtClose = '&Fechar'
     AppMessages.MsgRec_WindowCaption = 'Mensagem'
     AppMessages.MsgRec_Title = 'Mensagem Recebida'
@@ -107,36 +107,36 @@ object Form1: TForm1
     AppMessages.MsgSend_WindowCaption = 'Mensagem'
     AppMessages.MsgSend_Title = 'Enviar Nova Mensagem'
     AppMessages.MsgSend_GroupTo = 'Para'
-    AppMessages.MsgSend_RadioUser = 'Usuário :'
+    AppMessages.MsgSend_RadioUser = 'UsuÃ¡rio :'
     AppMessages.MsgSend_RadioAll = 'Todos'
     AppMessages.MsgSend_GroupMessage = 'Mensagem'
     AppMessages.MsgSend_LabelSubject = 'Assunto'
     AppMessages.MsgSend_LabelMessageText = 'Texto da mensagem'
-    CommonMessages.AutoLogonError = 'Falha de Auto Logon!'#13#10'Informe um usuário e senha válidos.'
-    CommonMessages.ChangePasswordError.InvalidCurrentPassword = 'Senha Atual não confere!'
-    CommonMessages.ChangePasswordError.NewPasswordError = 'Os campos: Nova Senha e Confirmação devem ser iguais.'
+    CommonMessages.AutoLogonError = 'Falha de Auto Logon!'#13#10'Informe um usuÃ¡rio e senha vÃ¡lidos.'
+    CommonMessages.ChangePasswordError.InvalidCurrentPassword = 'Senha Atual nÃ£o confere!'
+    CommonMessages.ChangePasswordError.NewPasswordError = 'Os campos: Nova Senha e ConfirmaÃ§Ã£o devem ser iguais.'
     CommonMessages.ChangePasswordError.NewEqualCurrent = 'Nova senha igual a senha atual'
-    CommonMessages.ChangePasswordError.PasswordRequired = 'A Senha é obrigatória'
-    CommonMessages.ChangePasswordError.MinPasswordLength = 'A senha deve conter no mínimo %d caracteres'
+    CommonMessages.ChangePasswordError.PasswordRequired = 'A Senha Ã© obrigatÃ³ria'
+    CommonMessages.ChangePasswordError.MinPasswordLength = 'A senha deve conter no mÃ­nimo %d caracteres'
     CommonMessages.ChangePasswordError.InvalidNewPassword = 'Proibido utilizar senhas obvias!'
-    CommonMessages.InvalidLogin = 'Usuário ou Senha inválidos!'
-    CommonMessages.InactiveLogin = 'Atenção, seu login esta inativo'
+    CommonMessages.InvalidLogin = 'UsuÃ¡rio ou Senha invÃ¡lidos!'
+    CommonMessages.InactiveLogin = 'AtenÃ§Ã£o, seu login esta inativo'
     CommonMessages.InitialMessage.Strings = (
-      'ATENÇÃO Login Inicial:'
+      'ATENÃÃO Login Inicial:'
       ''
-      'Usuário : :user'
+      'UsuÃ¡rio : :user'
       'Senha : :password'
       ''
-      'Defina as permissões para este usuário.'
+      'Defina as permissÃµes para este usuÃ¡rio.'
     )
-    CommonMessages.MaxLoginAttemptsError = '%d Tentativas de login inválido. Por motivos de segurança o '#13#10'sistema será fechado.'
+    CommonMessages.MaxLoginAttemptsError = '%d Tentativas de login invÃ¡lido. Por motivos de seguranÃ§a o '#13#10'sistema serÃ¡ fechado.'
     CommonMessages.PasswordChanged = 'Senha alterada com sucesso!'
     CommonMessages.BlankPassword = 'Retirada senha do Login %s'
-    CommonMessages.UsuarioExiste = 'O Usuário "%s" já está cadastrado no sistema !!'
-    CommonMessages.PasswordExpired = 'Atenção, sua senha expirou, favor troca-la'
+    CommonMessages.UsuarioExiste = 'O UsuÃ¡rio "%s" jÃ¡ estÃ¡ cadastrado no sistema !!'
+    CommonMessages.PasswordExpired = 'AtenÃ§Ã£o, sua senha expirou, favor troca-la'
     CommonMessages.ForcaTrocaSenha = 'MudanÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a de senha obrigatÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³ria'
     Login.WindowCaption = 'Login'
-    Login.LabelUser = 'Usuário :'
+    Login.LabelUser = 'UsuÃ¡rio :'
     Login.LabelPassword = 'Senha :'
     Login.BtOk = '&OK'
     Login.BtCancel = '&Cancelar'
@@ -217,91 +217,91 @@ object Form1: TForm1
       0000
     }
     Login.LabelTentativa = 'Tentativa : '
-    Login.LabelTentativas = 'Máximo de Tentativas : '
-    Log.WindowCaption = 'Segurança'
+    Login.LabelTentativas = 'MÃ¡ximo de Tentativas : '
+    Log.WindowCaption = 'SeguranÃ§a'
     Log.LabelDescription = 'Log do Sistema'
-    Log.LabelUser = 'Usuário :'
+    Log.LabelUser = 'UsuÃ¡rio :'
     Log.LabelDate = 'Data :'
-    Log.LabelLevel = 'Nível mínimo :'
+    Log.LabelLevel = 'NÃ­vel mÃ­nimo :'
     Log.ColAppID = 'AppID'
-    Log.ColLevel = 'Nível'
+    Log.ColLevel = 'NÃ­vel'
     Log.ColMessage = 'Mensagem'
-    Log.ColUser = 'Usuário'
+    Log.ColUser = 'UsuÃ¡rio'
     Log.ColDate = 'Data'
     Log.BtFilter = '&Aplicar Filtro'
     Log.BtDelete = '&Excluir Log'
     Log.BtClose = '&Fechar'
     Log.PromptDelete = 'Confirma excluir todos os registros de log selecionados ?'
-    Log.PromptDelete_WindowCaption = 'Confirma exclusão'
+    Log.PromptDelete_WindowCaption = 'Confirma exclusÃ£o'
     Log.OptionUserAll = 'Todos'
     Log.OptionLevelLow = 'Baixo'
     Log.OptionLevelNormal = 'Normal'
     Log.OptionLevelHigh = 'Alto'
-    Log.OptionLevelCritic = 'Crítico'
-    Log.DeletePerformed = 'Exclusão de log´s do sistema : Usuário = "%s" | Data = %s a %s | Nível <= %s'
-    UsersForm.WindowCaption = 'Segurança'
-    UsersForm.LabelDescription = 'Cadastro de Usuários'
+    Log.OptionLevelCritic = 'CrÃ­tico'
+    Log.DeletePerformed = 'ExclusÃ£o de logÂ´s do sistema : UsuÃ¡rio = "%s" | Data = %s a %s | NÃ­vel <= %s'
+    UsersForm.WindowCaption = 'SeguranÃ§a'
+    UsersForm.LabelDescription = 'Cadastro de UsuÃ¡rios'
     UsersForm.ColName = 'Nome'
     UsersForm.ColLogin = 'Login'
     UsersForm.ColEmail = 'Email'
     UsersForm.BtAdd = '&Adicionar'
     UsersForm.BtChange = 'A&lterar'
     UsersForm.BtDelete = '&Excluir'
-    UsersForm.PromptDelete = 'Confirma excluir o usuário "%s" ?'
-    UsersForm.PromptDelete_WindowCaption = 'Excluir usuário'
+    UsersForm.PromptDelete = 'Confirma excluir o usuÃ¡rio "%s" ?'
+    UsersForm.PromptDelete_WindowCaption = 'Excluir usuÃ¡rio'
     UsersForm.BtRights = 'A&cessos'
     UsersForm.BtPassword = '&Senha'
     UsersForm.BtClose = '&Fechar'
-    AddChangeUser.WindowCaption = 'Cadastro de Usuários'
-    AddChangeUser.LabelAdd = 'Adicionar Usuário'
-    AddChangeUser.LabelChange = 'Alterar Usuário'
+    AddChangeUser.WindowCaption = 'Cadastro de UsuÃ¡rios'
+    AddChangeUser.LabelAdd = 'Adicionar UsuÃ¡rio'
+    AddChangeUser.LabelChange = 'Alterar UsuÃ¡rio'
     AddChangeUser.LabelName = 'Nome :'
     AddChangeUser.LabelLogin = 'Login :'
     AddChangeUser.LabelEmail = 'Email :'
     AddChangeUser.LabelPerfil = 'Perfil :'
-    AddChangeUser.CheckPrivileged = 'Usuário privilegiado'
+    AddChangeUser.CheckPrivileged = 'UsuÃ¡rio privilegiado'
     AddChangeUser.BtSave = '&Gravar'
     AddChangeUser.BtCancel = 'Cancelar'
-    AddChangeUser.CheckExpira = 'Senha do usuário não expira'
+    AddChangeUser.CheckExpira = 'Senha do usuÃ¡rio nÃ£o expira'
     AddChangeUser.Day = 'Dias'
     AddChangeUser.ExpiredIn = 'Expira em'
     AddChangeUser.LabelStatus = 'Status'
     AddChangeUser.StatusActive = 'Ativo'
     AddChangeUser.StatusDisabled = 'Inativo'
-    AddChangeProfile.WindowCaption = 'Perfil de Usuários'
+    AddChangeProfile.WindowCaption = 'Perfil de UsuÃ¡rios'
     AddChangeProfile.LabelAdd = 'Adicionar Perfil'
     AddChangeProfile.LabelChange = 'Alterar Perfil'
-    AddChangeProfile.LabelName = 'Descrição :'
+    AddChangeProfile.LabelName = 'DescriÃ§Ã£o :'
     AddChangeProfile.BtSave = '&Gravar'
     AddChangeProfile.BtCancel = 'Cancelar'
-    UsersProfile.WindowCaption = 'Segurança'
-    UsersProfile.LabelDescription = 'Perfil de Usuários'
+    UsersProfile.WindowCaption = 'SeguranÃ§a'
+    UsersProfile.LabelDescription = 'Perfil de UsuÃ¡rios'
     UsersProfile.ColProfile = 'Perfil'
     UsersProfile.BtAdd = '&Adicionar'
     UsersProfile.BtChange = 'A&lterar'
     UsersProfile.BtDelete = '&Excluir'
     UsersProfile.BtRights = 'A&cessos'
-    UsersProfile.PromptDelete = 'Existem usuários com o perfil "%s". Confirma excluir?'
+    UsersProfile.PromptDelete = 'Existem usuÃ¡rios com o perfil "%s". Confirma excluir?'
     UsersProfile.PromptDelete_WindowCaption = 'Delete profile'
     UsersProfile.BtClose = '&Fechar'
-    Rights.WindowCaption = 'Segurança'
-    Rights.LabelUser = 'Permissões do Usuário :'
-    Rights.LabelProfile = 'Permissões do Perfil :'
+    Rights.WindowCaption = 'SeguranÃ§a'
+    Rights.LabelUser = 'PermissÃµes do UsuÃ¡rio :'
+    Rights.LabelProfile = 'PermissÃµes do Perfil :'
     Rights.PageMenu = 'Itens do Menu'
-    Rights.PageActions = 'Ações'
+    Rights.PageActions = 'AÃ§Ãµes'
     Rights.PageControls = 'Controles'
     Rights.BtUnlock = '&Liberar'
     Rights.BtLock = '&Bloquear'
     Rights.BtSave = '&Gravar'
     Rights.BtCancel = '&Cancelar'
-    ChangePassword.WindowCaption = 'Segurança'
+    ChangePassword.WindowCaption = 'SeguranÃ§a'
     ChangePassword.LabelDescription = 'Trocar Senha'
     ChangePassword.LabelCurrentPassword = 'Senha Atual :'
     ChangePassword.LabelNewPassword = 'Nova Senha :'
-    ChangePassword.LabelConfirm = 'Confirmação :'
+    ChangePassword.LabelConfirm = 'ConfirmaÃ§Ã£o :'
     ChangePassword.BtSave = '&Gravar'
     ChangePassword.BtCancel = 'Cancelar'
-    ResetPassword.WindowCaption = 'Definir senha do usuário : "%s"'
+    ResetPassword.WindowCaption = 'Definir senha do usuÃ¡rio : "%s"'
     ResetPassword.LabelPassword = 'Senha :'
     BancoDados = MySql
     Language = ucPortuguesBr
@@ -317,8 +317,8 @@ object Form1: TForm1
     UsersLogged.InputCaption = 'Mensagem'
     UsersLogged.InputText = 'Digite sua mensagem'
     UsersLogged.MsgSystem = 'Mensagem do sistema'
-    left = 32
-    top = 104
+    Left = 32
+    Top = 104
   end
   object SQLite3Connection1: TSQLite3Connection
     Connected = False
@@ -327,8 +327,8 @@ object Form1: TForm1
     KeepConnection = False
     Transaction = SQLTransaction1
     LogEvents = []
-    Options = []
-    left = 256
-    top = 43
+    AlwaysUseBigint = False
+    Left = 256
+    Top = 43
   end
 end

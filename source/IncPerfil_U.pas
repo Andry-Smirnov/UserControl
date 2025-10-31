@@ -1,5 +1,7 @@
 unit IncPerfil_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -19,7 +21,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   UCBase;
 
 type
@@ -47,7 +49,7 @@ type
 
 implementation
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TfrmIncluirPerfil.btCancelaClick(Sender: TObject);
 begin

@@ -66,7 +66,7 @@ implementation
 uses
   pUCFrame_Log,
   pUCFrame_Profile,
-  pUCFrame_User,
+  userframe,
   pUcFrame_UserLogged,
   UCMessages;
 
@@ -162,7 +162,7 @@ end;
 
 procedure TFormUserPerf.SpeedUserClick(Sender: TObject);
 begin
-  if FrmFrame is TUCFrame_User then
+  if FrmFrame is TUserFrameForm then
     Exit;
 
   if Assigned(FrmFrame) then
@@ -170,18 +170,18 @@ begin
 
   LoadDatasets;
 
-  FrmFrame := TUCFrame_User.Create(Self);
-  TUCFrame_User(FrmFrame).FDataSetCadastroUsuario :=
+  FrmFrame := TUserFrameForm.Create(Self);
+  TUserFrameForm(FrmFrame).FDataSetCadastroUsuario :=
     FUsercontrol.CurrentUser.PerfilUsuario;
-  TUCFrame_User(FrmFrame).DataUser.DataSet := TUCFrame_User(FrmFrame)
+  TUserFrameForm(FrmFrame).DataUser.DataSet := TUserFrameForm(FrmFrame)
     .FDataSetCadastroUsuario;
-  TUCFrame_User(FrmFrame).DataPerfil.DataSet :=
+  TUserFrameForm(FrmFrame).DataPerfil.DataSet :=
     FUsercontrol.CurrentUser.PerfilGrupo;
-  TUCFrame_User(FrmFrame).BtnClose.ModalResult := mrOk;
-  TUCFrame_User(FrmFrame).FUsercontrol := FUsercontrol;
-  TUCFrame_User(FrmFrame).Height := Panel3.Height;
-  TUCFrame_User(FrmFrame).Width := Panel3.Width;
-  TUCFrame_User(FrmFrame).SetWindow;
+  TUserFrameForm(FrmFrame).BtnClose.ModalResult := mrOk;
+  TUserFrameForm(FrmFrame).FUsercontrol := FUsercontrol;
+  TUserFrameForm(FrmFrame).Height := Panel3.Height;
+  TUserFrameForm(FrmFrame).Width := Panel3.Width;
+  TUserFrameForm(FrmFrame).SetWindow;
   LbDescricao.Caption := FUsercontrol.UserSettings.UsersForm.LabelDescription;
 
   FrmFrame.Parent := Panel3;

@@ -1,5 +1,7 @@
 unit MsgRecForm_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -18,7 +20,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   UCBase;
 
 type
@@ -51,7 +53,7 @@ implementation
 uses
   UCMessages;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TMsgRecForm.btFecharClick(Sender: TObject);
 begin

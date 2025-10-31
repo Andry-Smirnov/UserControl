@@ -1,5 +1,7 @@
 unit EnvMsgForm_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -20,7 +22,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   UCBase;
 
 type
@@ -60,7 +62,7 @@ uses
   MsgsForm_U,
   UCMessages;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TEnvMsgForm.btCancelaClick(Sender: TObject);
 begin

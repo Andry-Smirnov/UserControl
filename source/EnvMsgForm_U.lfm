@@ -11,10 +11,8 @@ object EnvMsgForm: TEnvMsgForm
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -25,8 +23,8 @@ object EnvMsgForm: TEnvMsgForm
     Color = clWhite
     TabOrder = 0
     object lbTitulo: TLabel
-      Left = 48
-      Top = 10
+      Left = 44
+      Top = 6
       Width = 205
       Height = 18
       Caption = 'Enviar Nova Mensagem'
@@ -38,8 +36,8 @@ object EnvMsgForm: TEnvMsgForm
       ParentFont = False
     end
     object Image1: TImage
-      Left = 8
-      Top = 4
+      Left = 4
+      Top = 0
       Width = 28
       Height = 28
       AutoSize = True
@@ -155,19 +153,19 @@ object EnvMsgForm: TEnvMsgForm
     Caption = 'Para'
     TabOrder = 1
     object rbUsuario: TRadioButton
-      Left = 40
-      Top = 24
+      Left = 36
+      Top = 0
       Width = 80
       Height = 17
-      Caption = 'Usu'#225'rio :'
+      Caption = 'Usuбrio :'
       Checked = True
       TabOrder = 0
       TabStop = True
       OnClick = rbUsuarioClick
     end
     object rbTodos: TRadioButton
-      Left = 40
-      Top = 56
+      Left = 36
+      Top = 28
       Width = 113
       Height = 17
       Caption = 'Todos'
@@ -175,13 +173,10 @@ object EnvMsgForm: TEnvMsgForm
       OnClick = rbUsuarioClick
     end
     object dbUsuario: TDBLookupComboBox
-      Left = 120
-      Top = 18
+      Left = 116
+      Top = 0
       Width = 217
       Height = 21
-      BevelEdges = []
-      BevelInner = bvNone
-      BevelOuter = bvNone
       KeyField = 'IdUser'
       ListField = 'Nome'
       ListSource = DataSource1
@@ -197,30 +192,30 @@ object EnvMsgForm: TEnvMsgForm
     Caption = 'Mensagem'
     TabOrder = 2
     object lbAssunto: TLabel
-      Left = 24
-      Top = 24
+      Left = 20
+      Top = 0
       Width = 38
       Height = 13
       Caption = 'Assunto'
     end
     object lbMensagem: TLabel
-      Left = 24
-      Top = 72
+      Left = 20
+      Top = 44
       Width = 52
       Height = 13
       Caption = 'Mensagem'
     end
     object EditAssunto: TEdit
-      Left = 24
-      Top = 40
+      Left = 20
+      Top = 12
       Width = 313
       Height = 21
       MaxLength = 50
       TabOrder = 0
     end
     object MemoMsg: TMemo
-      Left = 24
-      Top = 88
+      Left = 20
+      Top = 60
       Width = 313
       Height = 97
       MaxLength = 255
@@ -234,7 +229,6 @@ object EnvMsgForm: TEnvMsgForm
     Width = 79
     Height = 25
     Caption = '&Enviar'
-    DoubleBuffered = True
     Glyph.Data = {
       36030000424D3603000000000000360000002800000010000000100000000100
       18000000000000030000120B0000120B00000000000000000000FF00FFA47874
@@ -262,7 +256,6 @@ object EnvMsgForm: TEnvMsgForm
       FF00FFFF00FFFF00FFFF00FFA47874A47874A47874A47874FF00FFFF00FFFF00
       FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
       00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
-    ParentDoubleBuffered = False
     TabOrder = 3
     OnClick = btEnviaClick
   end
@@ -273,7 +266,6 @@ object EnvMsgForm: TEnvMsgForm
     Height = 25
     Cancel = True
     Caption = 'Cancelar'
-    DoubleBuffered = True
     Glyph.Data = {
       66030000424D6603000000000000660200002800000010000000100000000100
       08000000000000010000120B0000120B00008C0000008C00000000000000FFFF
@@ -303,7 +295,6 @@ object EnvMsgForm: TEnvMsgForm
       14212E44757D69577902024D0D08011218241F3253016140790202024D0A0C01
       0E1C2A390156787902020202024D4D1A1B2735334C797902020202020202024D
       4D4D4D4D4D0202020202}
-    ParentDoubleBuffered = False
     TabOrder = 4
     OnClick = btCancelaClick
   end

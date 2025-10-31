@@ -1,48 +1,46 @@
 object UCEditorForm: TUCEditorForm
   Left = 237
+  Height = 524
   Top = 128
+  Width = 594
   BorderStyle = bsDialog
-  Caption = 'Configura'#231#227'o UserControl'
+  Caption = 'Configuraзгo UserControl'
   ClientHeight = 524
   ClientWidth = 594
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 13
   object pnlBotoes: TPanel
     Left = 0
+    Height = 45
     Top = 479
     Width = 594
-    Height = 45
     Align = alBottom
     BevelOuter = bvNone
+    ClientHeight = 45
+    ClientWidth = 594
+    ParentBackground = False
     TabOrder = 0
     object btnOK: TBitBtn
-      Left = 219
-      Top = 7
-      Width = 75
+      Left = 217
       Height = 25
-      DoubleBuffered = True
+      Top = 5
+      Width = 75
       Kind = bkOK
       NumGlyphs = 2
-      ParentDoubleBuffered = False
       TabOrder = 0
     end
     object btnClose: TBitBtn
-      Left = 299
-      Top = 7
-      Width = 75
+      Left = 297
       Height = 25
-      Caption = '&Fechar'
-      DoubleBuffered = True
+      Top = 5
+      Width = 75
+      Caption = '&Закрыть'
       Glyph.Data = {
         B6020000424DB602000000000000B60100002800000010000000100000000100
         08000000000000010000120B0000120B0000600000006000000000000000FFFF
@@ -65,29 +63,33 @@ object UCEditorForm: TUCEditorForm
         403607484E4C4F3F4502020245242622212307474D4B4E3F4502020245292827
         254307474D4B4D3F4502020245302A2B292D07474D4B4D3F4502020245352E2C
         2E3207474D4B4D3F450202024545332F343107464A494A3F450202020202453C
-        3744074545454545450202020202020245450702020202020202}
-      ParentDoubleBuffered = False
+        3744074545454545450202020202020245450702020202020202
+      }
       TabOrder = 1
     end
   end
   object Panel2: TPanel
     Left = 0
+    Height = 73
     Top = 0
     Width = 594
-    Height = 73
     Align = alTop
     BevelOuter = bvNone
+    ClientHeight = 73
+    ClientWidth = 594
     Color = clWhite
+    ParentBackground = False
+    ParentColor = False
     TabOrder = 1
     object lbComponente: TLabel
-      Left = 5
-      Top = 27
-      Width = 230
+      Left = 3
       Height = 19
+      Top = 25
+      Width = 230
       Alignment = taCenter
       AutoSize = False
-      Caption = 'Configura'#231#227'o B'#225'sica'
-      Font.Charset = ANSI_CHARSET
+      Caption = 'Configuraзгo Bбsica'
+      Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Tahoma'
@@ -96,13 +98,13 @@ object UCEditorForm: TUCEditorForm
     end
     object Image1: TImage
       Left = 220
+      Height = 73
       Top = 0
       Width = 374
-      Height = 80
       Align = alRight
       AutoSize = True
       Picture.Data = {
-        0A544A504547496D616765FE200000FFD8FFE000104A46494600010101004800
+        0A544A706567496D616765FE200000FFD8FFE000104A46494600010101004800
         480000FFDB0043000302020302020303030304030304050805050404050A0707
         06080C0A0C0C0B0A0B0B0D0E12100D0E110E0B0B1016101113141515150C0F17
         1816141812141514FFDB00430103040405040509050509140D0B0D1414141414
@@ -366,185 +368,201 @@ object UCEditorForm: TUCEditorForm
         E25DA7D3EF735F45EC6FEE9FCA8D8DFDD3F951603E71FF008543E25500FF0064
         06CF6FB4C7C7FE3D5249F0ABC4CF6EB18D0C295E770BA8B27FF1EAFA2B637F74
         FE546C6FEE9FCA8B01F355CFC1EF15CBB443A2F18C906E62EBFF007D515F4D5B
-        A36F3F29E9E945689684B3FFD9}
+        A36F3F29E9E945689684B3FFD9
+      }
     end
   end
   object pnlCentro: TPanel
     Left = 0
+    Height = 406
     Top = 73
     Width = 594
-    Height = 406
     Align = alClient
     BevelOuter = bvNone
+    ClientHeight = 406
+    ClientWidth = 594
+    ParentBackground = False
     TabOrder = 2
     object PageControl: TPageControl
       Left = 0
+      Height = 406
       Top = 0
       Width = 594
-      Height = 406
       ActivePage = tabPrincipal
       Align = alClient
       Style = tsFlatButtons
+      TabIndex = 0
       TabOrder = 0
       object tabPrincipal: TTabSheet
         Caption = 'Principal'
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
+        ClientHeight = 377
+        ClientWidth = 586
         object Panel5: TPanel
           Left = 0
+          Height = 377
           Top = 0
           Width = 586
-          Height = 375
           Align = alClient
           BevelOuter = bvNone
+          ClientHeight = 377
+          ClientWidth = 586
+          Font.Color = clWindowText
+          Font.Height = -11
+          ParentBackground = False
+          ParentFont = False
           TabOrder = 0
           object Label5: TLabel
-            Left = 64
-            Top = 20
-            Width = 115
+            Left = 62
             Height = 13
-            Caption = 'Identifica'#231#227'o Programa :'
+            Top = 18
+            Width = 123
+            Caption = 'Identificaзгo Programa :'
           end
           object Label6: TLabel
-            Left = 47
-            Top = 276
-            Width = 132
+            Left = 45
             Height = 13
+            Top = 274
+            Width = 137
             Caption = 'Tabela de Usuarios/Perfis : '
           end
           object Label7: TLabel
-            Left = 69
-            Top = 213
-            Width = 110
+            Left = 67
             Height = 13
-            Caption = 'Tabela de Permiss'#245'es :'
+            Top = 211
+            Width = 111
+            Caption = 'Tabela de Permissхes :'
           end
           object Label29: TLabel
-            Left = 120
-            Top = 107
-            Width = 59
+            Left = 118
             Height = 13
+            Top = 105
+            Width = 68
             Alignment = taRightJustify
             Caption = 'Criptografia :'
           end
           object Label30: TLabel
-            Left = 116
-            Top = 142
-            Width = 63
+            Left = 114
             Height = 13
+            Top = 140
+            Width = 64
             Alignment = taRightJustify
             Caption = 'Encrypt Key :'
           end
           object Label32: TLabel
-            Left = 117
-            Top = 178
-            Width = 62
+            Left = 115
             Height = 13
+            Top = 176
+            Width = 68
             Alignment = taRightJustify
             Caption = 'Login Mode :'
           end
           object edtApplicationID: TEdit
-            Left = 182
-            Top = 17
-            Width = 220
+            Left = 180
             Height = 21
+            Top = 15
+            Width = 220
             TabOrder = 0
           end
           object edtTableUsers: TEdit
-            Left = 182
-            Top = 268
-            Width = 220
+            Left = 180
             Height = 21
+            Top = 266
+            Width = 220
             TabOrder = 1
           end
           object edtTableRights: TEdit
-            Left = 182
-            Top = 205
-            Width = 220
+            Left = 180
             Height = 21
+            Top = 203
+            Width = 220
             TabOrder = 2
             OnChange = edtTableRightsChange
           end
           object edtTabelaPermissoesEX: TEdit
-            Left = 182
-            Top = 233
-            Width = 220
+            Left = 180
             Height = 21
+            Top = 231
+            Width = 220
             Enabled = False
             TabOrder = 3
             Text = 'EX'
           end
           object ckAutoStart: TCheckBox
-            Left = 182
-            Top = 44
-            Width = 220
-            Height = 21
+            Left = 180
+            Height = 17
+            Top = 42
+            Width = 142
             Caption = 'Iniciar Automaticamente'
             TabOrder = 4
           end
           object btnTabelasPadrao: TButton
-            Left = 182
-            Top = 344
-            Width = 220
+            Left = 180
             Height = 21
-            Caption = 'Tabelas Padr'#227'o'
+            Top = 342
+            Width = 220
+            Caption = 'Tabelas Padrгo'
             TabOrder = 5
             OnClick = btnTabelasPadraoClick
           end
           object ckValidationKey: TCheckBox
-            Left = 182
-            Top = 71
-            Width = 220
-            Height = 21
+            Left = 180
+            Height = 17
+            Top = 69
+            Width = 119
             Caption = 'CheckValidationKey'
             TabOrder = 6
           end
           object cbCriptografia: TComboBox
-            Left = 182
-            Top = 99
-            Width = 220
+            Left = 180
             Height = 21
-            Style = csDropDownList
-            TabOrder = 7
+            Top = 97
+            Width = 220
+            ItemHeight = 13
             Items.Strings = (
               'cPadrao'
-              'cMD5')
+              'cMD5'
+            )
+            Style = csDropDownList
+            TabOrder = 7
           end
           object cbLoginMode: TComboBox
-            Left = 182
-            Top = 170
-            Width = 220
+            Left = 180
             Height = 21
-            Style = csDropDownList
-            TabOrder = 8
+            Top = 168
+            Width = 220
+            ItemHeight = 13
             Items.Strings = (
               'lmActive'
-              'lmPassive')
+              'lmPassive'
+            )
+            Style = csDropDownList
+            TabOrder = 8
           end
           object GroupBox3: TGroupBox
-            Left = 425
-            Top = 9
-            Width = 113
+            Left = 423
             Height = 78
+            Top = 7
+            Width = 113
             Caption = 'Not Allowed Items'
+            ClientHeight = 60
+            ClientWidth = 109
+            ParentBackground = False
             TabOrder = 9
             object ckActionVisible: TCheckBox
-              Left = 12
-              Top = 24
-              Width = 89
+              Left = 10
               Height = 17
+              Top = 10
+              Width = 88
               Caption = 'Action Visible'
               Checked = True
               State = cbChecked
               TabOrder = 0
             end
             object ckMenuVisible: TCheckBox
-              Left = 12
-              Top = 47
-              Width = 89
+              Left = 10
               Height = 17
+              Top = 33
+              Width = 85
               Caption = 'Menu Visible'
               Checked = True
               State = cbChecked
@@ -552,61 +570,56 @@ object UCEditorForm: TUCEditorForm
             end
           end
           object spedtEncryptKey: TSpinEdit
-            Left = 182
-            Top = 133
+            Left = 180
+            Height = 21
+            Top = 131
             Width = 220
-            Height = 22
-            MaxValue = 0
-            MinValue = 0
             TabOrder = 10
-            Value = 0
           end
         end
       end
       object tabControlRights: TTabSheet
         Caption = 'Control Rights'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 6
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label33: TLabel
           Left = 179
+          Height = 13
           Top = 117
           Width = 52
-          Height = 13
           Alignment = taRightJustify
           Caption = 'ActionList :'
         end
         object Label34: TLabel
           Left = 129
+          Height = 13
           Top = 159
           Width = 102
-          Height = 13
           Alignment = taRightJustify
           Caption = 'ActionMainMenuBar :'
         end
         object Label35: TLabel
           Left = 153
+          Height = 13
           Top = 202
           Width = 78
-          Height = 13
           Alignment = taRightJustify
           Caption = 'ActionManager :'
         end
         object Label36: TLabel
           Left = 175
+          Height = 13
           Top = 245
           Width = 56
-          Height = 13
           Alignment = taRightJustify
           Caption = 'MainMenu :'
         end
         object SpeedButton5: TSpeedButton
           Left = 463
+          Height = 22
           Top = 112
           Width = 23
-          Height = 22
           Flat = True
           Glyph.Data = {
             36050000424D3605000000000000360400002800000010000000100000000100
@@ -650,15 +663,16 @@ object UCEditorForm: TUCEditorForm
             0303030300010100040404040404000303030303030001010004040404040400
             0303030303030001000404040404040400030303030303000004040404040404
             0400030303030303000404040404040404040100000000010104040404040404
-            0404040404040404040404040404040404040404040404040404}
+            0404040404040404040404040404040404040404040404040404
+          }
           OnClick = SpeedButton5Click
         end
         object SpeedButton6: TSpeedButton
           Tag = 1
           Left = 463
+          Height = 22
           Top = 155
           Width = 23
-          Height = 22
           Flat = True
           Glyph.Data = {
             36050000424D3605000000000000360400002800000010000000100000000100
@@ -702,15 +716,16 @@ object UCEditorForm: TUCEditorForm
             0303030300010100040404040404000303030303030001010004040404040400
             0303030303030001000404040404040400030303030303000004040404040404
             0400030303030303000404040404040404040100000000010104040404040404
-            0404040404040404040404040404040404040404040404040404}
+            0404040404040404040404040404040404040404040404040404
+          }
           OnClick = SpeedButton5Click
         end
         object SpeedButton7: TSpeedButton
           Tag = 2
           Left = 463
+          Height = 22
           Top = 197
           Width = 23
-          Height = 22
           Flat = True
           Glyph.Data = {
             36050000424D3605000000000000360400002800000010000000100000000100
@@ -754,15 +769,16 @@ object UCEditorForm: TUCEditorForm
             0303030300010100040404040404000303030303030001010004040404040400
             0303030303030001000404040404040400030303030303000004040404040404
             0400030303030303000404040404040404040100000000010104040404040404
-            0404040404040404040404040404040404040404040404040404}
+            0404040404040404040404040404040404040404040404040404
+          }
           OnClick = SpeedButton5Click
         end
         object SpeedButton8: TSpeedButton
           Tag = 3
           Left = 463
+          Height = 22
           Top = 241
           Width = 23
-          Height = 22
           Flat = True
           Glyph.Data = {
             36050000424D3605000000000000360400002800000010000000100000000100
@@ -806,23 +822,26 @@ object UCEditorForm: TUCEditorForm
             0303030300010100040404040404000303030303030001010004040404040400
             0303030303030001000404040404040400030303030303000004040404040404
             0400030303030303000404040404040404040100000000010104040404040404
-            0404040404040404040404040404040404040404040404040404}
+            0404040404040404040404040404040404040404040404040404
+          }
           OnClick = SpeedButton5Click
         end
         object cbActionList: TComboBox
           Left = 237
+          Height = 21
           Top = 113
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboRightsChange
         end
         object cbActionMainMenuBar: TComboBox
           Left = 237
+          Height = 21
           Top = 155
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboRightsChange
@@ -830,18 +849,20 @@ object UCEditorForm: TUCEditorForm
         end
         object cbActionManager: TComboBox
           Left = 237
+          Height = 21
           Top = 198
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 2
           OnChange = ComboRightsChange
         end
         object cbMainMenu: TComboBox
           Left = 237
+          Height = 21
           Top = 241
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 3
           OnChange = ComboRightsChange
@@ -849,30 +870,29 @@ object UCEditorForm: TUCEditorForm
       end
       object tabUser: TTabSheet
         Caption = 'User'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 3
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label2: TLabel
           Left = 172
+          Height = 13
           Top = 122
           Width = 36
-          Height = 13
           Caption = 'Action :'
         end
         object Label27: TLabel
           Left = 152
+          Height = 13
           Top = 161
           Width = 56
-          Height = 13
           Caption = 'Menu Item :'
         end
         object cbUserAction: TComboBox
           Left = 214
+          Height = 21
           Top = 118
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboActionMenuItem
@@ -880,9 +900,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserMenuItem: TComboBox
           Left = 214
+          Height = 21
           Top = 157
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboActionMenuItem
@@ -890,51 +911,50 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserProtectAdministrator: TCheckBox
           Left = 214
+          Height = 17
           Top = 196
-          Width = 220
-          Height = 21
+          Width = 140
           Caption = 'User Protect Administrator'
           TabOrder = 2
         end
         object ckUserUsePrivilegedField: TCheckBox
           Left = 214
+          Height = 17
           Top = 236
-          Width = 220
-          Height = 21
+          Width = 111
           Caption = 'Use Privileged Field'
           TabOrder = 3
         end
       end
       object tabUserProfile: TTabSheet
         Caption = 'User Profile'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 4
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label3: TLabel
           Left = 174
+          Height = 13
           Top = 128
           Width = 36
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Action :'
           Visible = False
         end
         object Label28: TLabel
           Left = 154
+          Height = 13
           Top = 181
           Width = 56
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Menu Item :'
           Visible = False
         end
         object cbUserProfileAction: TComboBox
           Left = 213
+          Height = 21
           Top = 124
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           Visible = False
@@ -943,9 +963,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserProfileMenuItem: TComboBox
           Left = 213
+          Height = 21
           Top = 177
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           Visible = False
@@ -954,49 +975,48 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserProfileActive: TCheckBox
           Left = 213
+          Height = 17
           Top = 230
-          Width = 220
-          Height = 21
+          Width = 48
           Caption = 'Active'
           TabOrder = 2
         end
       end
       object tabUserPasswordChange: TTabSheet
         Caption = 'User Password Change'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 5
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label4: TLabel
           Left = 126
+          Height = 13
           Top = 252
           Width = 108
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Min Password Length :'
         end
         object Label31: TLabel
           Left = 198
+          Height = 13
           Top = 110
           Width = 36
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Action :'
         end
         object Label37: TLabel
           Left = 178
+          Height = 13
           Top = 157
           Width = 56
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Menu Item :'
         end
         object cbUserPasswordChangeAction: TComboBox
           Left = 239
+          Height = 21
           Top = 106
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboActionMenuItem
@@ -1004,9 +1024,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserPasswordChangeMenuItem: TComboBox
           Left = 239
+          Height = 21
           Top = 153
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboActionMenuItem
@@ -1014,70 +1035,69 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserPassowrdChangeForcePassword: TCheckBox
           Left = 239
+          Height = 17
           Top = 200
-          Width = 220
-          Height = 21
+          Width = 94
           Caption = 'Force Password'
           TabOrder = 2
         end
         object spedtUserPasswordChangeMinPasswordLength: TSpinEdit
           Left = 239
+          Height = 21
           Top = 247
           Width = 220
-          Height = 22
-          MaxValue = 0
-          MinValue = 0
           TabOrder = 3
-          Value = 0
         end
       end
       object tabLogControl: TTabSheet
         Caption = 'Log Control'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 1
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label25: TLabel
           Left = 140
+          Height = 13
           Top = 115
           Width = 80
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Tabela de Logs :'
         end
         object Label1: TLabel
           Left = 164
+          Height = 13
           Top = 75
           Width = 56
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Menu Item :'
           Visible = False
         end
         object Label26: TLabel
           Left = 184
+          Height = 13
           Top = 35
           Width = 36
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Action :'
           Visible = False
         end
         object Panel4: TPanel
           Left = 0
-          Top = 205
-          Width = 586
           Height = 170
+          Top = 207
+          Width = 586
           Align = alBottom
           BevelOuter = bvNone
+          ClientHeight = 170
+          ClientWidth = 586
           Color = clWhite
+          ParentBackground = False
+          ParentColor = False
           TabOrder = 0
           object Image4: TImage
-            Left = 20
-            Top = 28
-            Width = 25
+            Left = 18
             Height = 24
+            Top = 26
+            Width = 25
             Picture.Data = {
               07544269746D617076060000424D760600000000000036040000280000001800
               000018000000010008000000000040020000C40E0000C40E0000000100000000
@@ -1131,15 +1151,16 @@ object UCEditorForm: TUCEditorForm
               77777777777777777777775A5975713825777777777777777777777777777777
               77777777636E6335777777777777777777777777777777777777777753765377
               7777777777777777777777777777777777777777775377777777777777777777
-              7777}
+              7777
+            }
           end
           object Label19: TLabel
-            Left = 60
-            Top = 28
-            Width = 320
+            Left = 58
             Height = 13
-            Caption = 'O Componente n'#227'o grava nenhum log automaticamente!'
-            Font.Charset = ANSI_CHARSET
+            Top = 26
+            Width = 319
+            Caption = 'O Componente nгo grava nenhum log automaticamente!'
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
@@ -1147,87 +1168,78 @@ object UCEditorForm: TUCEditorForm
             ParentFont = False
           end
           object Label20: TLabel
-            Left = 60
-            Top = 52
-            Width = 505
+            Left = 58
             Height = 13
-            Caption = 
-              'Utilize o Metodo: Log(msg : String; nivel : Integer {0..3} = 0) ' +
-              'para gravar registros no Log de mensagens'
-            Font.Charset = ANSI_CHARSET
+            Top = 50
+            Width = 505
+            Caption = 'Utilize o Metodo: Log(msg : String; nivel : Integer {0..3} = 0) para gravar registros no Log de mensagens'
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = []
             ParentFont = False
           end
           object Label21: TLabel
-            Left = 68
-            Top = 76
-            Width = 16
+            Left = 66
             Height = 13
+            Top = 74
+            Width = 16
             Caption = 'Ex:'
-            Font.Charset = ANSI_CHARSET
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = []
             ParentFont = False
           end
           object Label22: TLabel
-            Left = 92
-            Top = 76
-            Width = 175
+            Left = 90
             Height = 13
-            Caption = 'UserControl1.Log('#39'Exemplo de Log'#39');'
-            Font.Charset = ANSI_CHARSET
+            Top = 74
+            Width = 175
+            Caption = 'UserControl1.Log(''Exemplo de Log'');'
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = []
             ParentFont = False
           end
           object Label23: TLabel
-            Left = 280
-            Top = 76
-            Width = 285
+            Left = 278
             Height = 65
-            Caption = 
-              'try'#13#10'  ..'#13#10'except'#13#10'  on e : Exception do ADOUserControl1.Log(e.M' +
-              'essage, 3);'#13#10'end;'
-            Font.Charset = ANSI_CHARSET
+            Top = 74
+            Width = 285
+            Caption = 'try'#13#10'  ..'#13#10'except'#13#10'  on e : Exception do ADOUserControl1.Log(e.Message, 3);'#13#10'end;'
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = []
             ParentFont = False
           end
           object Label24: TLabel
-            Left = 92
-            Top = 108
-            Width = 162
+            Left = 90
             Height = 13
-            Caption = 'UserControl1.Log('#39'Exemplo 2'#39', 1);'
-            Font.Charset = ANSI_CHARSET
+            Top = 106
+            Width = 162
+            Caption = 'UserControl1.Log(''Exemplo 2'', 1);'
+            Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
             Font.Name = 'Tahoma'
-            Font.Style = []
             ParentFont = False
           end
         end
         object edtLogControlTableLog: TEdit
           Left = 226
+          Height = 21
           Top = 112
           Width = 220
-          Height = 21
           TabOrder = 1
         end
         object ckLogControlActive: TCheckBox
           Left = 226
+          Height = 17
           Top = 152
-          Width = 220
-          Height = 21
+          Width = 48
           Caption = 'Active'
           Checked = True
           State = cbChecked
@@ -1235,9 +1247,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbLogControlAction: TComboBox
           Left = 226
+          Height = 21
           Top = 32
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 3
           Visible = False
@@ -1246,9 +1259,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbLogControlMenuItem: TComboBox
           Left = 226
+          Height = 21
           Top = 72
           Width = 220
-          Height = 21
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 4
           Visible = False
@@ -1258,53 +1272,51 @@ object UCEditorForm: TUCEditorForm
       end
       object tabLogin: TTabSheet
         Caption = 'Login'
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 2
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label14: TLabel
           Left = 115
-          Top = 25
-          Width = 149
           Height = 13
+          Top = 25
+          Width = 150
           Alignment = taRightJustify
-          Caption = 'N'#250'mero m'#225'ximo de Tentativas :'
+          Caption = 'Nъmero mбximo de Tentativas :'
         end
         object Label15: TLabel
           Left = 181
+          Height = 13
           Top = 52
           Width = 83
-          Height = 13
           Alignment = taRightJustify
           Caption = 'Get Login Name :'
         end
         object Label16: TLabel
           Left = 136
+          Height = 13
           Top = 350
           Width = 79
-          Height = 13
           Caption = 'Imagem Superior'
         end
         object Label17: TLabel
           Left = 288
+          Height = 13
           Top = 350
           Width = 85
-          Height = 13
           Caption = 'Imagem Esquerda'
         end
         object Label18: TLabel
           Left = 440
+          Height = 13
           Top = 350
           Width = 72
-          Height = 13
           Caption = 'Imagem Inferior'
         end
         object SpeedButton1: TSpeedButton
           Left = 19
+          Height = 40
           Top = 288
           Width = 73
-          Height = 40
           Caption = 'Visualizar'
           Flat = True
           Glyph.Data = {
@@ -1333,192 +1345,203 @@ object UCEditorForm: TUCEditorForm
             6701CC6701CC6701CC6701CC6701CC6701CC6701CC6701FF00FFFF00FFFF00FF
             FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
             FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
-            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+          }
           Layout = blGlyphTop
           OnClick = SpeedButton1Click
         end
         object SpeedButton2: TSpeedButton
           Left = 211
+          Height = 22
           Top = 322
           Width = 48
-          Height = 22
           Caption = 'Limpar'
           Flat = True
           OnClick = SpeedButton2Click
         end
         object SpeedButton3: TSpeedButton
           Left = 365
+          Height = 22
           Top = 322
           Width = 48
-          Height = 22
           Caption = 'Limpar'
           Flat = True
           OnClick = SpeedButton3Click
         end
         object SpeedButton4: TSpeedButton
           Left = 517
+          Height = 22
           Top = 322
           Width = 48
-          Height = 22
           Caption = 'Limpar'
           Flat = True
           OnClick = SpeedButton4Click
         end
         object GroupBox1: TGroupBox
           Left = 2
+          Height = 185
           Top = 88
           Width = 290
-          Height = 185
           Caption = 'Login Inicial'
+          ClientHeight = 167
+          ClientWidth = 286
+          ParentBackground = False
           TabOrder = 0
           object Label8: TLabel
-            Left = 14
-            Top = 24
-            Width = 42
+            Left = 12
             Height = 13
-            Caption = 'Usu'#225'rio :'
+            Top = 10
+            Width = 42
+            Caption = 'Usuбrio :'
           end
           object Label9: TLabel
-            Left = 19
-            Top = 55
-            Width = 37
+            Left = 17
             Height = 13
+            Top = 41
+            Width = 37
             Caption = 'Senha :'
           end
           object Label12: TLabel
-            Left = 25
-            Top = 87
-            Width = 31
+            Left = 23
             Height = 13
+            Top = 73
+            Width = 31
             Caption = 'Email :'
           end
           object lblInitialRights: TLabel
-            Left = -7
-            Top = 115
-            Width = 63
+            Left = 0
             Height = 13
+            Top = 101
+            Width = 63
             Alignment = taRightJustify
             Caption = 'Initial Rights :'
           end
           object edtInitialLoginUser: TEdit
-            Left = 64
-            Top = 20
-            Width = 220
+            Left = 62
             Height = 21
+            Top = 6
+            Width = 220
             TabOrder = 0
           end
           object edtInitialLoginPassword: TEdit
-            Left = 64
-            Top = 51
-            Width = 220
+            Left = 62
             Height = 21
+            Top = 37
+            Width = 220
             TabOrder = 1
           end
           object edtInitialLoginEmail: TEdit
-            Left = 64
-            Top = 83
-            Width = 220
+            Left = 62
             Height = 21
+            Top = 69
+            Width = 220
             TabOrder = 2
           end
           object mmInitialRights: TMemo
-            Left = 64
-            Top = 115
-            Width = 220
+            Left = 62
             Height = 62
-            Font.Charset = DEFAULT_CHARSET
+            Top = 101
+            Width = 220
             Font.Color = clGreen
             Font.Height = -11
             Font.Name = 'MS Sans Serif'
-            Font.Style = []
             ParentFont = False
             TabOrder = 3
           end
         end
         object GroupBox2: TGroupBox
           Left = 295
+          Height = 185
           Top = 88
           Width = 290
-          Height = 185
-          Caption = 'Login Autom'#225'tico'
+          Caption = 'Login Automбtico'
+          ClientHeight = 167
+          ClientWidth = 286
+          ParentBackground = False
           TabOrder = 1
           object Label10: TLabel
-            Left = 13
-            Top = 44
-            Width = 42
+            Left = 11
             Height = 13
+            Top = 30
+            Width = 42
             Alignment = taRightJustify
-            Caption = 'Usu'#225'rio :'
+            Caption = 'Usuбrio :'
           end
           object Label11: TLabel
-            Left = 18
-            Top = 81
-            Width = 37
+            Left = 16
             Height = 13
+            Top = 67
+            Width = 37
             Alignment = taRightJustify
             Caption = 'Senha :'
           end
           object edtLoginAutoLoginUser: TEdit
-            Left = 56
-            Top = 40
-            Width = 220
+            Left = 54
             Height = 21
+            Top = 26
+            Width = 220
             TabOrder = 0
           end
           object edtLoginAutoLoginPassword: TEdit
-            Left = 56
-            Top = 77
-            Width = 220
+            Left = 54
             Height = 21
+            Top = 63
+            Width = 220
             TabOrder = 1
           end
           object ckLoginAutologinActive: TCheckBox
-            Left = 56
-            Top = 104
-            Width = 65
+            Left = 54
             Height = 17
+            Top = 90
+            Width = 42
             Caption = 'Ativo'
             Checked = True
             State = cbChecked
             TabOrder = 2
           end
           object ckLoginAutoLoginMessageOnError: TCheckBox
-            Left = 33
-            Top = 127
-            Width = 225
+            Left = 31
             Height = 17
-            Caption = 'Exibir mensagem padr'#227'o de erro se falhar ?'
+            Top = 113
+            Width = 218
+            Caption = 'Exibir mensagem padrгo de erro se falhar ?'
             TabOrder = 3
           end
         end
         object cbGetLoginName: TComboBox
           Left = 270
+          Height = 21
           Top = 48
           Width = 201
-          Height = 21
-          Style = csDropDownList
+          ItemHeight = 13
           ItemIndex = 0
-          TabOrder = 2
-          Text = 'lnNone'
           Items.Strings = (
             'lnNone'
             'lnUserName'
-            'lnMachineName')
+            'lnMachineName'
+          )
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'lnNone'
         end
         object Panel6: TPanel
           Left = 143
+          Height = 65
           Top = 280
           Width = 65
-          Height = 65
           BevelOuter = bvLowered
+          ClientHeight = 65
+          ClientWidth = 65
           Color = clGray
+          ParentBackground = False
+          ParentColor = False
           TabOrder = 3
           object imgTop: TImage
+            Cursor = crHandPoint
             Left = 1
+            Height = 63
             Top = 1
             Width = 63
-            Height = 63
-            Cursor = crHandPoint
             Align = alClient
             Center = True
             Proportional = True
@@ -1528,18 +1551,22 @@ object UCEditorForm: TUCEditorForm
         end
         object Panel7: TPanel
           Left = 295
+          Height = 65
           Top = 280
           Width = 65
-          Height = 65
           BevelOuter = bvLowered
+          ClientHeight = 65
+          ClientWidth = 65
           Color = clGray
+          ParentBackground = False
+          ParentColor = False
           TabOrder = 4
           object imgLeft: TImage
+            Cursor = crHandPoint
             Left = 1
+            Height = 63
             Top = 1
             Width = 63
-            Height = 63
-            Cursor = crHandPoint
             Align = alClient
             Center = True
             Proportional = True
@@ -1549,18 +1576,22 @@ object UCEditorForm: TUCEditorForm
         end
         object Panel8: TPanel
           Left = 447
+          Height = 65
           Top = 280
           Width = 65
-          Height = 65
           BevelOuter = bvLowered
+          ClientHeight = 65
+          ClientWidth = 65
           Color = clGray
+          ParentBackground = False
+          ParentColor = False
           TabOrder = 5
           object imgBottom: TImage
+            Cursor = crHandPoint
             Left = 1
+            Height = 63
             Top = 1
             Width = 63
-            Height = 63
-            Cursor = crHandPoint
             Align = alClient
             Center = True
             Proportional = True
@@ -1570,13 +1601,10 @@ object UCEditorForm: TUCEditorForm
         end
         object spedtMaxLoginAttempts: TSpinEdit
           Left = 270
+          Height = 21
           Top = 20
           Width = 121
-          Height = 22
-          MaxValue = 0
-          MinValue = 0
           TabOrder = 6
-          Value = 0
         end
       end
     end

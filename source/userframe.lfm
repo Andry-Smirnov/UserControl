@@ -1,4 +1,4 @@
-object UCFrame_User: TUCFrame_User
+object UserFrameForm: TUserFrameForm
   Left = 0
   Height = 311
   Top = 0

@@ -1,4 +1,4 @@
-unit TrocaSenha_U;
+unit ChangeUserPassword;
 
 {$MODE Delphi}
 
@@ -25,7 +25,7 @@ uses
   UCBase; { Por Vicente Barros Leonel }
 
 type
-  TChangePasswordForm = class(TForm)
+  TChangeUserPasswordForm = class(TForm)
     Panel1: TPanel;
     lbDescricao: TLabel;
     Image1: TImage;
@@ -60,17 +60,17 @@ implementation
 
 {$R *.lfm}
 
-procedure TChangePasswordForm.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TChangeUserPasswordForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := caFree;
 end;
 
-procedure TChangePasswordForm.btCancelClick(Sender: TObject);
+procedure TChangeUserPasswordForm.btCancelClick(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TChangePasswordForm.FormActivate(Sender: TObject);
+procedure TChangeUserPasswordForm.FormActivate(Sender: TObject);
 begin
   EditAtu.CharCase := Self.fUsercontrol.Login.CharCasePass;
   EditNova.CharCase := Self.fUsercontrol.Login.CharCasePass;
@@ -78,7 +78,7 @@ begin
   { Por Vicente Barros Leonel }
 end;
 
-procedure TChangePasswordForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+procedure TChangeUserPasswordForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   If ForcarTroca = True then
   Begin

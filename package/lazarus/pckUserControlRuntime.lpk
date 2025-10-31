@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="4">
+  <Package Version="5">
     <PathDelim Value="\"/>
     <Name Value="pckUserControlRuntime"/>
     <Type Value="RunAndDesignTime"/>
@@ -35,16 +35,16 @@
     <Version Major="2" Minor="33"/>
     <Files Count="22">
       <Item1>
-        <Filename Value="..\..\source\TrocaSenha_U.pas"/>
-        <UnitName Value="TrocaSenha_U"/>
+        <Filename Value="..\..\source\changeuserpassword.pas"/>
+        <UnitName Value="ChangeUserPassword"/>
       </Item1>
       <Item2>
         <Filename Value="..\..\source\UCBase.pas"/>
         <UnitName Value="UCBase"/>
       </Item2>
       <Item3>
-        <Filename Value="..\..\source\SenhaForm_U.pas"/>
-        <UnitName Value="SenhaForm_U"/>
+        <Filename Value="..\..\source\passwords.pas"/>
+        <UnitName Value="passwords"/>
       </Item3>
       <Item4>
         <Filename Value="..\..\source\EnvMsgForm_U.pas"/>
@@ -71,12 +71,12 @@
         <UnitName Value="UserPermis_U"/>
       </Item9>
       <Item10>
-        <Filename Value="..\..\source\UCSettings.pas"/>
-        <UnitName Value="UCSettings"/>
+        <Filename Value="..\..\source\settings.pas"/>
+        <UnitName Value="settings"/>
       </Item10>
       <Item11>
-        <Filename Value="..\..\source\LoginWindow_U.pas"/>
-        <UnitName Value="LoginWindow_U"/>
+        <Filename Value="..\..\source\loginwindow.pas"/>
+        <UnitName Value="loginwindow"/>
       </Item11>
       <Item12>
         <Filename Value="..\..\source\UcConsts_Language.pas"/>
@@ -87,8 +87,8 @@
         <UnitName Value="pUCGeral"/>
       </Item13>
       <Item14>
-        <Filename Value="..\..\source\pUCFrame_User.pas"/>
-        <UnitName Value="pUCFrame_User"/>
+        <Filename Value="..\..\source\userframe.pas"/>
+        <UnitName Value="userframe"/>
       </Item14>
       <Item15>
         <Filename Value="..\..\source\pUCFrame_Profile.pas"/>
@@ -123,6 +123,7 @@
         <Type Value="Include"/>
       </Item22>
     </Files>
+    <CompatibilityMode Value="True"/>
     <RequiredPkgs Count="3">
       <Item1>
         <PackageName Value="DateTimeCtrls"/>

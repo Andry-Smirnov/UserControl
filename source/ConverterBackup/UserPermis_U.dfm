@@ -11,11 +11,9 @@ object UserPermis: TUserPermis
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   OnDestroy = FormDestroy
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
@@ -175,7 +173,6 @@ object UserPermis: TUserPermis
       Width = 81
       Height = 25
       Caption = '&Liberar'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000C8D0D4C8D0D4
@@ -228,7 +225,6 @@ object UserPermis: TUserPermis
         D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C2C8CBBDC2C4B5B5B5B5
         B5B5B5B5B5BDC2C4C2C8CBC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
       NumGlyphs = 2
-      ParentDoubleBuffered = False
       TabOrder = 0
       OnClick = BtLiberaClick
     end
@@ -238,7 +234,6 @@ object UserPermis: TUserPermis
       Width = 81
       Height = 25
       Caption = '&Bloquear'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000C8D0D4C8D0D4
@@ -291,7 +286,6 @@ object UserPermis: TUserPermis
         D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
         D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
       NumGlyphs = 2
-      ParentDoubleBuffered = False
       TabOrder = 1
       OnClick = BtBloqueiaClick
     end
@@ -301,7 +295,6 @@ object UserPermis: TUserPermis
       Width = 81
       Height = 25
       Caption = '&Gravar'
-      DoubleBuffered = True
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
         18000000000000060000120B0000120B00000000000000000000FF00FFFF00FF
@@ -354,7 +347,6 @@ object UserPermis: TUserPermis
         6FCE726FCE726FCE726FFF00FF9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A
         9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A9A}
       NumGlyphs = 2
-      ParentDoubleBuffered = False
       TabOrder = 2
       OnClick = BtGravaClick
     end
@@ -364,7 +356,6 @@ object UserPermis: TUserPermis
       Width = 81
       Height = 25
       Caption = '&Cancelar'
-      DoubleBuffered = True
       Glyph.Data = {
         66030000424D6603000000000000660200002800000010000000100000000100
         08000000000000010000120B0000120B00008C0000008C00000000000000FFFF
@@ -394,7 +385,6 @@ object UserPermis: TUserPermis
         14212E44757D69577902024D0D08011218241F3253016140790202024D0A0C01
         0E1C2A390156787902020202024D4D1A1B2735334C797902020202020202024D
         4D4D4D4D4D0202020202}
-      ParentDoubleBuffered = False
       TabOrder = 3
       OnClick = BtCancelClick
     end
@@ -411,20 +401,14 @@ object UserPermis: TUserPermis
     TabPosition = tpLeft
     object PageMenu: TTabSheet
       Caption = 'Itens do Menu'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object TreeMenu: TTreeView
         Left = 0
         Top = 0
         Width = 418
         Height = 479
         Align = alClient
-        Ctl3D = True
         Images = ImageList1
         Indent = 19
-        ParentCtl3D = False
         ReadOnly = True
         RightClickSelect = True
         TabOrder = 0
@@ -438,20 +422,14 @@ object UserPermis: TUserPermis
     object PageAction: TTabSheet
       Caption = 'A'#231#245'es'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object TreeAction: TTreeView
         Left = 0
         Top = 0
         Width = 418
         Height = 479
         Align = alClient
-        Ctl3D = True
         Images = ImageList1
         Indent = 19
-        ParentCtl3D = False
         ReadOnly = True
         RightClickSelect = True
         TabOrder = 0
@@ -464,20 +442,14 @@ object UserPermis: TUserPermis
     object PageControls: TTabSheet
       Caption = 'Controles'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object TreeControls: TTreeView
         Left = 0
         Top = 0
         Width = 418
         Height = 479
         Align = alClient
-        Ctl3D = True
         Images = ImageList1
         Indent = 19
-        ParentCtl3D = False
         ReadOnly = True
         RightClickSelect = True
         TabOrder = 0

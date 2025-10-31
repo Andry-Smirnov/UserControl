@@ -1,4 +1,4 @@
-unit pUCFrame_User;
+unit userframe;
 
 interface
 
@@ -28,7 +28,7 @@ uses
   UserPermis_U;
 
 type
-  TUCFrame_User = class(TFrame)
+  TUserFrameForm = class(TFrame)
     Panel3: TPanel;
     btAdic: TBitBtn;
     BtAlt: TBitBtn;
@@ -66,9 +66,9 @@ implementation
 uses
   UCMessages;
 
-{$R *.dfm}
+{$R *.lfm}
 
-procedure TUCFrame_User.btAdicClick(Sender: TObject);
+procedure TUserFrameForm.btAdicClick(Sender: TObject);
 begin
   FfrmIncluirUsuario := TfrmIncluirUsuario.Create(Self);
   FfrmIncluirUsuario.FUsercontrol := Self.FUsercontrol;
@@ -77,7 +77,7 @@ begin
   FreeAndNil(FfrmIncluirUsuario);
 end;
 
-procedure TUCFrame_User.BtAltClick(Sender: TObject);
+procedure TUserFrameForm.BtAltClick(Sender: TObject);
 begin
   if FDataSetCadastroUsuario.IsEmpty then
     Exit;
@@ -111,7 +111,7 @@ begin
   FreeAndNil(FfrmIncluirUsuario);
 end;
 
-procedure TUCFrame_User.BtExcluiClick(Sender: TObject);
+procedure TUserFrameForm.BtExcluiClick(Sender: TObject);
 var
   TempID: Integer;
   CanDelete: Boolean;
@@ -146,7 +146,7 @@ begin
   end;
 end;
 
-procedure TUCFrame_User.BtPassClick(Sender: TObject);
+procedure TUserFrameForm.BtPassClick(Sender: TObject);
 begin
   if FDataSetCadastroUsuario.IsEmpty then
     Exit;
@@ -181,14 +181,14 @@ begin
   FreeAndNil(FormSenha);
 end;
 
-destructor TUCFrame_User.Destroy;
+destructor TUserFrameForm.Destroy;
 begin
   // nada a destruir
   // não destruir o FDataSetCadastroUsuario o USERCONTROL toma conta dele
   inherited;
 end;
 
-procedure TUCFrame_User.BtAcessClick(Sender: TObject);
+procedure TUserFrameForm.BtAcessClick(Sender: TObject);
 begin
   if FDataSetCadastroUsuario.IsEmpty then
     Exit;
@@ -200,7 +200,7 @@ begin
   ActionBtPermissUserDefault;
 end;
 
-procedure TUCFrame_User.SetWindowUserProfile;
+procedure TUserFrameForm.SetWindowUserProfile;
 begin
   with FUsercontrol.UserSettings.Rights do
   begin
@@ -219,7 +219,7 @@ begin
   end;
 end;
 
-procedure TUCFrame_User.ActionBtPermissUserDefault;
+procedure TUserFrameForm.ActionBtPermissUserDefault;
 var
   TempCampos, TempCamposEX: String;
 begin
@@ -274,7 +274,7 @@ begin
   end;
 end;
 
-procedure TUCFrame_User.FDataSetCadastroUsuarioAfterScroll(DataSet: TDataSet);
+procedure TUserFrameForm.FDataSetCadastroUsuarioAfterScroll(DataSet: TDataSet);
 begin
   if (FUsercontrol.User.ProtectAdministrator) and
     (DataSet.FieldByName('Login').AsString = FUsercontrol.Login.InitialLogin.User) then
@@ -293,7 +293,7 @@ begin
   end;
 end;
 
-procedure TUCFrame_User.SetWindow;
+procedure TUserFrameForm.SetWindow;
 begin
   FDataSetCadastroUsuario.AfterScroll := FDataSetCadastroUsuarioAfterScroll;
   FDataSetCadastroUsuarioAfterScroll(FDataSetCadastroUsuario);
@@ -313,7 +313,7 @@ begin
 
 end;
 
-procedure TUCFrame_User.SetWindowUser(Adicionar: Boolean);
+procedure TUserFrameForm.SetWindowUser(Adicionar: Boolean);
 begin
   with FUsercontrol.UserSettings.AddChangeUser do
   begin

@@ -1,5 +1,7 @@
 unit MsgsForm_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -20,7 +22,7 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   ToolWin;
 
 type
@@ -77,7 +79,7 @@ uses
   MsgRecForm_U,
   UCBase;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TMsgsForm.btCloseClick(Sender: TObject);
 begin

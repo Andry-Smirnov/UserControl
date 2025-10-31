@@ -1,5 +1,7 @@
 unit IncUser_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -21,7 +23,7 @@ uses
   Spin,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
   UCBase;
 
 type
@@ -71,9 +73,9 @@ type
 implementation
 
 uses
-  SenhaForm_U;
+  passwords;
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TfrmIncluirUsuario.FormClose(Sender: TObject;
   var Action: TCloseAction);
@@ -115,18 +117,18 @@ begin
         Exit;
       end;
 
-      FormSenha := TSenhaForm.Create(Self);
-      TSenhaForm(FormSenha).Position := UserSettings.WindowsPosition;
-      TSenhaForm(FormSenha).FUserControl := FUserControl;
-      TSenhaForm(FormSenha).Caption :=
+      FormSenha := TPasswordForm.Create(Self);
+      TPasswordForm(FormSenha).Position := UserSettings.WindowsPosition;
+      TPasswordForm(FormSenha).FUserControl := FUserControl;
+      TPasswordForm(FormSenha).Caption :=
         Format(FUserControl.UserSettings.ResetPassword.WindowCaption,
         [EditLogin.Text]);
-      if TSenhaForm(FormSenha).ShowModal <> mrOk then
+      if TPasswordForm(FormSenha).ShowModal <> mrOk then
       begin
         btGravar.Enabled := True;
         Exit;
       end;
-      vNovaSenha := TSenhaForm(FormSenha).edtSenha.Text;
+      vNovaSenha := TPasswordForm(FormSenha).edtSenha.Text;
       vNovoIDUsuario := GetNewIdUser;
       vNome := EditNome.Text;
       vLogin := EditLogin.Text;
@@ -179,7 +181,7 @@ begin
         (FUserControl.MailUserControl.AlteraUsuario.Ativo) then
         try
           FUserControl.MailUserControl.EnviaEmailAlteraUsuario(vNome, vLogin,
-            'Não Alterada', vEmail, IntToStr(vPerfil), EncryptKey);
+            'NÐ³o Alterada', vEmail, IntToStr(vPerfil), EncryptKey);
         except
           on E: Exception do
             Log(E.Message, 2);
@@ -236,7 +238,7 @@ begin
     ComboPerfil.ListSource.DataSet.Open;
   end;
 
-  // Opção de senha so deve aparecer qdo setada como true no componente By Vicente Barros Leonel
+  // OpÐ·Ð³o de senha so deve aparecer qdo setada como true no componente By Vicente Barros Leonel
   ckUserExpired.Visible := FUserControl.Login.ActiveDateExpired;
 
   ckPrivilegiado.Visible := FUserControl.User.UsePrivilegedField;

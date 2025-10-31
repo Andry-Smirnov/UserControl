@@ -11,18 +11,12 @@ object UCObjSel: TUCObjSel
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  DesignSize = (
-    755
-    472
-  )
   PixelsPerInch = 96
-  TextHeight = 13
   object lbCompDisp: TLabel
     Left = 8
     Top = 57
@@ -419,7 +413,6 @@ object UCObjSel: TUCObjSel
         MinWidth = 100
       end>
     ColumnClick = False
-    Ctl3D = False
     GridLines = True
     MultiSelect = True
     ReadOnly = True
@@ -452,7 +445,6 @@ object UCObjSel: TUCObjSel
         Width = 100
       end>
     ColumnClick = False
-    Ctl3D = False
     GridLines = True
     MultiSelect = True
     TabOrder = 1
@@ -469,8 +461,8 @@ object UCObjSel: TUCObjSel
     Color = clWhite
     TabOrder = 2
     object lbForm: TLabel
-      Left = 364
-      Top = 5
+      Left = 362
+      Top = 3
       Width = 78
       Height = 18
       Caption = 'Form999'
@@ -482,8 +474,8 @@ object UCObjSel: TUCObjSel
       ParentFont = False
     end
     object Image1: TImage
-      Left = 8
-      Top = 10
+      Left = 6
+      Top = 8
       Width = 28
       Height = 28
       AutoSize = True
@@ -567,8 +559,8 @@ object UCObjSel: TUCObjSel
       }
     end
     object lbTitle: TLabel
-      Left = 56
-      Top = 5
+      Left = 54
+      Top = 3
       Width = 298
       Height = 18
       Caption = 'Seleção de Componentes do Form. :'
@@ -580,8 +572,8 @@ object UCObjSel: TUCObjSel
       ParentFont = False
     end
     object lbGrupo: TLabel
-      Left = 56
-      Top = 29
+      Left = 54
+      Top = 27
       Width = 61
       Height = 18
       Caption = 'Grupo :'
@@ -593,8 +585,8 @@ object UCObjSel: TUCObjSel
       ParentFont = False
     end
     object lbGroup: TLabel
-      Left = 128
-      Top = 29
+      Left = 126
+      Top = 27
       Width = 54
       Height = 18
       Caption = 'Grupo'
@@ -613,7 +605,6 @@ object UCObjSel: TUCObjSel
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&OK'
-    DoubleBuffered = True
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000000000000000000000000000000000000FF00FF00FF00
@@ -650,7 +641,6 @@ object UCObjSel: TUCObjSel
       6F00CE726F00CE726F00CE726F00CE726F00CE726F00CE726F00CE726F00CE72
       6F00CE726F00CE726F00CE726F00CE726F00CE726F00CE726F00
     }
-    ParentDoubleBuffered = False
     TabOrder = 3
     OnClick = BtOKClick
   end
@@ -661,7 +651,6 @@ object UCObjSel: TUCObjSel
     Height = 25
     Anchors = [akLeft, akBottom]
     Caption = '&Cancelar'
-    DoubleBuffered = True
     Glyph.Data = {
       66030000424D6603000000000000660200002800000010000000100000000100
       08000000000000010000120B0000120B00008C0000008C00000000000000FFFF
@@ -692,7 +681,6 @@ object UCObjSel: TUCObjSel
       0E1C2A390156787902020202024D4D1A1B2735334C797902020202020202024D
       4D4D4D4D4D0202020202
     }
-    ParentDoubleBuffered = False
     TabOrder = 4
     OnClick = btCancelClick
   end

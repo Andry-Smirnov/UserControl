@@ -1,5 +1,7 @@
 unit UCObjSel_U;
 
+{$MODE Delphi}
+
 interface
 
 {$I 'UserControl.inc'}
@@ -24,7 +26,7 @@ uses
   SysUtils,
   UCBase,
   UcConsts_Language,
-  Windows;
+  LCLIntf, LCLType, LMessages;
 
 type
   TQControl = class(TControl)
@@ -76,7 +78,7 @@ type
 
 implementation
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TUCObjSel.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

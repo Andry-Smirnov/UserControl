@@ -1,10 +1,10 @@
 object FormUserPerf: TFormUserPerf
-  Left = 0
+  Left = 677
   Height = 506
-  Top = 0
+  Top = 356
   Width = 692
   BorderStyle = bsDialog
-  Caption = 'Controle de Usuários'
+  Caption = 'Управление пользователями'
   ClientHeight = 506
   ClientWidth = 692
   Color = clBtnFace
@@ -12,11 +12,11 @@ object FormUserPerf: TFormUserPerf
   Font.Height = -11
   Font.Name = 'Tahoma'
   KeyPreview = True
+  Position = poScreenCenter
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnKeyPress = FormKeyPress
   OnShow = FormShow
-  Position = poScreenCenter
-  LCLVersion = '1.4.2.0'
   object Panel1: TPanel
     Left = 0
     Height = 41
@@ -27,15 +27,16 @@ object FormUserPerf: TFormUserPerf
     ClientHeight = 41
     ClientWidth = 692
     Color = clWhite
+    ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object LbDescricao: TLabel
       Left = 41
       Height = 41
       Top = 0
-      Width = 183
+      Width = 274
       Align = alLeft
-      Caption = 'Controle de Usuários'
+      Caption = ' Управление пользователями '
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -143,6 +144,7 @@ object FormUserPerf: TFormUserPerf
     ClientHeight = 465
     ClientWidth = 100
     Color = clSilver
+    ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object SpeedUser: TSpeedButton
@@ -152,7 +154,7 @@ object FormUserPerf: TFormUserPerf
       Top = 1
       Width = 98
       Align = alTop
-      Caption = '&Usuários'
+      Caption = '&Пользователи'
       Down = True
       Flat = True
       Glyph.Data = {
@@ -246,7 +248,7 @@ object FormUserPerf: TFormUserPerf
       Top = 61
       Width = 98
       Align = alTop
-      Caption = '&Perfil'
+      Caption = 'П&рофиль'
       Flat = True
       Glyph.Data = {
         66090000424D660900000000000036000000280000001C0000001C0000000100
@@ -339,7 +341,7 @@ object FormUserPerf: TFormUserPerf
       Top = 121
       Width = 98
       Align = alTop
-      Caption = '&Log'
+      Caption = '&Лог'
       Flat = True
       Glyph.Data = {
         66090000424D660900000000000036000000280000001C0000001C0000000100
@@ -432,7 +434,7 @@ object FormUserPerf: TFormUserPerf
       Top = 181
       Width = 98
       Align = alTop
-      Caption = 'Usuários Logados'
+      Caption = '&Вошедшие в систему'
       Flat = True
       Glyph.Data = {
         66090000424D660900000000000036000000280000001C0000001C0000000100
@@ -526,6 +528,7 @@ object FormUserPerf: TFormUserPerf
     Width = 592
     Align = alClient
     BevelOuter = bvNone
+    ParentBackground = False
     TabOrder = 2
   end
 end

@@ -24,11 +24,8 @@ type
     UCSQLdbConn1: TUCSQLdbConn;
     UserControl1: TUserControl;
     procedure FormCreate(Sender: TObject);
-    procedure IBConnection1AfterConnect(Sender: TObject);
   private
-    { private declarations }
   public
-    { public declarations }
   end;
 
 var
@@ -42,16 +39,11 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  SQLite3Connection1.DatabaseName:='..\db\demo.db';
-  SQLite3Connection1.Connected:=true;
+  SQLite3Connection1.DatabaseName := '..\db\demo.db';
+  SQLite3Connection1.Connected := True;
 
   UserControl1.Execute;
 end;
 
-procedure TForm1.IBConnection1AfterConnect(Sender: TObject);
-begin
-
-end;
 
 end.
-

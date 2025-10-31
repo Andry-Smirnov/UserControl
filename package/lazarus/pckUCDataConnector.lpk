@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
-  <Package Version="4">
+  <Package Version="5">
     <PathDelim Value="\"/>
     <Name Value="pckUCDataConnector"/>
     <Type Value="RunAndDesignTime"/>
@@ -31,7 +31,8 @@
       </Other>
     </CompilerOptions>
     <Description Value="UserControl for Lazarus/FPC"/>
-    <License Value="GPL"/>
+    <License Value="GPL
+"/>
     <Version Major="2" Minor="32"/>
     <Files Count="2">
       <Item1>
@@ -43,6 +44,7 @@
         <Type Value="Include"/>
       </Item2>
     </Files>
+    <CompatibilityMode Value="True"/>
     <RequiredPkgs Count="1">
       <Item1>
         <PackageName Value="LCL"/>

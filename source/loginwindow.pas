@@ -1,4 +1,4 @@
-unit LoginWindow_U;
+unit loginwindow;
 
 interface
 
@@ -53,7 +53,7 @@ type
 
 implementation
 
-{$R *.dfm}
+{$R *.lfm}
 
 procedure TLoginForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin

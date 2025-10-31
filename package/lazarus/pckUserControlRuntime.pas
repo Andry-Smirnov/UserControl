@@ -8,9 +8,9 @@ unit pckUserControlRuntime;
 interface
 
 uses
-  TrocaSenha_U, UCBase, SenhaForm_U, EnvMsgForm_U, MsgRecForm_U, MsgsForm_U, 
-  UCDataInfo, UCMessages, UserPermis_U, UCSettings, LoginWindow_U, 
-  UcConsts_Language, pUCGeral, pUCFrame_User, pUCFrame_Profile, pUCFrame_Log, 
+  ChangeUserPassword, UCBase, passwords, EnvMsgForm_U, MsgRecForm_U, 
+  MsgsForm_U, UCDataInfo, UCMessages, UserPermis_U, settings, loginwindow, 
+  UcConsts_Language, pUCGeral, userframe, pUCFrame_Profile, pUCFrame_Log, 
   pUcFrame_UserLogged, UCMail, UCEMailForm_U, IncUser_U, IncPerfil_U, 
   LazarusPackageIntf;
 

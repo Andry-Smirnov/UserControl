@@ -1,7 +1,5 @@
 unit UserPermis_U;
 
-{$MODE Delphi}
-
 interface
 
 {$I 'UserControl.inc'}
@@ -128,10 +126,10 @@ implementation
 uses
   ActnList,
   Messages,
-  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
+  {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
   SysUtils;
 
-{$R *.lfm}
+{$R *.dfm}
 
 procedure TUserPermis.BtGravaClick(Sender: TObject);
 var
