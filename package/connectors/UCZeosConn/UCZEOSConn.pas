@@ -21,7 +21,7 @@ uses
   Classes,
   DB,
   SysUtils,
-  UCDataConnector,
+  uc_dataconnector,
   ZConnection;
 
 type

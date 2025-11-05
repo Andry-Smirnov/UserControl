@@ -681,7 +681,7 @@ function MD5Sum(strValor: string): string;
 
 implementation
 
-{$R UCLock.dcr}
+{$R UCLock.res}
 
 uses
   DBGrids,
