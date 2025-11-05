@@ -4,7 +4,7 @@ unit uc_newmessage;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}

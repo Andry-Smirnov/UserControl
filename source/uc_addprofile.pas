@@ -4,7 +4,7 @@ unit uc_addprofile;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -63,7 +63,7 @@ end;
 
 procedure TAddProfileForm.btGravarClick(Sender: TObject);
 var
-  FProfile: String;
+  FProfile: string;
 begin
   btGravar.Enabled := False;
   with FUserControl do

@@ -1,7 +1,7 @@
 object SystemMessageForm: TSystemMessageForm
-  Left = 144
+  Left = 639
   Height = 452
-  Top = 150
+  Top = 349
   Width = 598
   BorderStyle = bsDialog
   Caption = 'Системные сообщения'
@@ -9,12 +9,10 @@ object SystemMessageForm: TSystemMessageForm
   ClientWidth = 598
   Color = clBtnFace
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  LCLVersion = '3.7.0.0'
   object Splitter1: TSplitter
     Cursor = crVSplit
     Left = 0
@@ -76,33 +74,33 @@ object SystemMessageForm: TSystemMessageForm
     object btnova: TToolButton
       Left = 1
       Top = 2
-      Caption = '&Nova Mensagem'
+      Caption = '&Новое сообщение'
       ImageIndex = 0
       OnClick = btnovaClick
     end
     object btResponder: TToolButton
-      Left = 96
+      Left = 111
       Top = 2
-      Caption = '&Responder'
+      Caption = '&Ответить'
       ImageIndex = 1
       OnClick = btResponderClick
     end
     object btEncaminhar: TToolButton
-      Left = 184
+      Left = 199
       Top = 2
-      Caption = 'E&ncaminhar'
+      Caption = '&Переправить'
       ImageIndex = 2
       OnClick = btEncaminharClick
     end
     object btExcluir: TToolButton
-      Left = 272
+      Left = 287
       Top = 2
       Caption = '&Удалить'
       ImageIndex = 3
       OnClick = btExcluirClick
     end
     object btClose: TToolButton
-      Left = 360
+      Left = 375
       Top = 2
       Caption = '&Закрыть'
       ImageIndex = 4

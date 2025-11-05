@@ -2,7 +2,7 @@ unit uc_frameuserslogged;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -58,7 +58,7 @@ uses
 
 procedure TUCFrame_UsersLogged.SetWindow;
 var
-  SQLStmt: String;
+  SQLStmt: string;
   I: Integer;
   Form: TForm;
 begin
@@ -122,7 +122,7 @@ end;
 
 procedure TUCFrame_UsersLogged.BitMsgClick(Sender: TObject);
 var
-  Msg: String;
+  Msg: string;
 begin
   if Assigned(UCMes) then
     if InputQuery(FUserControl.UserSettings.UsersLogged.InputText,

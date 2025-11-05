@@ -4,7 +4,7 @@ unit uc_password;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   {$IFDEF WINDOWS}

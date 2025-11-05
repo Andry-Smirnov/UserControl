@@ -4,7 +4,7 @@ unit uc_settingseditor;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   {$IFNDEF FPC}

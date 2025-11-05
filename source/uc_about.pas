@@ -2,7 +2,7 @@ unit uc_about;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -17,9 +17,9 @@ uses
   Controls,
   ExtCtrls,
   Forms,
-  {$IFNDEF FPC}
+{$IFNDEF FPC}
   jpeg,
-  {$ENDIF}
+{$ENDIF}
   StdCtrls;
 
 type

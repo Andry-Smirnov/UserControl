@@ -4,7 +4,7 @@ unit uc_receivedmessage;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}

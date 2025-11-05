@@ -2,7 +2,7 @@ unit uc_logframe;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -111,7 +111,7 @@ procedure TLogFrame.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
 var
   TempImg: Graphics.TBitmap;
   FData: System.TDateTime;
-  TempData: String;
+  TempData: string;
 begin
   if LogDataset.IsEmpty then
     Exit;
@@ -148,7 +148,7 @@ end;
 
 procedure TLogFrame.btexcluiClick(Sender: TObject);
 var
-  FTabLog, Temp: String;
+  FTabLog, Temp: string;
 begin
   // modified by fduenas
   if Application.MessageBox(PChar(FUserControl.UserSettings.Log.PromptDelete),
@@ -251,8 +251,8 @@ end;
 
 procedure TLogFrame.SetWindow;
 var
-  TabelaLog: String;
-  SQLStmt: String;
+  TabelaLog: string;
+  SQLStmt: string;
 begin
   ComboNivel.items.Clear;
   ComboNivel.items.Append(FUserControl.UserSettings.Log.OptionLevelLow); // BGM

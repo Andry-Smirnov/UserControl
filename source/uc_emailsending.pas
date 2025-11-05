@@ -4,7 +4,7 @@ unit uc_emailsending;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   Classes,
@@ -20,13 +20,11 @@ type
     img: TImage;
     lbStatus: TLabel;
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var
-  UCEMailForm: TEMailForm;
+  EMailForm: TEMailForm;
 
 implementation
 

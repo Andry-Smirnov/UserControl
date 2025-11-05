@@ -6,7 +6,7 @@ unit uc_userpermissions;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFNDEF FPC}
@@ -254,9 +254,9 @@ procedure TUserPermissions.CarregaTreeviews;
 var
   I: Integer;
   TempNode: TTreeNode;
-  Temp: String;
-  Temp2: String;
-  Desc: String;
+  Temp: string;
+  Temp2: string;
+  Desc: string;
 begin
   FChangingTree := False;
   PC.ActivePage := PageMenu;

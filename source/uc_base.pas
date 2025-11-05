@@ -15,7 +15,7 @@ unit uc_base;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -415,14 +415,14 @@ type
     procedure ActionEsqueceuSenha(Sender: TObject);
   protected
     FRetry: integer;
-    // Formulários
+    // Formulï¿½rios
     FChangePasswordForm: TCustomForm;
     FLoginForm: TCustomForm;
     FSettingsForm: TCustomForm;
     // -----
 
     procedure Loaded; override;
-    // Criar Formulários
+    // Criar Formulï¿½rios
     procedure CriaFormTrocarSenha; dynamic;
     // -----
 
@@ -676,6 +676,7 @@ type
 function Decrypt(const S: ansistring; Key: word): ansistring;
 function Encrypt(const S: ansistring; Key: word): ansistring;
 function MD5Sum(strValor: string): string;
+procedure Register;
 
 { TODO -oLuiz -cUpgrade : Mudar o GetLoginName para a Unit principal }
 
@@ -693,6 +694,11 @@ uses
   uc_tools,
   uc_changeuserpassword,
   uc_userpermissions;
+
+
+procedure Register;
+begin
+end;
 
 {$IFDEF DELPHI9_UP} {$REGION 'TUSerControl'} {$ENDIF}
   { TUserControl }
@@ -829,7 +835,7 @@ begin
     begin
       if UpperCase(Owner.ClassParent.ClassName) = UpperCase('TDataModule') then
         //TODO: Translate or use ChangeLanguage function
-        raise Exception.Create( 'O Componente "TUserControl" não pode ser definido em um "TDataModulo"');
+        raise Exception.Create( 'O Componente "TUserControl" nï¿½o pode ser definido em um "TDataModulo"');
 
       if not Assigned(DataConnector) then
         raise Exception.Create(ChangeLanguage(fLanguage, 'MsgExceptConnector'));
@@ -849,7 +855,7 @@ begin
         if Owner.Components[I] is TUCSettings then
           begin
             Language := TUCSettings(Owner.Components[I]).Language;
-            // torna a linguage do UCSETTINGS como padrão
+            // torna a linguage do UCSETTINGS como padrï¿½o
             FUserSettings.BancoDados := TUCSettings(Owner.Components[I]).BancoDados;
             ApplySettings(TUCSettings(Owner.Components[I]));
           end;
@@ -1118,11 +1124,11 @@ procedure TUserControl.ActionTSBtGrava(Sender: TObject);
 var
   AuxPass: string;
 begin
-  { Pelo que eu analizei, a gravação da senha no Banco de Dados e feita criptografada
-    Qdo a criptografia e padrão, a funcao RegistraCurrentUser descriptografa a senha atual
+  { Pelo que eu analizei, a gravaï¿½ï¿½o da senha no Banco de Dados e feita criptografada
+    Qdo a criptografia e padrï¿½o, a funcao RegistraCurrentUser descriptografa a senha atual
     agora quando criptografia e MD5SUM, devemos criptografar a senha atual vinda do formulario de
     troca de senha para podemos comparar com a senha atual da classe TUCCurrentUser
-    Modificação Feita por Vicente Barros Leonel
+    Modificaï¿½ï¿½o Feita por Vicente Barros Leonel
   }
   case Self.Criptografia of
     cStandard: AuxPass := TChangeUserPasswordForm(FChangePasswordForm).EditAtu.Text;
@@ -1314,7 +1320,7 @@ end;
 
 procedure TUserControl.Log(Msg: string; Level: integer);
 begin
-  // Adicionado ao log a identificação da Aplicação
+  // Adicionado ao log a identificaï¿½ï¿½o da Aplicaï¿½ï¿½o
   if not LogControl.Active then
     Exit;
 
@@ -1401,7 +1407,7 @@ begin
       TChangeUserPasswordForm(FChangePasswordForm).ForcarTroca := True;
       FChangePasswordForm.ShowModal;
       FreeAndNil(FChangePasswordForm);
-      { Incrementa a Data de Expiração em x dias após a troca de senha }
+      { Incrementa a Data de Expiraï¿½ï¿½o em x dias apï¿½s a troca de senha }
       CurrentUser.DateExpiration := CurrentUser.DateExpiration + CurrentUser.UserDaysExpired;
     end;
 end;
@@ -1769,7 +1775,7 @@ var
   Sql: string;
   DataSet: TDataSet;
 begin
-  { Procura o campo FieldUserDaysSun na tabela de usuarios se o mesmo não existir cria }
+  { Procura o campo FieldUserDaysSun na tabela de usuarios se o mesmo nï¿½o existir cria }
   try
     Sql := Format('select * from %s', [FTableUsers.TableName]);
     DataSet := DataConnector.UCGetSQLDataset(Sql);
@@ -2238,7 +2244,7 @@ begin
           if Assigned(OnApplyRightsActionIt) then
             OnApplyRightsActionIt(Self, TAction(TActionList(ObjetoAction).Actions[I]));
         end;
-    end; // Fim das permissões de Actions
+    end; // Fim das permissï¿½es de Actions
 
 {$IFNDEF FPC}
   { .$IFDEF UCACTMANAGER }
@@ -2883,7 +2889,7 @@ begin
     Type_VarChar   := SourceSettings.Type_VarChar;
     Type_Char      := SourceSettings.Type_Char;
     Type_Int       := SourceSettings.Type_Int;
-    end;  atenção mudar aqui }
+    end;  atenï¿½ï¿½o mudar aqui }
 
   UserSettings.WindowsPosition := SourceSettings.WindowsPosition;
 end;

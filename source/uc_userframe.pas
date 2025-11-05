@@ -2,7 +2,7 @@ unit uc_userframe;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF DELPHI5_UP}
@@ -110,7 +110,7 @@ procedure TUserFrameForm.BtExcluiClick(Sender: TObject);
 var
   TempID: Integer;
   CanDelete: Boolean;
-  ErrorMsg: String;
+  ErrorMsg: string;
 begin
   if FUsersListDataSet.IsEmpty then
     Exit;
@@ -179,7 +179,7 @@ end;
 destructor TUserFrameForm.Destroy;
 begin
   // nada a destruir
-  // não destruir o FUsersListDataSet o USERCONTROL toma conta dele
+  // nï¿½o destruir o FUsersListDataSet o USERCONTROL toma conta dele
   inherited;
 end;
 
@@ -214,7 +214,7 @@ end;
 
 procedure TUserFrameForm.ActionBtPermissUserDefault;
 var
-  TempCampos, TempCamposEX: String;
+  TempCampos, TempCamposEX: string;
 begin
   UserPermissions.FTempUserID := FUsersListDataSet.FieldByName('IdUser').AsInteger;
   with FUsercontrol do

@@ -2,7 +2,7 @@ unit uc_messages;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   Classes,
@@ -15,36 +15,36 @@ uses
 type
   TUCAppMessagesMSG = class(TPersistent)
   private
-    FMsgRec_LabelDate: String;
-    FMsgsForm_BtBtForward: String;
-    Fmsgsform_btnew: String;
-    FMsgSend_GroupTo: String;
-    FMsgSend_WindowCaption: String;
-    FMsgSend_GroupMessage: String;
-    FMsgsForm_ColFrom: String;
-    FMsgsForm_BtDelete: String;
-    FMsgsForm_BtClose: String; // added by fduenas
-    FMsgRec_LabelMessage: String;
-    FMsgRec_Title: String;
-    FMsgSend_RadioAll: String;
-    FMsgSend_RadioUser: String;
-    FMsgSend_Title: String;
-    FMsgsForm_ColSubject: String;
-    FMsgRec_LabelFrom: String;
-    FMsgsForm_WindowCaption: String;
-    FMsgRec_LabelSubject: String;
-    FMsgRec_WindowCaption: String;
-    FMsgSend_BtSend: String;
-    FMsgSend_BtCancel: String;
-    FMsgsForm_BtReplay: String;
-    FMsgRec_BtClose: String;
-    FMsgSend_LabelSubject: String; // added by fduenas
-    FMsgSend_LabelMessageText: String; // added by fduenas
-    FMsgsForm_PromptDelete: String;
-    FMsgsForm_PromptDelete_WindowCaption: String; // added by fduenas
-    FMsgsForm_ColDate: String;
-    FMsgsForm_NoMessagesSelected: String; // added by fduenas
-    FMsgsForm_NoMessagesSelected_WindowCaption: String; // added by fduenas
+    FMsgRec_LabelDate: string;
+    FMsgsForm_BtBtForward: string;
+    Fmsgsform_btnew: string;
+    FMsgSend_GroupTo: string;
+    FMsgSend_WindowCaption: string;
+    FMsgSend_GroupMessage: string;
+    FMsgsForm_ColFrom: string;
+    FMsgsForm_BtDelete: string;
+    FMsgsForm_BtClose: string; // added by fduenas
+    FMsgRec_LabelMessage: string;
+    FMsgRec_Title: string;
+    FMsgSend_RadioAll: string;
+    FMsgSend_RadioUser: string;
+    FMsgSend_Title: string;
+    FMsgsForm_ColSubject: string;
+    FMsgRec_LabelFrom: string;
+    FMsgsForm_WindowCaption: string;
+    FMsgRec_LabelSubject: string;
+    FMsgRec_WindowCaption: string;
+    FMsgSend_BtSend: string;
+    FMsgSend_BtCancel: string;
+    FMsgsForm_BtReplay: string;
+    FMsgRec_BtClose: string;
+    FMsgSend_LabelSubject: string; // added by fduenas
+    FMsgSend_LabelMessageText: string; // added by fduenas
+    FMsgsForm_PromptDelete: string;
+    FMsgsForm_PromptDelete_WindowCaption: string; // added by fduenas
+    FMsgsForm_ColDate: string;
+    FMsgsForm_NoMessagesSelected: string; // added by fduenas
+    FMsgsForm_NoMessagesSelected_WindowCaption: string; // added by fduenas
   protected
   public
     constructor Create(Aowner: TComponent);
@@ -115,12 +115,12 @@ type
 
   TUCChangePassError = class(TPersistent)
   private
-    FInvalidCurrentPassword: String;
-    FNewPasswordError: String;
-    FNewEqualCurrent: String;
-    FPasswordRequired: String;
-    FMinPasswordLength: String;
-    FInvalidNewPassword: String;
+    FInvalidCurrentPassword: string;
+    FNewPasswordError: string;
+    FNewEqualCurrent: string;
+    FPasswordRequired: string;
+    FMinPasswordLength: string;
+    FInvalidNewPassword: string;
   protected
   public
     constructor Create(Aowner: TComponent);
@@ -143,17 +143,17 @@ type
 
   TUCUserCommonMSG = class(TPersistent)
   private
-    FPasswordOFF: String;
-    FPasswordChanged: String;
-    FInvalidUserPass: String;
-    FMaxLoginTry: String;
-    FAutoLogonError: String;
+    FPasswordOFF: string;
+    FPasswordChanged: string;
+    FInvalidUserPass: string;
+    FMaxLoginTry: string;
+    FAutoLogonError: string;
     FFirstMSG: TStrings;
     FChangePasswordError: TUCChangePassError;
-    FUsuarioExiste: String;
-    fPasswordExpired: String;
-    fForcaTrocaSenha: String;
-    fInactiveLogin: String;
+    FUsuarioExiste: string;
+    fPasswordExpired: string;
+    fForcaTrocaSenha: string;
+    fInactiveLogin: string;
     procedure SetFErroTrocaSenha(const Value: TUCChangePassError);
     procedure SetFFirstMSG(const Value: TStrings);
   protected
@@ -182,16 +182,16 @@ type
 
   TUCLoginFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FLabelUser: String;
-    FLabelPassword: String;
-    FBtOk: String;
-    FBtCancel: String;
+    FWindowCaption: string;
+    FLabelUser: string;
+    FLabelPassword: string;
+    FBtOk: string;
+    FBtCancel: string;
     FBottomImage: TPicture;
     FLeftImage: TPicture;
     FTopImage: TPicture;
-    fLabelTentativas: String;
-    fLabelTentativa: String;
+    fLabelTentativas: string;
+    fLabelTentativa: string;
     procedure SetFBottomImage(const Value: TPicture);
     procedure SetFLeftImage(const Value: TPicture);
     procedure SetFTopImage(const Value: TPicture);
@@ -218,19 +218,19 @@ type
 
   TUCCadUserFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FLabelDescricao: String;
-    FColNome: String;
-    FColLogin: String;
-    FColEmail: String;
-    FBtAdic: String;
-    FBtAlt: String;
-    FBtExc: String;
-    FBtAccess: String;
-    FBtPass: String;
-    FBtClose: String;
-    FConfExc: String;
-    FPromptDelete_WindowCaption: String; // added by fduenas
+    FWindowCaption: string;
+    FLabelDescricao: string;
+    FColNome: string;
+    FColLogin: string;
+    FColEmail: string;
+    FBtAdic: string;
+    FBtAlt: string;
+    FBtExc: string;
+    FBtAccess: string;
+    FBtPass: string;
+    FBtClose: string;
+    FConfExc: string;
+    FPromptDelete_WindowCaption: string; // added by fduenas
   protected
 
   public
@@ -257,27 +257,27 @@ type
 
   TUCLogControlFormMSG = class(TPersistent)
   private
-    FColAppID: String;
-    FColData: String;
-    FColNivel: String;
-    FColUsuario: String;
-    FColMensagem: String;
-    FLabelDescription: String;
-    FWindowCaption: String;
-    FLabelLevel: String;
-    FBtClose: String;
-    FConfExc: String;
-    FLabelUser: String;
-    FBtFilt: String;
-    FLabelDate: String;
-    FBtExc: String;
-    FOptionUserAll: String; // added by fduenas
-    FOptionLevelLow: String; // added by fduenas
-    FOptionLevelNormal: String; // added by fduenas
-    FOptionLevelHigh: String; // added by fduenas
-    FOptionLevelCritic: String; // added by fduenas
-    FPromptDelete_WindowCaption: String; // added by fduenas
-    FDeletePerformed: String;
+    FColAppID: string;
+    FColData: string;
+    FColNivel: string;
+    FColUsuario: string;
+    FColMensagem: string;
+    FLabelDescription: string;
+    FWindowCaption: string;
+    FLabelLevel: string;
+    FBtClose: string;
+    FConfExc: string;
+    FLabelUser: string;
+    FBtFilt: string;
+    FLabelDate: string;
+    FBtExc: string;
+    FOptionUserAll: string; // added by fduenas
+    FOptionLevelLow: string; // added by fduenas
+    FOptionLevelNormal: string; // added by fduenas
+    FOptionLevelHigh: string; // added by fduenas
+    FOptionLevelCritic: string; // added by fduenas
+    FPromptDelete_WindowCaption: string; // added by fduenas
+    FDeletePerformed: string;
   protected
 
   public
@@ -318,16 +318,16 @@ type
 
   TUCProfileUserFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FLabelDescription: String;
-    FColPerfil: String;
-    FBtAdic: String;
-    FBtAlt: String;
-    FBtExc: String;
-    FBtAcess: String;
-    FBtClose: String;
-    FConfExc: String;
-    FPromptDelete_WindowCaption: String; // added by fduenas
+    FWindowCaption: string;
+    FLabelDescription: string;
+    FColPerfil: string;
+    FBtAdic: string;
+    FBtAlt: string;
+    FBtExc: string;
+    FBtAcess: string;
+    FBtClose: string;
+    FConfExc: string;
+    FPromptDelete_WindowCaption: string; // added by fduenas
   protected
 
   public
@@ -351,22 +351,22 @@ type
 
   TUCAddUserFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FLabelAdd: String;
-    FLabelChange: String;
-    FLabelNome: String;
-    FLabelLogin: String;
-    FLabelEmail: String;
-    FCheckPriv: String;
-    FBtSave: String;
-    FBtCancelar: String;
-    FLabelPerfil: String;
-    fCheckExpira: String;
+    FWindowCaption: string;
+    FLabelAdd: string;
+    FLabelChange: string;
+    FLabelNome: string;
+    FLabelLogin: string;
+    FLabelEmail: string;
+    FCheckPriv: string;
+    FBtSave: string;
+    FBtCancelar: string;
+    FLabelPerfil: string;
+    fCheckExpira: string;
     fExpiredIn: string;
-    fDay: String;
-    fLabelStatus: String;
+    fDay: string;
+    fLabelStatus: string;
     fStatusDisabled: string;
-    fStatusActive: String;
+    fStatusActive: string;
   protected
 
   public
@@ -395,7 +395,7 @@ type
   TUCAddProfileFormMSG = class(TPersistent)
   private
     FWindowCaption, FLabelAdd, FLabelChange, FLabelName, FBtGravar,
-      FBtCancel: String;
+      FBtCancel: string;
   protected
 
   public
@@ -413,15 +413,15 @@ type
 
   TUCPermissFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FBtCancela: String;
-    FBtGrava: String;
-    FBtLock: String;
-    FBtUnlock: String;
-    FPageActions: String;
-    FPageMenu: String;
-    FLabelProfile: String;
-    FLabelUser: String;
+    FWindowCaption: string;
+    FBtCancela: string;
+    FBtGrava: string;
+    FBtLock: string;
+    FBtUnlock: string;
+    FPageActions: string;
+    FPageMenu: string;
+    FLabelProfile: string;
+    FLabelUser: string;
     fPageControls: string;
   protected
   public
@@ -443,13 +443,13 @@ type
 
   TUCTrocaSenhaFormMSG = class(TPersistent)
   private
-    FWindowCaption: String;
-    FBtCancel: String;
-    FBtSave: String;
-    FLabelConfirm: String;
-    FLabelNewPassword: String;
-    FLabelCurrentPassword: String;
-    FLabelDescription: String;
+    FWindowCaption: string;
+    FBtCancel: string;
+    FBtSave: string;
+    FLabelConfirm: string;
+    FLabelNewPassword: string;
+    FLabelCurrentPassword: string;
+    FLabelDescription: string;
   protected
 
   public
@@ -471,8 +471,8 @@ type
 
   TUCResetPassword = class(TPersistent)
   private
-    FWindowCaption: String;
-    FLabelPassword: String;
+    FWindowCaption: string;
+    FLabelPassword: string;
   protected
   public
     constructor Create(Aowner: TComponent);
@@ -485,18 +485,18 @@ type
 
   TUCCadUserLoggedMSG = Class(TPersistent)
   private
-    fBtnMessage: String;
-    fBtnRefresh: String;
-    fBtnClose: String;
-    FLabelDescricao: String;
-    fLabelCaption: String;
-    FColLogin: String;
-    FColData: String;
-    FColNome: String;
-    FColComputer: String;
-    fInputCaption: String;
-    fInputText: String;
-    fMsgSystem: String;
+    fBtnMessage: string;
+    fBtnRefresh: string;
+    fBtnClose: string;
+    FLabelDescricao: string;
+    fLabelCaption: string;
+    FColLogin: string;
+    FColData: string;
+    FColNome: string;
+    FColComputer: string;
+    fInputCaption: string;
+    fInputText: string;
+    fMsgSystem: string;
   public
     constructor Create(Aowner: TComponent);
     destructor Destroy; override;
@@ -552,7 +552,7 @@ type
     procedure SetFPermissFormMSG(const Value: TUCPermissFormMSG);
     procedure SetFTrocaSenhaFormMSG(const Value: TUCTrocaSenhaFormMSG);
   public
-    Type_Int, Type_Char, Type_VarChar, Type_Memo: String;
+    Type_Int, Type_Char, Type_VarChar, Type_Memo: string;
     constructor Create(Aowner: TComponent);
     destructor Destroy; override;
     procedure Assign(Source: TPersistent); override;

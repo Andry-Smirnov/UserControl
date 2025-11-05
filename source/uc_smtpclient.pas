@@ -1,7 +1,7 @@
 { *************************************************************
-  Author:       Stéphane Vander Clock (SVanderClock@Arkadia.com)
+  Author:       Stï¿½phane Vander Clock (SVanderClock@Arkadia.com)
 
-  Contributor   François PIETTE (http://www.overbyte.be)
+  Contributor   Franï¿½ois PIETTE (http://www.overbyte.be)
   Paul TOTH (tothpaul@free.fr - http://tothpaul.free.fr)
 
   EMail:        http://www.arkadia.com
@@ -14,7 +14,7 @@
   Support file attachement using MIME format (RFC-1521, RFC-2045)
   Support authentification (RFC-2104)
 
-  Legal issues: Copyright (C) 2005 by Stéphane Vander Clock
+  Legal issues: Copyright (C) 2005 by Stï¿½phane Vander Clock
 
   This software is provided 'as-is', without any express
   or implied warranty.  In no event will the author be
@@ -60,9 +60,9 @@
   Please send all your feedback to SVanderClock@Arkadia.com
   ************************************************************** }
 
-unit UCALSMTPClient;
+unit uc_smtpclient;
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 interface
 
@@ -110,8 +110,8 @@ type
     InstructionSupport: TALCPUInstructionSupport;
   end;
 
-  TALHandleTagfunct = function(const TagString: String; TagParams: TStrings;
-    ExtData: pointer; var Handled: Boolean): String;
+  TALHandleTagfunct = function(const TagString: string; TagParams: TStrings;
+    ExtData: pointer; var Handled: Boolean): string;
   TALMoveProc = procedure(const Source; var Dest; Count: Integer);
   TALCharPosFunct = function(Ch: char; const Str: ansistring): Integer;
   TALPosFunct = function(const SubStr: ansistring;
@@ -145,24 +145,24 @@ type
   { -------------------------------------- }
   TALSMTPClientHeader = class(TPersistent)
   private
-    fSendTo: String;
-    fSender: String;
-    fMessageID: String;
-    fbcc: String;
-    fContentTransferEncoding: String;
-    fComments: String;
-    fMIMEVersion: String;
-    fPriority: String;
-    fReplyTo: String;
-    fSubject: String;
-    fFrom: String;
-    fDate: String;
-    fDispositionNotificationTo: String;
-    fReferences: String;
-    fcc: String;
-    fContentType: String;
+    fSendTo: string;
+    fSender: string;
+    fMessageID: string;
+    fbcc: string;
+    fContentTransferEncoding: string;
+    fComments: string;
+    fMIMEVersion: string;
+    fPriority: string;
+    fReplyTo: string;
+    fSubject: string;
+    fFrom: string;
+    fDate: string;
+    fDispositionNotificationTo: string;
+    fReferences: string;
+    fcc: string;
+    fContentType: string;
     FCustomHeaders: TStrings;
-    function GetRawHeaderText: String;
+    function GetRawHeaderText: string;
     procedure SetRawHeaderText(const aRawHeaderText: String);
   protected
     procedure AssignTo(Dest: TPersistent); override;
@@ -223,32 +223,32 @@ type
     procedure Settimeout(const Value: Integer);
   protected
     procedure CheckError(Error: Boolean);
-    function SendCmd(aCmd: String; OkResponses: array of Word): String; virtual;
-    function GetResponse(OkResponses: array of Word): String;
+    function SendCmd(aCmd: string; OkResponses: array of Word): string; virtual;
+    function GetResponse(OkResponses: array of Word): string;
     function SocketWrite(var Buffer; Count: longint): longint; virtual;
     function SocketRead(var Buffer; Count: longint): longint; virtual;
   public
     constructor Create; virtual;
     destructor Destroy; override;
-    function Connect(aHost: String; APort: Integer): String; virtual;
-    function Helo: String; virtual;
-    function Ehlo: String; virtual;
-    function Auth(AUserName, APassword: String;
-      aAuthType: TAlSmtpClientAuthType): String; virtual;
-    function Vrfy(AUserName: String): String; virtual;
-    function MailFrom(aFromName: String): String; virtual;
-    function RcptTo(aRcptNameLst: TStrings): String; virtual;
-    function Data(aMailData: String): String; overload; virtual;
-    function Data(aHeader, aBody: String): String; overload; virtual;
-    function Data(aHeader: TALSMTPClientHeader; aBody: String): String;
+    function Connect(aHost: string; APort: Integer): string; virtual;
+    function Helo: string; virtual;
+    function Ehlo: string; virtual;
+    function Auth(AUserName, APassword: string;
+      aAuthType: TAlSmtpClientAuthType): string; virtual;
+    function Vrfy(AUserName: String): string; virtual;
+    function MailFrom(aFromName: String): string; virtual;
+    function RcptTo(aRcptNameLst: TStrings): string; virtual;
+    function Data(aMailData: String): string; overload; virtual;
+    function Data(aHeader, aBody: String): string; overload; virtual;
+    function Data(aHeader: TALSMTPClientHeader; aBody: String): string;
       overload; virtual;
-    function Quit: String; virtual;
-    function Rset: String; virtual;
-    procedure SendMail(aHost: String; APort: Integer; aFromName: String;
-      aRcptNameLst: TStrings; AUserName, APassword: String;
+    function Quit: string; virtual;
+    function Rset: string; virtual;
+    procedure SendMail(aHost: string; APort: Integer; aFromName: string;
+      aRcptNameLst: TStrings; AUserName, APassword: string;
       aAuthType: TAlSmtpClientAuthType; aMailData: String); overload; virtual;
-    procedure SendMail(aHost: String; APort: Integer; aFromName: String;
-      aRcptNameLst: TStrings; AUserName, APassword: String;
+    procedure SendMail(aHost: string; APort: Integer; aFromName: string;
+      aRcptNameLst: TStrings; AUserName, APassword: string;
       aAuthType: TAlSmtpClientAuthType; aHeader, aBody: String);
       overload; virtual;
     procedure Disconnect; virtual;
@@ -260,9 +260,9 @@ type
   end;
 
   { ---------------------------------------------------------------------------------------- }
-function AlSMTPClientParseEmail(FriendlyEmail: String;
-  var FriendlyName: String): String;
-function AlSMTPClientGenerateMessageID: String;
+function AlSMTPClientParseEmail(FriendlyEmail: string;
+  var FriendlyName: String): string;
+function AlSMTPClientGenerateMessageID: string;
 
 var
   ALMove: TALMoveProc;
@@ -277,7 +277,7 @@ uses
 // ***********************************************************************
 // AlFcnWinSock  Partial Unit
 // ***********************************************************************
-function ALgetLocalHostName: String;
+function ALgetLocalHostName: string;
 var
 {$IFDEF DELPHI12_UP}
   Buffer: PAnsiChar;
@@ -299,7 +299,7 @@ begin
   end;
 end;
 
-function ALHostToIP(HostName: String; var Ip: String): Boolean;
+function ALHostToIP(HostName: string; var Ip: String): Boolean;
 var
   WSAData: TWSAData;
   hostEnt: PHostEnt;
@@ -353,7 +353,7 @@ const
   CALRfc822MonthNames: array [1 .. 12] of String = ('Jan', 'Feb', 'Mar', 'Apr',
     'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
 
-function ALGMTDateTimeToRfc822Str(const aValue: TDateTime): String;
+function ALGMTDateTimeToRfc822Str(const aValue: TDateTime): string;
 var
   aDay, aMonth, aYear: Word;
 begin
@@ -364,7 +364,7 @@ begin
     aYear, FormatDateTime('hh":"nn":"ss', aValue), 'GMT']);
 end;
 
-function ALDateTimeToRfc822Str(const aValue: TDateTime): String;
+function ALDateTimeToRfc822Str(const aValue: TDateTime): string;
 
 { -------------------------------------------- }
   function InternalCalcTimeZoneBias: TDateTime;
@@ -501,7 +501,7 @@ end;
 // ALFcnMisc  Partial Unit
 // ***********************************************************************
 
-function ALMakeKeyStrByGUID: String;
+function ALMakeKeyStrByGUID: string;
 var
   aGUID: TGUID;
 begin
@@ -531,7 +531,7 @@ var
 
   { ********************************* }
   { Fast Equivalent of Delphi 7 PosEx }
-function ALPosEx(const SubStr, S: String; Offset: cardinal = 1): Integer;
+function ALPosEx(const SubStr, S: string; Offset: cardinal = 1): Integer;
 asm
   push    ebx
   push    esi
@@ -619,7 +619,7 @@ end;
 
 { *********************************** }
 { Non Case Sensitive version of PosEx }
-function ALPosExIgnoreCase(const SubStr, S: String;
+function ALPosExIgnoreCase(const SubStr, S: string;
   Offset: cardinal = 1): Integer;
 asm
   push    ebx
@@ -904,7 +904,7 @@ end;
 function ALStringReplace(const S, OldPattern, NewPattern: ansistring;
   Flags: TReplaceFlags): ansistring;
 type
-  TPosEx = function(const SubStr, S: String; Offset: cardinal = 1): Integer;
+  TPosEx = function(const SubStr, S: string; Offset: cardinal = 1): Integer;
 {$IFDEF DELPHI12_UP}
   TCharRep = procedure(var S: ansistring; const Old, New: PAnsiChar);
 {$ELSE}
@@ -1052,7 +1052,7 @@ end;
 /// /////////////////////////////////////////////////////////////
 
 { ******************************************** }
-function AlUpperCase(const S: String): String;
+function AlUpperCase(const S: String): string;
 asm
   push  ebx
   push  esi
@@ -1098,7 +1098,7 @@ asm
 end;
 
 { ******************************************** }
-function ALLowerCase(const S: String): String;
+function ALLowerCase(const S: String): string;
 asm
   push  ebx
   push  esi
@@ -1148,8 +1148,8 @@ end;
 /// ////////////////////////
 
 { ******************************************************************************** }
-function ALCopyStr(const aSourceString: String;
-  aStart, aLength: Integer): String;
+function ALCopyStr(const aSourceString: string;
+  aStart, aLength: Integer): string;
 var
   SourceStringLength: Integer;
 begin
@@ -1178,8 +1178,8 @@ var
 
   // ***********************************************************************
 
-function AlSMTPClientParseEmail(FriendlyEmail: String;
-  var FriendlyName: String): String;
+function AlSMTPClientParseEmail(FriendlyEmail: string;
+  var FriendlyName: String): string;
 var
   I, J: Integer;
   Flag: Boolean;
@@ -1251,7 +1251,7 @@ begin
 end;
 
 { ********************************************* }
-function AlSMTPClientGenerateMessageID: String;
+function AlSMTPClientGenerateMessageID: string;
 begin
   Result := ALStringReplace(ALMakeKeyStrByGUID, '-', '', [rfReplaceAll]) + '@' +
     ALgetLocalHostName;
@@ -2860,10 +2860,10 @@ begin
 end;
 
 { **************************************************** }
-function TALSMTPClientHeader.GetRawHeaderText: String;
+function TALSMTPClientHeader.GetRawHeaderText: string;
 var
   I: Integer;
-  Str: String;
+  Str: string;
 begin
   Result := '';
   if Trim(fFrom) <> '' then
@@ -2923,10 +2923,10 @@ var
   aRawHeaderLst: TStringList;
 
   { ------------------------------------- }
-  function AlG001(aName: String): String;
+  function AlG001(aName: String): string;
   var
     I: Integer;
-    Str: String;
+    Str: string;
   begin
     I := aRawHeaderLst.IndexOfName(aName);
     if I >= 0 then
@@ -2949,7 +2949,7 @@ var
   end;
 
 var
-  Str1, Str2: String;
+  Str1, Str2: string;
   J: Integer;
 begin
   aRawHeaderLst := TStringList.Create;
@@ -3031,7 +3031,7 @@ end;
 procedure TAlSmtpClient.CheckError(Error: Boolean);
 var
   ErrCode: Integer;
-  S: String;
+  S: string;
 begin
   ErrCode := WSAGetLastError;
   if Error and (ErrCode <> 0) then
@@ -3138,13 +3138,13 @@ begin
 end;
 
 { ******************************************************************** }
-function TAlSmtpClient.Connect(aHost: String; APort: Integer): String;
+function TAlSmtpClient.Connect(aHost: string; APort: Integer): string;
 
 { --------------------------------------------- }
-  procedure CallServer(Server: String; Port: Word);
+  procedure CallServer(Server: string; Port: Word);
   var
     SockAddr: Sockaddr_in;
-    Ip: String;
+    Ip: string;
   begin
     FSocketDescriptor := Socket(AF_INET, SOCK_STREAM, IPPROTO_IP);
     CheckError(FSocketDescriptor = INVALID_SOCKET);
@@ -3229,7 +3229,7 @@ function TAlSmtpClient.GetAuthTypeFromEhloResponse(EhloResponse: String)
   : TAlSmtpClientAuthTypeSet;
 var
   k, J: Integer;
-  Str1, Str2: String;
+  Str1, Str2: string;
   Lst: TStringList;
 begin
   Result := [];
@@ -3283,13 +3283,13 @@ end;
   This command and an OK reply to it confirm that both the sender-SMTP and the receiver-SMTP
   are in the initial state, that is, there is no transaction in progress and all state tables
   and buffers are cleared. }
-function TAlSmtpClient.Helo: String;
+function TAlSmtpClient.Helo: string;
 begin
   Result := SendCmd('HELO ' + ALgetLocalHostName, [250]);
 end;
 
 { ********************************** }
-function TAlSmtpClient.Ehlo: String;
+function TAlSmtpClient.Ehlo: string;
 begin
   Result := SendCmd('EHLO ' + ALgetLocalHostName, [250]);
   FAuthTypesSupported := GetAuthTypeFromEhloResponse(Result);
@@ -3308,7 +3308,7 @@ end;
   messages (for example, undeliverable mail notifications) the reverse-path may be null.
   This command clears the reverse-path buffer, the forward-path buffer, and the mail data
   buffer; and inserts the reverse-path information from this command into the reverse-path buffer. }
-function TAlSmtpClient.MailFrom(aFromName: String): String;
+function TAlSmtpClient.MailFrom(aFromName: String): string;
 begin
   aFromName := Trim(aFromName);
   if aFromName = '' then
@@ -3321,13 +3321,13 @@ begin
 end;
 
 { ************************************************************************************************** }
-function TAlSmtpClient.Auth(AUserName, APassword: String;
-  aAuthType: TAlSmtpClientAuthType): String;
+function TAlSmtpClient.Auth(AUserName, APassword: string;
+  aAuthType: TAlSmtpClientAuthType): string;
 
 { ----------------------------------- }
-  function InternalDoAuthPlain: String;
+  function InternalDoAuthPlain: string;
   var
-    aAuthPlain: String;
+    aAuthPlain: string;
   begin
     if AUserName = '' then
       raise Exception.Create('UserName is empty');
@@ -3341,7 +3341,7 @@ function TAlSmtpClient.Auth(AUserName, APassword: String;
   end;
 
 { ----------------------------------- }
-  function InternalDoAuthLogin: String;
+  function InternalDoAuthLogin: string;
   begin
     if AUserName = '' then
       raise Exception.Create('UserName is empty');
@@ -3395,10 +3395,10 @@ end;
 { ************************************************************************* }
 { This command is used to identify an individual recipient of the mail data;
   multiple recipients are specified by multiple use of this command. }
-function TAlSmtpClient.RcptTo(aRcptNameLst: TStrings): String;
+function TAlSmtpClient.RcptTo(aRcptNameLst: TStrings): string;
 var
   I: Integer;
-  aRcptNameValue: String;
+  aRcptNameValue: string;
 begin
   Result := '';
   if aRcptNameLst.Count <= 0 then
@@ -3446,7 +3446,7 @@ end;
   message to the originator of the message. Either a single notification which lists all of the recipients that failed
   to get the message, or separate notification messages must be sent for each failed recipient. All undeliverable mail
   notification messages are sent using the MAIL command (even if they result from processing a SEND, SOML, or SAML command). }
-function TAlSmtpClient.Data(aMailData: String): String;
+function TAlSmtpClient.Data(aMailData: String): string;
 var
   I: Integer;
 begin
@@ -3466,14 +3466,14 @@ begin
 end;
 
 { ********************************************************** }
-function TAlSmtpClient.Data(aHeader, aBody: String): String;
+function TAlSmtpClient.Data(aHeader, aBody: String): string;
 begin
   Result := Data(Trim(aHeader) + #13#10#13#10 + aBody);
 end;
 
 { ****************************************************************************** }
 function TAlSmtpClient.Data(aHeader: TALSMTPClientHeader;
-  aBody: String): String;
+  aBody: String): string;
 begin
   Result := Data(aHeader.GetRawHeaderText, aBody);
 end;
@@ -3490,7 +3490,7 @@ end;
   transaction, but not undoing any previously completed transaction),
   the sender should act as if the command or transaction in progress had
   received a temporary error (4xx). }
-function TAlSmtpClient.Quit: String;
+function TAlSmtpClient.Quit: string;
 begin
   Result := SendCmd('QUIT', [221]);
   Disconnect;
@@ -3501,7 +3501,7 @@ end;
   If it is a user name, the full name of the user (if known) and the fully
   specified mailbox are returned. This command has no effect on any of the
   reverse-path buffer, the forward-path buffer, or the mail data buffer. }
-function TAlSmtpClient.Vrfy(AUserName: String): String;
+function TAlSmtpClient.Vrfy(AUserName: String): string;
 begin
   Result := SendCmd('VRFY ' + AUserName, [250]);
 end;
@@ -3511,14 +3511,14 @@ end;
   be aborted. Any stored sender, recipients, and mail data must be
   discarded, and all buffers and state tables cleared. The receiver
   must send an OK reply. }
-function TAlSmtpClient.Rset: String;
+function TAlSmtpClient.Rset: string;
 begin
   Result := SendCmd('RSET', [250]);
 end;
 
 { ********************************************* }
-procedure TAlSmtpClient.SendMail(aHost: String; APort: Integer;
-  aFromName: String; aRcptNameLst: TStrings; AUserName, APassword: String;
+procedure TAlSmtpClient.SendMail(aHost: string; APort: Integer;
+  aFromName: string; aRcptNameLst: TStrings; AUserName, APassword: string;
   aAuthType: TAlSmtpClientAuthType; aMailData: String);
 begin
   if Fconnected then
@@ -3544,8 +3544,8 @@ begin
 end;
 
 { ********************************************* }
-procedure TAlSmtpClient.SendMail(aHost: String; APort: Integer;
-  aFromName: String; aRcptNameLst: TStrings; AUserName, APassword: String;
+procedure TAlSmtpClient.SendMail(aHost: string; APort: Integer;
+  aFromName: string; aRcptNameLst: TStrings; AUserName, APassword: string;
   aAuthType: TAlSmtpClientAuthType; aHeader, aBody: String);
 begin
   if Fconnected then
@@ -3605,8 +3605,8 @@ end;
   NOOP <CRLF>
   QUIT <CRLF>
   TURN <CRLF> }
-function TAlSmtpClient.SendCmd(aCmd: String;
-  OkResponses: array of Word): String;
+function TAlSmtpClient.SendCmd(aCmd: string;
+  OkResponses: array of Word): string;
 var
   P: PChar;
   L: Integer;
@@ -3645,7 +3645,7 @@ end;
   Only the EXPN and HELP commands are expected to result in multiline replies
   in normal circumstances, however multiline replies are allowed for any
   command. }
-function TAlSmtpClient.GetResponse(OkResponses: array of Word): String;
+function TAlSmtpClient.GetResponse(OkResponses: array of Word): string;
 
 { ---------------------------------------------- }
   function Internalstpblk(PValue: PChar): PChar;
@@ -3696,9 +3696,9 @@ function TAlSmtpClient.GetResponse(OkResponses: array of Word): String;
   end;
 
 var
-  aBuffStr: String;
+  aBuffStr: string;
   aBuffStrLength: Integer;
-  aResponse: String;
+  aResponse: string;
   aStatusCode: Integer;
   aGoodResponse: Boolean;
   ALst: TStringList;

@@ -14,7 +14,7 @@ unit uc_mail;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   Classes,
@@ -175,9 +175,9 @@ begin
   inherited;
   UserAdded := TUCMailMessage.Create(Self);
   UserAdded.FLines.Add
-  ('<html> <head> <title>Inclusão de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
+  ('<html> <head> <title>Inclusï¿½o de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
     + #13#10 + 'margin-top: 0px; 	margin-right: 0px; 	margin-bottom: 0px; } --> </style></head>'
-    + #13#10 + '<body> <p>Atenção: <br>Senha criada com sucesso:</p>' +
+    + #13#10 + '<body> <p>Atenï¿½ï¿½o: <br>Senha criada com sucesso:</p>' +
     #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' +
     #13#10 + '<tr> ' + #13#10 +
     ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' +
@@ -192,14 +192,14 @@ begin
     #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' +
     #13#10 + '<p>Atenciosamente,</p>' + #13#10 +
     '<p>Administrador do sistema</p></body></html>');
-  UserAdded.FTitle := 'Inclusão de usuário';
+  UserAdded.FTitle := 'Inclusï¿½o de usuï¿½rio';
 
   SendEmailUserChanged := TUCMailMessage.Create(Self);
   SendEmailUserChanged.FLines.Add
-  ('<html> <head> <title>Alteração de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
+  ('<html> <head> <title>Alteraï¿½ï¿½o de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
     + #13#10 + 'margin-top: 0px; 	margin-right: 0px; 	margin-bottom: 0px; } --> </style></head>'
     + #13#10 +
-    '<body> <p>Atenção: <br> Você solicitou uma alteração de senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
+    '<body> <p>Atenï¿½ï¿½o: <br> Vocï¿½ solicitou uma alteraï¿½ï¿½o de senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
     + #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' +
     #13#10 + '<tr> ' + #13#10 +
     ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' +
@@ -214,14 +214,14 @@ begin
     #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' +
     #13#10 + '<p>Atenciosamente,</p>' + #13#10 +
     '<p>Administrador do sistema</p></body></html>');
-  SendEmailUserChanged.FTitle := 'Alteração de usuário';
+  SendEmailUserChanged.FTitle := 'Alteraï¿½ï¿½o de usuï¿½rio';
 
   PasswordForgotten := TUCMPasswordForgotten.Create(Self);
   PasswordForgotten.FLines.Add
-  ('<html> <head> <title>Alteração de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
+  ('<html> <head> <title>Alteraï¿½ï¿½o de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
     + #13#10 + 'margin-top: 0px; 	margin-right: 0px; 	margin-bottom: 0px; } --> </style></head>'
     + #13#10 +
-    '<body> <p>Atenção: <br> Você solicitou um lembrete de senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
+    '<body> <p>Atenï¿½ï¿½o: <br> Vocï¿½ solicitou um lembrete de senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
     + #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' +
     #13#10 + '<tr> ' + #13#10 +
     ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' +
@@ -236,22 +236,22 @@ begin
     #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' +
     #13#10 + '<p>Atenciosamente,</p>' + #13#10 +
     '<p>Administrador do sistema</p></body></html>');
-  PasswordForgotten.FTitle := 'Alteração de Senha';
+  PasswordForgotten.FTitle := 'Alteraï¿½ï¿½o de Senha';
 
   PasswordForced := TUCMailMessage.Create(Self);
   PasswordForced.FLines.Add
-  ('<html> <head> <title>Alteração de Senha Forçada</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
+  ('<html> <head> <title>Alteraï¿½ï¿½o de Senha Forï¿½ada</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
     + #13#10 + 'margin-top: 0px; 	margin-right: 0px; 	margin-bottom: 0px; } --> </style></head>'
     + #13#10 +
-    '<body> <p>Atenção: <br> Você ou um administrador forçou a troca de sua senha do sistema, sua senha foi alterada para a senha abaixo:</p>' + #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' + #13#10 + '<tr> ' + #13#10 + ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' + #13#10 + '<td>:nome</td> ' + #13#10 + '</tr> ' + #13#10 + '<tr>' + '  <td align="right"><strong>Login ..:&nbsp;</strong></td>' + #13#10 + '  <td>:login</td>' + #13#10 + '</tr>' + #13#10 + '  <tr> ' + #13#10 + '    <td align="right"><strong>Nova Senha ..:&nbsp;</strong></td>' + #13#10 + '    <td>:senha</td>' + #13#10 + '  </tr> ' + #13#10 + '<tr> ' + #13#10 + '<td align="right"><strong>Email ..:&nbsp;</strong></td>' + #13#10 + '<td>:email</td>' + #13#10 + '</tr> ' + #13#10 + '<tr>' + #13#10 + '<td align="right"><strong>Perfil ..:&nbsp;</strong></td>' + #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' + #13#10 + '<p>Atenciosamente,</p>' + #13#10 + '<p>Administrador do sistema</p></body></html>');
-  PasswordForced.FTitle := 'Troca de senha forçada';
+    '<body> <p>Atenï¿½ï¿½o: <br> Vocï¿½ ou um administrador forï¿½ou a troca de sua senha do sistema, sua senha foi alterada para a senha abaixo:</p>' + #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' + #13#10 + '<tr> ' + #13#10 + ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' + #13#10 + '<td>:nome</td> ' + #13#10 + '</tr> ' + #13#10 + '<tr>' + '  <td align="right"><strong>Login ..:&nbsp;</strong></td>' + #13#10 + '  <td>:login</td>' + #13#10 + '</tr>' + #13#10 + '  <tr> ' + #13#10 + '    <td align="right"><strong>Nova Senha ..:&nbsp;</strong></td>' + #13#10 + '    <td>:senha</td>' + #13#10 + '  </tr> ' + #13#10 + '<tr> ' + #13#10 + '<td align="right"><strong>Email ..:&nbsp;</strong></td>' + #13#10 + '<td>:email</td>' + #13#10 + '</tr> ' + #13#10 + '<tr>' + #13#10 + '<td align="right"><strong>Perfil ..:&nbsp;</strong></td>' + #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' + #13#10 + '<p>Atenciosamente,</p>' + #13#10 + '<p>Administrador do sistema</p></body></html>');
+  PasswordForced.FTitle := 'Troca de senha forï¿½ada';
 
   PasswordChanged := TUCMailMessage.Create(Self);
   PasswordChanged.FLines.Add
-  ('<html> <head> <title>Alteração de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
+  ('<html> <head> <title>Alteraï¿½ï¿½o de Senha</title> <style type="text/css"> <!-- body { 	margin-left: 0px; '
     + #13#10 + 'margin-top: 0px; 	margin-right: 0px; 	margin-bottom: 0px; } --> </style></head>'
     + #13#10 +
-    '<body> <p>Atenção: <br> Você alterou sua senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
+    '<body> <p>Atenï¿½ï¿½o: <br> Vocï¿½ alterou sua senha do sistema, sua senha foi alterada para a senha abaixo:</p>'
     + #13#10 + '<table width="100%" border="0" cellspacing="2" cellpadding="0"> ' +
     #13#10 + '<tr> ' + #13#10 +
     ' <td width="10%" align="right"><strong>Nome ..:&nbsp;</strong></td>' +
@@ -266,7 +266,7 @@ begin
     #13#10 + '<td>:perfil</td> ' + #13#10 + '</tr>' + #13#10 + '</table>' +
     #13#10 + '<p>Atenciosamente,</p>' + #13#10 +
     '<p>Administrador do sistema</p></body></html>');
-  PasswordChanged.FTitle := 'Alteração de senha';
+  PasswordChanged.FTitle := 'Alteraï¿½ï¿½o de senha';
 
   {$IFNDEF FPC}
   fAuthType := alsmtpClientAuthPlain;
@@ -329,10 +329,10 @@ end;
 
 procedure TMailUserControl.onStatus(Status: string);
 begin
-  if not Assigned(UCEMailForm) then
+  if not Assigned(EMailForm) then
     Exit;
-  UCEMailForm.lbStatus.Caption := Status;
-  UCEMailForm.Update;
+  EMailForm.lbStatus.Caption := Status;
+  EMailForm.Update;
 end;
 
 function TMailUserControl.SendEmailTp(Name, Login, Password, Email, Profile: string;
@@ -363,10 +363,10 @@ begin
 
   try
     try
-      UCEMailForm := TEMailForm.Create(Self);
-      UCEMailForm.lbStatus.Caption := '';
-      UCEMailForm.Show;
-      UCEMailForm.Update;
+      EMailForm := TEMailForm.Create(Self);
+      EMailForm.lbStatus.Caption := '';
+      EMailForm.Show;
+      EMailForm.Update;
 
 {$IFNDEF FPC}
       MailMsg.SendMail(ServidorSMTP, FPorta, EmailRemetente, MailRecipients,
@@ -374,13 +374,13 @@ begin
         ParseMailMSG(Nome, Login, USenha, Email, Perfil, UCMSG.Mensagem.Text));
 {$ENDIF}
 
-      UCEMailForm.Update;
+      EMailForm.Update;
       Result := True;
     except
       on e: Exception do
         begin
           Beep;
-          UCEMailForm.Close;
+          EMailForm.Close;
           MessageDlg(e.Message, mtWarning, [mbOK], 0);
           raise;
         end;
@@ -391,7 +391,7 @@ begin
     FreeAndNil(MailHeader);
 {$ENDIF}
     FreeAndNil(MailRecipients);
-    FreeAndNil(UCEMailForm);
+    FreeAndNil(EMailForm);
   end;
 end;
 
@@ -410,7 +410,7 @@ begin
             MessageDlg(PasswordForgotten.MessageEmailSent, mtInformation, [mbOK], 0);
           end
         else
-          MessageDlg('Não foi possivel enviar nova senha', mtInformation, [mbOK], 0);
+          MessageDlg('Nï¿½o foi possivel enviar nova senha', mtInformation, [mbOK], 0);
       except
       end;
     end;

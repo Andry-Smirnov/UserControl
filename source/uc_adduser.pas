@@ -4,7 +4,7 @@ unit uc_adduser;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -104,10 +104,10 @@ end;
 
 procedure TAddUserForm.btGravarClick(Sender: TObject);
 var
-  vNovaSenha: String;
-  vNome: String;
-  vLogin: String;
-  vEmail: String;
+  vNovaSenha: string;
+  vNome: string;
+  vLogin: string;
+  vEmail: string;
   vUserExpired: Integer;
   vPerfil: Integer;
   vPrivilegiado: Boolean;
@@ -210,7 +210,7 @@ end;
 function TAddUserForm.GetNewIdUser: Integer;
 var
   DataSet: TDataSet;
-  SQLStmt: String;
+  SQLStmt: string;
 begin
   with FUserControl do
   begin

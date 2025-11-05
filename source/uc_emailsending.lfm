@@ -1,35 +1,35 @@
-object UCEMailForm: TUCEMailForm
+object EMailForm: TEMailForm
   Left = 450
+  Height = 34
   Top = 464
+  Width = 303
   BorderStyle = bsDialog
-  Caption = 'Envio de Email'
+  Caption = 'Email Sending'
   ClientHeight = 34
   ClientWidth = 303
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
-  Font.Style = []
   FormStyle = fsStayOnTop
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
-  TextHeight = 13
+  LCLVersion = '4.2.0.0'
   object Panel1: TPanel
     Left = 0
+    Height = 34
     Top = 0
     Width = 303
-    Height = 34
     Align = alClient
     BevelOuter = bvLowered
+    ClientHeight = 34
+    ClientWidth = 303
     Color = clWhite
+    ParentBackground = False
+    ParentColor = False
     TabOrder = 0
     object img: TImage
       Left = 8
+      Height = 28
       Top = 3
       Width = 28
-      Height = 28
       AutoSize = True
       Picture.Data = {
         07544269746D6170760C0000424D760C00000000000036000000280000001C00
@@ -132,20 +132,15 @@ object UCEMailForm: TUCEMailForm
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00C7B2A300C7B2A300C7B2A300C7B2
         A300C7B2A300C7B2A300C7B2A300C7B2A300B7A2930069473100FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-        FF00}
+        FF00
+      }
     end
     object lbStatus: TLabel
       Left = 48
+      Height = 15
       Top = 14
-      Width = 66
-      Height = 14
+      Width = 64
       Caption = 'Status email'
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentFont = False
     end
   end
 end

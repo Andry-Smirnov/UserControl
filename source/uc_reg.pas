@@ -2,7 +2,7 @@ unit uc_reg;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   Classes,
@@ -25,27 +25,27 @@ type
   TUCComponentsVarProperty = class(TStringProperty)
     function GetAttributes: TPropertyAttributes; override;
     procedure Edit; override;
-    function GetValue: String; override;
+    function GetValue: string; override;
   end;
 
   TUCControlsEditor = class(TComponentEditor)
     procedure Edit; override;
     procedure ExecuteVerb(Index: Integer); override;
-    function GetVerb(Index: Integer): String; override;
+    function GetVerb(Index: Integer): string; override;
     function GetVerbCount: Integer; override;
   end;
 
   TUserControlEditor = class(TComponentEditor)
     procedure Edit; override;
     procedure ExecuteVerb(Index: Integer); override;
-    function GetVerb(Index: Integer): String; override;
+    function GetVerb(Index: Integer): string; override;
     function GetVerbCount: Integer; override;
   end;
 
   TUCAboutVarProperty = class(TStringProperty)
     function GetAttributes: TPropertyAttributes; override;
     procedure Edit; override;
-    function GetValue: String; override;
+    function GetValue: string; override;
   end;
 
 procedure Register;
@@ -105,7 +105,7 @@ begin
   Result := [paDialog, paReadOnly];
 end;
 
-function TUCComponentsVarProperty.GetValue: String;
+function TUCComponentsVarProperty.GetValue: string;
 begin
   Result := 'Components...';
 end;
@@ -126,7 +126,7 @@ begin
   Result := [paDialog, paReadOnly];
 end;
 
-function TUCAboutVarProperty.GetValue: String;
+function TUCAboutVarProperty.GetValue: string;
 begin
   Result := 'Version ' + UCVersion;
 end;
@@ -141,11 +141,11 @@ var
   Formulario: TUCEditorForm;
   UserControl: TUserControl;
   Controle_Action, Controle_MainMenu, Controle_ActionManager,
-    Controle_ActionMainMenuBar: String;
-  UserActionMenuItem: String;
-  UserProfileActionMenuItem: String;
-  LogControlActionMeuItem: String;
-  UserPasswordChangeActionMenuItem: String;
+    Controle_ActionMainMenuBar: string;
+  UserActionMenuItem: string;
+  UserProfileActionMenuItem: string;
+  LogControlActionMeuItem: string;
+  UserPasswordChangeActionMenuItem: string;
   FormularioDono: TForm;
 begin
   UserControl := Componente;
@@ -301,7 +301,7 @@ begin
     begin
       //TODO: Translate
       MessageDlg('A propriedade UserControl tem que ser informada e o componente '
-        + #13 + #10 + 'tem que estar visível!', mtInformation, [mbOK], 0);
+        + #13 + #10 + 'tem que estar visï¿½vel!', mtInformation, [mbOK], 0);
       Exit;
     end;
 
@@ -326,7 +326,7 @@ begin
 
   if FModulo = nil then
   begin
-    ShowMessage('Módulo ' + FUCControl.UserControl.Owner.Name + ' não encontrado!');
+    ShowMessage('Mï¿½dulo ' + FUCControl.UserControl.Owner.Name + ' nï¿½o encontrado!');
     Exit;
   end
   else
@@ -355,7 +355,7 @@ begin
   Edit;
 end;
 
-function TUCControlsEditor.GetVerb(Index: Integer): String;
+function TUCControlsEditor.GetVerb(Index: Integer): string;
 begin
   //TODO: Translate
   //Result := '&Selecionar Componentes...';
@@ -379,7 +379,7 @@ begin
   Edit;
 end;
 
-function TUserControlEditor.GetVerb(Index: Integer): String;
+function TUserControlEditor.GetVerb(Index: Integer): string;
 begin
   //TODO: Translate
   //Result := 'Configurar...';

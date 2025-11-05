@@ -4,7 +4,7 @@ unit uc_systemmessage;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}
@@ -100,7 +100,7 @@ begin
   FreeAndNil(EnvMsgForm);
 end;
 
-function FmtDtHr(dt: String): String;
+function FmtDtHr(dt: String): string;
 begin
   Result := Copy(dt, 7, 2) + '/' + Copy(dt, 5, 2) + '/' + Copy(dt, 1, 4) + ' ' +
     Copy(dt, 9, 2) + ':' + Copy(dt, 11, 2);

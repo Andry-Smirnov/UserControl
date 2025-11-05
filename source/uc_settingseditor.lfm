@@ -1,7 +1,7 @@
 object UCEditorForm: TUCEditorForm
-  Left = 237
+  Left = 680
   Height = 524
-  Top = 128
+  Top = 233
   Width = 594
   BorderStyle = bsDialog
   Caption = 'Настройки UserControl'
@@ -10,11 +10,10 @@ object UCEditorForm: TUCEditorForm
   Color = clBtnFace
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Position = poMainFormCenter
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
-  Position = poMainFormCenter
-  LCLVersion = '3.7.0.0'
   object pnlBotoes: TPanel
     Left = 0
     Height = 45
@@ -31,8 +30,8 @@ object UCEditorForm: TUCEditorForm
       Height = 25
       Top = 5
       Width = 84
+      Caption = 'OK'
       Kind = bkOK
-      NumGlyphs = 2
       TabOrder = 0
     end
     object btnClose: TBitBtn
@@ -41,30 +40,6 @@ object UCEditorForm: TUCEditorForm
       Top = 5
       Width = 87
       Caption = '&Закрыть'
-      Glyph.Data = {
-        B6020000424DB602000000000000B60100002800000010000000100000000100
-        08000000000000010000120B0000120B0000600000006000000000000000FFFF
-        FF00FF00FF00C76A6D00CC6E7100D0727500FBDDDE0069333400D2686900D06A
-        6B00D56D6E00DE737400DA727300D7707100D56F7000E0777800DF777800DB75
-        7600DA747500C3686900C66A6B00DF797A00E57D7E00E07A7B00E37D7E00D374
-        7600E9818200E57F8000EA828300E6808100F0878800EE868700F58C8D00F48C
-        8D00F28B8C00DC7F8000FA919200F9909200F48E8F00F8929300F9939400FE97
-        9800FD979800FC969700FF999A00E3888900FF9A9B00FE999A00FF9B9C00EB8F
-        9000E78C8D00E98E8F00FF9D9E00FF9FA000DA888A00D7868700D8888A00EC96
-        9700FEA2A300F0999A00B0717200FCAFB000FABCBD00F9C5C600FDDCDD00B966
-        6600BB686800E0858500DA8888009A666600FBF0D200FDF3D400FFF5D800FDFC
-        DA00FDFCDC00FFFFDD00FFFFDE00FFFFDF00FFFFE000ECFDD400B8E1AC006BDC
-        89003DC2640042C468005DD5800039C5650046D4730024CB600029CC630029CB
-        630030CD67002FCA640033CB670019CB5B0020CA5E0025CF6300020202020202
-        0245070202020202020202020202454541420702020202020202020245451409
-        081307454545454545020202450B0D0E0A03073A3D3E3F3F45020202450F1112
-        0C0407555F585D3F4502020245161715100507535A5C573F45020202451C1B18
-        1D190752595B5E3F45020202451E1A39063807505154563F4502020245201F3B
-        403607484E4C4F3F4502020245242622212307474D4B4E3F4502020245292827
-        254307474D4B4D3F4502020245302A2B292D07474D4B4D3F4502020245352E2C
-        2E3207474D4B4D3F450202024545332F343107464A494A3F450202020202453C
-        3744074545454545450202020202020245450702020202020202
-      }
       TabOrder = 1
     end
   end
@@ -92,7 +67,6 @@ object UCEditorForm: TUCEditorForm
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -16
-      Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
@@ -388,91 +362,98 @@ object UCEditorForm: TUCEditorForm
       Height = 406
       Top = 0
       Width = 594
-      ActivePage = tabPrincipal
+      ActivePage = tabLogin
       Align = alClient
       Style = tsFlatButtons
-      TabIndex = 0
+      TabIndex = 6
       TabOrder = 0
       object tabPrincipal: TTabSheet
         Caption = 'Principal'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         object Panel5: TPanel
           Left = 0
-          Height = 370
+          Height = 377
           Top = 0
-          Width = 588
+          Width = 586
           Align = alClient
           BevelOuter = bvNone
-          ClientHeight = 370
-          ClientWidth = 588
+          ClientHeight = 377
+          ClientWidth = 586
           Font.Color = clWindowText
           Font.Height = -11
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
           object Label5: TLabel
-            Left = 62
+            Left = 49
             Height = 13
-            Top = 18
-            Width = 127
-            Caption = 'Identificaзгo Programa :'
+            Top = 16
+            Width = 118
+            Caption = 'Program Identification:'
           end
           object Label6: TLabel
-            Left = 45
+            Left = 33
             Height = 13
-            Top = 274
-            Width = 143
-            Caption = 'Tabela de Usuarios/Perfis : '
+            Top = 271
+            Width = 134
+            Alignment = taRightJustify
+            Caption = 'Tabela de Usuarios/Perfis: '
+            ParentBidiMode = False
           end
           object Label7: TLabel
-            Left = 67
+            Left = 61
             Height = 13
-            Top = 211
-            Width = 120
-            Caption = 'Tabela de Permissхes :'
+            Top = 206
+            Width = 106
+            Alignment = taRightJustify
+            Caption = 'Table of Permissions:'
+            ParentBidiMode = False
           end
           object Label29: TLabel
-            Left = 118
+            Left = 102
             Height = 13
-            Top = 105
-            Width = 69
+            Top = 102
+            Width = 65
             Alignment = taRightJustify
-            Caption = 'Criptografia :'
+            Caption = 'Criptografia:'
+            ParentBidiMode = False
           end
           object Label30: TLabel
-            Left = 114
+            Left = 106
             Height = 13
-            Top = 140
-            Width = 69
+            Top = 136
+            Width = 61
             Alignment = taRightJustify
-            Caption = 'Encrypt Key :'
+            Caption = 'Encrypt Key:'
+            ParentBidiMode = False
           end
           object Label32: TLabel
-            Left = 115
+            Left = 102
             Height = 13
-            Top = 176
-            Width = 68
+            Top = 171
+            Width = 65
             Alignment = taRightJustify
-            Caption = 'Login Mode :'
+            Caption = 'Login Mode:'
+            ParentBidiMode = False
           end
           object edtApplicationID: TEdit
             Left = 180
-            Height = 19
+            Height = 21
             Top = 15
             Width = 220
             TabOrder = 0
           end
           object edtTableUsers: TEdit
             Left = 180
-            Height = 19
+            Height = 21
             Top = 266
             Width = 220
             TabOrder = 1
           end
           object edtTableRights: TEdit
             Left = 180
-            Height = 19
+            Height = 21
             Top = 203
             Width = 220
             TabOrder = 2
@@ -480,7 +461,7 @@ object UCEditorForm: TUCEditorForm
           end
           object edtTabelaPermissoesEX: TEdit
             Left = 180
-            Height = 19
+            Height = 21
             Top = 231
             Width = 220
             Enabled = False
@@ -489,10 +470,10 @@ object UCEditorForm: TUCEditorForm
           end
           object ckAutoStart: TCheckBox
             Left = 180
-            Height = 18
+            Height = 17
             Top = 42
-            Width = 153
-            Caption = 'Iniciar Automaticamente'
+            Width = 114
+            Caption = 'Start Automatically'
             TabOrder = 4
           end
           object btnTabelasPadrao: TButton
@@ -506,18 +487,18 @@ object UCEditorForm: TUCEditorForm
           end
           object ckValidationKey: TCheckBox
             Left = 180
-            Height = 18
+            Height = 17
             Top = 69
-            Width = 130
-            Caption = 'CheckValidationKey'
+            Width = 125
+            Caption = 'Check Validation Key'
             TabOrder = 6
           end
           object cbCriptografia: TComboBox
             Left = 180
-            Height = 20
+            Height = 21
             Top = 97
             Width = 220
-            ItemHeight = 26
+            ItemHeight = 13
             Items.Strings = (
               'cPadrao'
               'cMD5'
@@ -527,10 +508,10 @@ object UCEditorForm: TUCEditorForm
           end
           object cbLoginMode: TComboBox
             Left = 180
-            Height = 20
+            Height = 21
             Top = 168
             Width = 220
-            ItemHeight = 26
+            ItemHeight = 13
             Items.Strings = (
               'lmActive'
               'lmPassive'
@@ -544,15 +525,15 @@ object UCEditorForm: TUCEditorForm
             Top = 7
             Width = 113
             Caption = 'Not Allowed Items'
-            ClientHeight = 51
-            ClientWidth = 103
+            ClientHeight = 60
+            ClientWidth = 109
             ParentBackground = False
             TabOrder = 9
             object ckActionVisible: TCheckBox
               Left = 10
-              Height = 18
+              Height = 17
               Top = 10
-              Width = 98
+              Width = 88
               Caption = 'Action Visible'
               Checked = True
               State = cbChecked
@@ -560,9 +541,9 @@ object UCEditorForm: TUCEditorForm
             end
             object ckMenuVisible: TCheckBox
               Left = 10
-              Height = 18
+              Height = 17
               Top = 33
-              Width = 94
+              Width = 85
               Caption = 'Menu Visible'
               Checked = True
               State = cbChecked
@@ -571,7 +552,7 @@ object UCEditorForm: TUCEditorForm
           end
           object spedtEncryptKey: TSpinEdit
             Left = 180
-            Height = 19
+            Height = 21
             Top = 131
             Width = 220
             TabOrder = 10
@@ -580,14 +561,14 @@ object UCEditorForm: TUCEditorForm
       end
       object tabControlRights: TTabSheet
         Caption = 'Control Rights'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 6
         object Label33: TLabel
           Left = 179
           Height = 13
           Top = 117
-          Width = 59
+          Width = 56
           Alignment = taRightJustify
           Caption = 'ActionList :'
         end
@@ -603,7 +584,7 @@ object UCEditorForm: TUCEditorForm
           Left = 153
           Height = 13
           Top = 202
-          Width = 86
+          Width = 85
           Alignment = taRightJustify
           Caption = 'ActionManager :'
         end
@@ -611,7 +592,7 @@ object UCEditorForm: TUCEditorForm
           Left = 175
           Height = 13
           Top = 245
-          Width = 61
+          Width = 62
           Alignment = taRightJustify
           Caption = 'MainMenu :'
         end
@@ -828,20 +809,20 @@ object UCEditorForm: TUCEditorForm
         end
         object cbActionList: TComboBox
           Left = 237
-          Height = 20
+          Height = 21
           Top = 113
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboRightsChange
         end
         object cbActionMainMenuBar: TComboBox
           Left = 237
-          Height = 20
+          Height = 21
           Top = 155
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboRightsChange
@@ -849,20 +830,20 @@ object UCEditorForm: TUCEditorForm
         end
         object cbActionManager: TComboBox
           Left = 237
-          Height = 20
+          Height = 21
           Top = 198
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 2
           OnChange = ComboRightsChange
         end
         object cbMainMenu: TComboBox
           Left = 237
-          Height = 20
+          Height = 21
           Top = 241
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 3
           OnChange = ComboRightsChange
@@ -870,29 +851,29 @@ object UCEditorForm: TUCEditorForm
       end
       object tabUser: TTabSheet
         Caption = 'User'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 3
         object Label2: TLabel
           Left = 172
           Height = 13
           Top = 122
-          Width = 40
+          Width = 39
           Caption = 'Action :'
         end
         object Label27: TLabel
           Left = 152
           Height = 13
           Top = 161
-          Width = 62
+          Width = 61
           Caption = 'Menu Item :'
         end
         object cbUserAction: TComboBox
           Left = 214
-          Height = 20
+          Height = 21
           Top = 118
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboActionMenuItem
@@ -900,10 +881,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserMenuItem: TComboBox
           Left = 214
-          Height = 20
+          Height = 21
           Top = 157
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboActionMenuItem
@@ -911,31 +892,31 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserProtectAdministrator: TCheckBox
           Left = 214
-          Height = 18
+          Height = 17
           Top = 196
-          Width = 167
+          Width = 153
           Caption = 'User Protect Administrator'
           TabOrder = 2
         end
         object ckUserUsePrivilegedField: TCheckBox
           Left = 214
-          Height = 18
+          Height = 17
           Top = 236
-          Width = 130
+          Width = 118
           Caption = 'Use Privileged Field'
           TabOrder = 3
         end
       end
       object tabUserProfile: TTabSheet
         Caption = 'User Profile'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 4
         object Label3: TLabel
           Left = 174
           Height = 13
           Top = 128
-          Width = 40
+          Width = 39
           Alignment = taRightJustify
           Caption = 'Action :'
           Visible = False
@@ -944,17 +925,17 @@ object UCEditorForm: TUCEditorForm
           Left = 154
           Height = 13
           Top = 181
-          Width = 62
+          Width = 61
           Alignment = taRightJustify
           Caption = 'Menu Item :'
           Visible = False
         end
         object cbUserProfileAction: TComboBox
           Left = 213
-          Height = 20
+          Height = 21
           Top = 124
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           Visible = False
@@ -963,10 +944,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserProfileMenuItem: TComboBox
           Left = 213
-          Height = 20
+          Height = 21
           Top = 177
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           Visible = False
@@ -975,23 +956,23 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserProfileActive: TCheckBox
           Left = 213
-          Height = 18
+          Height = 17
           Top = 230
-          Width = 59
+          Width = 48
           Caption = 'Active'
           TabOrder = 2
         end
       end
       object tabUserPasswordChange: TTabSheet
         Caption = 'User Password Change'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 5
         object Label4: TLabel
           Left = 126
           Height = 13
           Top = 252
-          Width = 118
+          Width = 117
           Alignment = taRightJustify
           Caption = 'Min Password Length :'
         end
@@ -999,7 +980,7 @@ object UCEditorForm: TUCEditorForm
           Left = 198
           Height = 13
           Top = 110
-          Width = 40
+          Width = 39
           Alignment = taRightJustify
           Caption = 'Action :'
         end
@@ -1007,16 +988,16 @@ object UCEditorForm: TUCEditorForm
           Left = 178
           Height = 13
           Top = 157
-          Width = 62
+          Width = 61
           Alignment = taRightJustify
           Caption = 'Menu Item :'
         end
         object cbUserPasswordChangeAction: TComboBox
           Left = 239
-          Height = 20
+          Height = 21
           Top = 106
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 0
           OnChange = ComboActionMenuItem
@@ -1024,10 +1005,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbUserPasswordChangeMenuItem: TComboBox
           Left = 239
-          Height = 20
+          Height = 21
           Top = 153
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 1
           OnChange = ComboActionMenuItem
@@ -1035,15 +1016,15 @@ object UCEditorForm: TUCEditorForm
         end
         object ckUserPassowrdChangeForcePassword: TCheckBox
           Left = 239
-          Height = 18
+          Height = 17
           Top = 200
-          Width = 109
+          Width = 98
           Caption = 'Force Password'
           TabOrder = 2
         end
         object spedtUserPasswordChangeMinPasswordLength: TSpinEdit
           Left = 239
-          Height = 19
+          Height = 21
           Top = 247
           Width = 220
           TabOrder = 3
@@ -1051,14 +1032,14 @@ object UCEditorForm: TUCEditorForm
       end
       object tabLogControl: TTabSheet
         Caption = 'Log Control'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 1
         object Label25: TLabel
           Left = 140
           Height = 13
           Top = 115
-          Width = 85
+          Width = 81
           Alignment = taRightJustify
           Caption = 'Tabela de Logs :'
         end
@@ -1066,7 +1047,7 @@ object UCEditorForm: TUCEditorForm
           Left = 164
           Height = 13
           Top = 75
-          Width = 62
+          Width = 61
           Alignment = taRightJustify
           Caption = 'Menu Item :'
           Visible = False
@@ -1075,7 +1056,7 @@ object UCEditorForm: TUCEditorForm
           Left = 184
           Height = 13
           Top = 35
-          Width = 40
+          Width = 39
           Alignment = taRightJustify
           Caption = 'Action :'
           Visible = False
@@ -1083,12 +1064,12 @@ object UCEditorForm: TUCEditorForm
         object Panel4: TPanel
           Left = 0
           Height = 170
-          Top = 200
-          Width = 588
+          Top = 207
+          Width = 586
           Align = alBottom
           BevelOuter = bvNone
           ClientHeight = 170
-          ClientWidth = 588
+          ClientWidth = 586
           Color = clWhite
           ParentBackground = False
           ParentColor = False
@@ -1158,7 +1139,7 @@ object UCEditorForm: TUCEditorForm
             Left = 58
             Height = 13
             Top = 26
-            Width = 312
+            Width = 319
             Caption = 'O Componente nгo grava nenhum log automaticamente!'
             Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
@@ -1171,7 +1152,7 @@ object UCEditorForm: TUCEditorForm
             Left = 58
             Height = 13
             Top = 50
-            Width = 514
+            Width = 505
             Caption = 'Utilize o Metodo: Log(msg : String; nivel : Integer {0..3} = 0) para gravar registros no Log de mensagens'
             Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
@@ -1193,53 +1174,53 @@ object UCEditorForm: TUCEditorForm
           end
           object Label22: TLabel
             Left = 90
-            Height = 13
+            Height = 14
             Top = 74
-            Width = 178
+            Width = 210
             Caption = 'UserControl1.Log(''Exemplo de Log'');'
             Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'Tahoma'
+            Font.Name = 'Iosevka'
             ParentFont = False
           end
           object Label23: TLabel
-            Left = 278
-            Height = 65
+            Left = 310
+            Height = 70
             Top = 74
-            Width = 286
+            Width = 336
             Caption = 'try'#13#10'  ..'#13#10'except'#13#10'  on e : Exception do ADOUserControl1.Log(e.Message, 3);'#13#10'end;'
             Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'Tahoma'
+            Font.Name = 'Iosevka'
             ParentFont = False
           end
           object Label24: TLabel
             Left = 90
-            Height = 13
+            Height = 14
             Top = 106
-            Width = 164
+            Width = 198
             Caption = 'UserControl1.Log(''Exemplo 2'', 1);'
             Font.CharSet = ANSI_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'Tahoma'
+            Font.Name = 'Iosevka'
             ParentFont = False
           end
         end
         object edtLogControlTableLog: TEdit
           Left = 226
-          Height = 19
+          Height = 21
           Top = 112
           Width = 220
           TabOrder = 1
         end
         object ckLogControlActive: TCheckBox
           Left = 226
-          Height = 18
+          Height = 17
           Top = 152
-          Width = 59
+          Width = 48
           Caption = 'Active'
           Checked = True
           State = cbChecked
@@ -1247,10 +1228,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbLogControlAction: TComboBox
           Left = 226
-          Height = 20
+          Height = 21
           Top = 32
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 3
           Visible = False
@@ -1259,10 +1240,10 @@ object UCEditorForm: TUCEditorForm
         end
         object cbLogControlMenuItem: TComboBox
           Left = 226
-          Height = 20
+          Height = 21
           Top = 72
           Width = 220
-          ItemHeight = 26
+          ItemHeight = 13
           Style = csDropDownList
           TabOrder = 4
           Visible = False
@@ -1272,45 +1253,45 @@ object UCEditorForm: TUCEditorForm
       end
       object tabLogin: TTabSheet
         Caption = 'Login'
-        ClientHeight = 370
-        ClientWidth = 588
+        ClientHeight = 377
+        ClientWidth = 586
         ImageIndex = 2
         object Label14: TLabel
-          Left = 115
+          Left = 104
           Height = 13
-          Top = 25
-          Width = 166
+          Top = 24
+          Width = 158
           Alignment = taRightJustify
-          Caption = 'Nъmero mбximo de Tentativas :'
+          Caption = 'Maximum number of Attempts:'
         end
         object Label15: TLabel
-          Left = 181
+          Left = 177
           Height = 13
           Top = 52
-          Width = 90
+          Width = 85
           Alignment = taRightJustify
-          Caption = 'Get Login Name :'
+          Caption = 'Get Login Name:'
         end
         object Label16: TLabel
           Left = 136
           Height = 13
           Top = 350
-          Width = 89
-          Caption = 'Imagem Superior'
+          Width = 78
+          Caption = 'Superior Image'
         end
         object Label17: TLabel
           Left = 288
           Height = 13
           Top = 350
-          Width = 94
-          Caption = 'Imagem Esquerda'
+          Width = 53
+          Caption = 'Left Image'
         end
         object Label18: TLabel
           Left = 440
           Height = 13
           Top = 350
-          Width = 82
-          Caption = 'Imagem Inferior'
+          Width = 72
+          Caption = 'Bottom Image'
         end
         object SpeedButton1: TSpeedButton
           Left = 19
@@ -1355,7 +1336,7 @@ object UCEditorForm: TUCEditorForm
           Height = 22
           Top = 322
           Width = 48
-          Caption = 'Limpar'
+          Caption = 'Clean'
           Flat = True
           OnClick = SpeedButton2Click
         end
@@ -1364,7 +1345,7 @@ object UCEditorForm: TUCEditorForm
           Height = 22
           Top = 322
           Width = 48
-          Caption = 'Limpar'
+          Caption = 'Clean'
           Flat = True
           OnClick = SpeedButton3Click
         end
@@ -1373,7 +1354,7 @@ object UCEditorForm: TUCEditorForm
           Height = 22
           Top = 322
           Width = 48
-          Caption = 'Limpar'
+          Caption = 'Clean'
           Flat = True
           OnClick = SpeedButton4Click
         end
@@ -1382,34 +1363,34 @@ object UCEditorForm: TUCEditorForm
           Height = 185
           Top = 88
           Width = 290
-          Caption = 'Login Inicial'
-          ClientHeight = 158
-          ClientWidth = 280
+          Caption = 'Initial Login'
+          ClientHeight = 167
+          ClientWidth = 286
           ParentBackground = False
           TabOrder = 0
           object Label8: TLabel
             Left = 12
             Height = 13
             Top = 10
-            Width = 47
-            Caption = 'Usuбrio :'
+            Width = 26
+            Caption = 'User:'
           end
           object Label9: TLabel
-            Left = 17
+            Left = 12
             Height = 13
             Top = 41
-            Width = 39
-            Caption = 'Senha :'
+            Width = 52
+            Caption = 'Password:'
           end
           object Label12: TLabel
-            Left = 23
+            Left = 16
             Height = 13
             Top = 73
-            Width = 35
+            Width = 33
             Caption = 'Email :'
           end
           object lblInitialRights: TLabel
-            Left = 0
+            Left = 12
             Height = 13
             Top = 101
             Width = 71
@@ -1418,29 +1399,29 @@ object UCEditorForm: TUCEditorForm
           end
           object edtInitialLoginUser: TEdit
             Left = 62
-            Height = 19
+            Height = 21
             Top = 6
             Width = 220
             TabOrder = 0
           end
           object edtInitialLoginPassword: TEdit
             Left = 62
-            Height = 19
+            Height = 21
             Top = 37
             Width = 220
             TabOrder = 1
           end
           object edtInitialLoginEmail: TEdit
             Left = 62
-            Height = 19
+            Height = 21
             Top = 69
             Width = 220
             TabOrder = 2
           end
           object mmInitialRights: TMemo
             Left = 62
-            Height = 62
-            Top = 101
+            Height = 43
+            Top = 120
             Width = 220
             Font.Color = clGreen
             Font.Height = -11
@@ -1454,66 +1435,66 @@ object UCEditorForm: TUCEditorForm
           Height = 185
           Top = 88
           Width = 290
-          Caption = 'Login Automбtico'
-          ClientHeight = 158
-          ClientWidth = 280
+          Caption = 'Automatic Login'
+          ClientHeight = 167
+          ClientWidth = 286
           ParentBackground = False
           TabOrder = 1
           object Label10: TLabel
-            Left = 11
+            Left = 9
             Height = 13
             Top = 30
-            Width = 47
+            Width = 26
             Alignment = taRightJustify
-            Caption = 'Usuбrio :'
+            Caption = 'User:'
           end
           object Label11: TLabel
-            Left = 16
+            Left = 9
             Height = 13
             Top = 67
-            Width = 39
+            Width = 52
             Alignment = taRightJustify
-            Caption = 'Senha :'
+            Caption = 'Password:'
           end
           object edtLoginAutoLoginUser: TEdit
             Left = 54
-            Height = 19
+            Height = 21
             Top = 26
             Width = 220
             TabOrder = 0
           end
           object edtLoginAutoLoginPassword: TEdit
             Left = 54
-            Height = 19
+            Height = 21
             Top = 63
             Width = 220
             TabOrder = 1
           end
           object ckLoginAutologinActive: TCheckBox
             Left = 54
-            Height = 18
+            Height = 17
             Top = 90
-            Width = 53
-            Caption = 'Ativo'
+            Width = 48
+            Caption = 'Active'
             Checked = True
             State = cbChecked
             TabOrder = 2
           end
           object ckLoginAutoLoginMessageOnError: TCheckBox
             Left = 31
-            Height = 18
+            Height = 17
             Top = 113
-            Width = 253
-            Caption = 'Exibir mensagem padrгo de erro se falhar ?'
+            Width = 220
+            Caption = 'Display error pattern message if it fails?'
             TabOrder = 3
           end
         end
         object cbGetLoginName: TComboBox
           Left = 270
-          Height = 20
+          Height = 21
           Top = 48
           Width = 201
-          ItemHeight = 26
+          ItemHeight = 13
           ItemIndex = 0
           Items.Strings = (
             'lnNone'
@@ -1544,9 +1525,9 @@ object UCEditorForm: TUCEditorForm
             Width = 63
             Align = alClient
             Center = True
-            OnClick = ActionsExecute
             Proportional = True
             Stretch = True
+            OnClick = ActionsExecute
           end
         end
         object Panel7: TPanel
@@ -1569,9 +1550,9 @@ object UCEditorForm: TUCEditorForm
             Width = 63
             Align = alClient
             Center = True
-            OnClick = ActionsExecute
             Proportional = True
             Stretch = True
+            OnClick = ActionsExecute
           end
         end
         object Panel8: TPanel
@@ -1594,14 +1575,14 @@ object UCEditorForm: TUCEditorForm
             Width = 63
             Align = alClient
             Center = True
-            OnClick = ActionsExecute
             Proportional = True
             Stretch = True
+            OnClick = ActionsExecute
           end
         end
         object spedtMaxLoginAttempts: TSpinEdit
           Left = 270
-          Height = 19
+          Height = 21
           Top = 20
           Width = 121
           TabOrder = 6

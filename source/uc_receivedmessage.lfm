@@ -9,37 +9,35 @@ object MsgRecForm: TMsgRecForm
   ClientWidth = 506
   Color = clBtnFace
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
   FormStyle = fsStayOnTop
+  LCLVersion = '4.2.0.0'
   OnCreate = FormCreate
-  LCLVersion = '3.7.0.0'
   object lbDE: TLabel
     Left = 16
-    Height = 13
+    Height = 15
     Top = 57
-    Width = 18
+    Width = 17
     Caption = 'От:'
   end
   object lbAssunto: TLabel
     Left = 16
-    Height = 13
+    Height = 15
     Top = 89
     Width = 31
     Caption = 'Тема:'
   end
   object lbMensagem: TLabel
     Left = 16
-    Height = 13
+    Height = 15
     Top = 120
-    Width = 95
+    Width = 97
     Caption = 'Текст сообщения'
   end
   object lbData: TLabel
     Left = 360
-    Height = 13
+    Height = 15
     Top = 57
-    Width = 30
+    Width = 28
     Caption = 'Дата:'
   end
   object Panel1: TPanel
@@ -57,9 +55,9 @@ object MsgRecForm: TMsgRecForm
     TabOrder = 2
     object lbTitulo: TLabel
       Left = 46
-      Height = 19
+      Height = 18
       Top = 8
-      Width = 221
+      Width = 219
       Caption = 'Полученное сообщение'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
@@ -211,8 +209,8 @@ object MsgRecForm: TMsgRecForm
     Top = 303
     Width = 83
     Caption = '&Закрыть'
-    OnClick = btFecharClick
     TabOrder = 1
+    OnClick = btFecharClick
   end
   object stData: TStaticText
     Left = 397

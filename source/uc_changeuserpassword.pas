@@ -4,9 +4,16 @@ unit uc_changeuserpassword;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
+{$IFDEF WINDOWS}
+  LCLIntf, 
+  LCLType, 
+  LMessages,
+{$ELSE}
+  LCLType,
+{$ENDIF}
 {$IFDEF DELPHI5_UP}
   Variants,
 {$ENDIF}
@@ -20,9 +27,10 @@ uses
   Messages,
   StdCtrls,
   SysUtils,
-  {$IFDEF WINDOWS}LCLIntf, LCLType, LMessages,{$ELSE}LCLType,{$ENDIF}
-  // UCConsts,
-  uc_base; { Por Vicente Barros Leonel }
+  // uc_consts,
+  // Por Vicente Barros Leonel
+  uc_base
+  ;
 
 type
   TChangeUserPasswordForm = class(TForm)

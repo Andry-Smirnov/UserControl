@@ -1,7 +1,7 @@
-object frmIncluirPerfil: TfrmIncluirPerfil
-  Left = 232
+object AddProfileForm: TAddProfileForm
+  Left = 458
   Height = 132
-  Top = 319
+  Top = 295
   Width = 434
   BorderStyle = bsDialog
   Caption = 'Профиль пользователя'
@@ -9,9 +9,7 @@ object frmIncluirPerfil: TfrmIncluirPerfil
   ClientWidth = 434
   Color = clBtnFace
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
-  LCLVersion = '3.7.0.0'
+  LCLVersion = '4.2.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 35
@@ -27,9 +25,9 @@ object frmIncluirPerfil: TfrmIncluirPerfil
     TabOrder = 1
     object LbDescricao: TLabel
       Left = 43
-      Height = 19
+      Height = 18
       Top = 8
-      Width = 176
+      Width = 173
       Caption = 'Создание профиля'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
@@ -167,8 +165,8 @@ object frmIncluirPerfil: TfrmIncluirPerfil
       Width = 81
       Caption = '&Сохранить'
       NumGlyphs = 2
-      OnClick = btGravarClick
       TabOrder = 0
+      OnClick = btGravarClick
     end
     object btCancela: TBitBtn
       Left = 6
@@ -176,8 +174,8 @@ object frmIncluirPerfil: TfrmIncluirPerfil
       Top = 55
       Width = 81
       Caption = '&Отмена'
-      OnClick = btCancelaClick
       TabOrder = 1
+      OnClick = btCancelaClick
     end
   end
   object Panel2: TPanel
@@ -194,14 +192,14 @@ object frmIncluirPerfil: TfrmIncluirPerfil
     TabOrder = 0
     object lbNome: TLabel
       Left = 13
-      Height = 13
+      Height = 15
       Top = 40
-      Width = 56
+      Width = 55
       Caption = 'Название:'
     end
     object EditDescricao: TEdit
       Left = 71
-      Height = 19
+      Height = 23
       Top = 37
       Width = 249
       MaxLength = 30

@@ -8,13 +8,12 @@ unit pckUserControlDesign;
 interface
 
 uses
-  uc_about, uc_settingseditor, uc_idle, uc_reg, LazarusPackageIntf;
+  uc_about, uc_settingseditor, uc_idle, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
-  RegisterUnit('uc_reg', @uc_reg.Register);
 end;
 
 initialization

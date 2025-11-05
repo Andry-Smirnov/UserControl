@@ -11,11 +11,11 @@ object UCAboutForm: TUCAboutForm
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  Position = poScreenCenter
-  LCLVersion = '1.4.0.4'
   object pnlFundo: TPanel
     Left = 0
     Height = 520
@@ -26,6 +26,7 @@ object UCAboutForm: TUCAboutForm
     ClientHeight = 520
     ClientWidth = 506
     Color = 6435072
+    ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object Image4: TImage
@@ -156,7 +157,11 @@ object UCAboutForm: TUCAboutForm
       ClientHeight = 518
       ClientWidth = 476
       Color = 6435072
+      Font.Color = clBlack
+      Font.Height = -11
+      ParentBackground = False
       ParentColor = False
+      ParentFont = False
       TabOrder = 0
       object Panel1: TPanel
         Left = 0
@@ -171,6 +176,7 @@ object UCAboutForm: TUCAboutForm
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Tahoma'
+        ParentBackground = False
         ParentColor = False
         ParentFont = False
         TabOrder = 0
@@ -454,7 +460,6 @@ object UCAboutForm: TUCAboutForm
           Height = 94
           Top = 1
           Width = 94
-          OnClick = Image2Click
           Picture.Data = {
             1754506F727461626C654E6574776F726B47726170686963553B000089504E47
             0D0A1A0A0000000D494844520000005E0000005E0806000000AAD2A36E000000
@@ -933,19 +938,19 @@ object UCAboutForm: TUCAboutForm
             FA0441EAD2D05A827ECF718F73F838D00574699AF6E12F09FC3FA0FF07941F09
             895384A7330000000049454E44AE426082
           }
+          OnClick = Image2Click
         end
         object lblVersao: TLabel
-          Left = 396
-          Height = 23
+          Left = 404
+          Height = 25
           Top = 81
-          Width = 71
+          Width = 63
           Alignment = taRightJustify
           Anchors = [akTop, akRight]
           Caption = 'Version'
           Font.CharSet = ANSI_CHARSET
           Font.Color = 6435072
           Font.Height = -19
-          Font.Name = 'Verdana'
           Layout = tlCenter
           ParentColor = False
           ParentFont = False
@@ -960,20 +965,16 @@ object UCAboutForm: TUCAboutForm
         ClientHeight = 93
         ClientWidth = 474
         Color = clWhite
+        ParentBackground = False
         ParentColor = False
         TabOrder = 1
         object Label2: TLabel
           Left = 17
           Height = 13
           Top = 8
-          Width = 167
-          Caption = 'Versão Lazarus Mantida por :'
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Verdana'
+          Width = 159
+          Caption = 'Lazarus Version Maintained By:'
           ParentColor = False
-          ParentFont = False
         end
         object Label3: TLabel
           Left = 96
@@ -993,12 +994,11 @@ object UCAboutForm: TUCAboutForm
           Left = 16
           Height = 13
           Top = 56
-          Width = 117
+          Width = 107
           Caption = 'sac@jbssolucoes.net'
           Font.CharSet = ANSI_CHARSET
           Font.Color = clBlue
           Font.Height = -11
-          Font.Name = 'Verdana'
           ParentColor = False
           ParentFont = False
           OnClick = Label4Click
@@ -1007,7 +1007,7 @@ object UCAboutForm: TUCAboutForm
           Left = 16
           Height = 13
           Top = 32
-          Width = 67
+          Width = 72
           Caption = 'José Benedito'
           ParentColor = False
         end
@@ -1018,7 +1018,6 @@ object UCAboutForm: TUCAboutForm
           Top = 56
           Width = 30
           AutoSize = True
-          OnClick = Image3Click
           Picture.Data = {
             0A544A706567496D61676502040000FFD8FFE000104A46494600010101004800
             480000FFDB0043000302020302020303030304030304050805050404050A0707
@@ -1054,6 +1053,7 @@ object UCAboutForm: TUCAboutForm
             6860A2E597A6BD9B939B7F02BD9CB571E6BD9CAEFB4A4ACCAC452A32A54653BF
             B777E7492E4DDDAFD13B5B45A79267FFD9
           }
+          OnClick = Image3Click
         end
         object Label6: TLabel
           Cursor = crHandPoint
@@ -1078,17 +1078,17 @@ object UCAboutForm: TUCAboutForm
         BevelOuter = bvNone
         ClientHeight = 299
         ClientWidth = 474
+        ParentBackground = False
         TabOrder = 2
         object Label9: TLabel
           Left = 8
           Height = 13
           Top = 0
-          Width = 163
+          Width = 143
           Caption = 'Créditos e agradecimentos :'
           Font.CharSet = ANSI_CHARSET
           Font.Color = clWhite
           Font.Height = -11
-          Font.Name = 'Verdana'
           ParentColor = False
           ParentFont = False
         end
@@ -1097,10 +1097,6 @@ object UCAboutForm: TUCAboutForm
           Height = 256
           Top = 16
           Width = 463
-          Font.CharSet = ANSI_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Verdana'
           Lines.Strings = (
             'Rodrigo Alves Cordeiro ( QmD ) - qmd@usercontrol.com.br'
             'Alexandre Oliveira Campioni - alexandre.rural@netsite.com.br'
@@ -1121,7 +1117,6 @@ object UCAboutForm: TUCAboutForm
             'Stefan Nawrath'
             'Vicente Barros Leonel [ Fknyght ]'
           )
-          ParentFont = False
           ReadOnly = True
           TabOrder = 0
         end
@@ -1131,8 +1126,8 @@ object UCAboutForm: TUCAboutForm
           Top = 276
           Width = 75
           Caption = 'OK'
-          OnClick = Button1Click
           TabOrder = 1
+          OnClick = Button1Click
         end
       end
     end

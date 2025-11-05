@@ -9,12 +9,10 @@ object AddUserForm: TAddUserForm
   ClientWidth = 472
   Color = clBtnFace
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  LCLVersion = '4.2.0.0'
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  LCLVersion = '3.7.0.0'
   object Panel1: TPanel
     Left = 0
     Height = 35
@@ -30,9 +28,9 @@ object AddUserForm: TAddUserForm
     TabOrder = 2
     object LbDescricao: TLabel
       Left = 44
-      Height = 19
+      Height = 18
       Top = 7
-      Width = 220
+      Width = 219
       Caption = 'Создание пользователя'
       Font.CharSet = ANSI_CHARSET
       Font.Color = clWindowText
@@ -170,8 +168,8 @@ object AddUserForm: TAddUserForm
       Width = 81
       Caption = '&Сохранить'
       NumGlyphs = 2
-      OnClick = btGravarClick
       TabOrder = 0
+      OnClick = btGravarClick
     end
     object btCancela: TBitBtn
       Left = 6
@@ -179,8 +177,8 @@ object AddUserForm: TAddUserForm
       Top = 54
       Width = 81
       Caption = '&Отмена'
-      OnClick = btCancelaClick
       TabOrder = 1
+      OnClick = btCancelaClick
     end
   end
   object Panel2: TPanel
@@ -196,39 +194,39 @@ object AddUserForm: TAddUserForm
     ParentBackground = False
     TabOrder = 0
     object lbNome: TLabel
-      Left = 46
-      Height = 13
+      Left = 44
+      Height = 15
       Top = 13
-      Width = 37
+      Width = 35
       Alignment = taRightJustify
-      Caption = 'Nome :'
+      Caption = 'Name:'
       Layout = tlCenter
     end
     object lbLogin: TLabel
-      Left = 48
-      Height = 13
+      Left = 46
+      Height = 15
       Top = 43
-      Width = 35
+      Width = 33
       Alignment = taRightJustify
-      Caption = 'Login :'
+      Caption = 'Login:'
       Layout = tlCenter
     end
     object lbEmail: TLabel
-      Left = 48
-      Height = 13
+      Left = 40
+      Height = 15
       Top = 73
-      Width = 35
+      Width = 37
       Alignment = taRightJustify
-      Caption = 'EMail :'
+      Caption = 'E-mail:'
       Layout = tlCenter
     end
     object lbPerfil: TLabel
-      Left = 51
-      Height = 13
-      Top = 134
-      Width = 34
+      Left = 45
+      Height = 15
+      Top = 136
+      Width = 37
       Alignment = taRightJustify
-      Caption = 'Perfil :'
+      Caption = 'Profile:'
       Layout = tlCenter
     end
     object btlimpa: TSpeedButton
@@ -283,34 +281,34 @@ object AddUserForm: TAddUserForm
       OnClick = btlimpaClick
     end
     object LabelExpira: TLabel
-      Left = 28
-      Height = 13
-      Top = 165
-      Width = 58
+      Left = 26
+      Height = 15
+      Top = 168
+      Width = 56
       Alignment = taRightJustify
-      Caption = 'Expira em :'
+      Caption = 'Expires on:'
       Layout = tlCenter
     end
     object LabelDias: TLabel
-      Left = 329
-      Height = 13
-      Top = 165
-      Width = 22
-      Caption = 'dias'
+      Left = 330
+      Height = 15
+      Top = 168
+      Width = 24
+      Caption = 'days'
       Layout = tlCenter
     end
     object Label1: TLabel
       Left = 44
-      Height = 13
+      Height = 15
       Top = 104
-      Width = 40
+      Width = 35
       Alignment = taRightJustify
-      Caption = 'Status :'
+      Caption = 'Status:'
       Layout = tlCenter
     end
     object EditNome: TEdit
       Left = 86
-      Height = 19
+      Height = 23
       Top = 13
       Width = 265
       MaxLength = 30
@@ -318,7 +316,7 @@ object AddUserForm: TAddUserForm
     end
     object EditLogin: TEdit
       Left = 86
-      Height = 19
+      Height = 23
       Top = 43
       Width = 265
       MaxLength = 30
@@ -326,7 +324,7 @@ object AddUserForm: TAddUserForm
     end
     object EditEmail: TEdit
       Left = 86
-      Height = 19
+      Height = 23
       Top = 73
       Width = 265
       MaxLength = 150
@@ -334,15 +332,15 @@ object AddUserForm: TAddUserForm
     end
     object ckPrivilegiado: TCheckBox
       Left = 87
-      Height = 18
+      Height = 19
       Top = 218
-      Width = 131
-      Caption = 'Usuбrio privilegiado'
+      Width = 95
+      Caption = 'Privileged user'
       TabOrder = 7
     end
     object ComboPerfil: TDBLookupComboBox
       Left = 86
-      Height = 20
+      Height = 23
       Top = 134
       Width = 242
       KeyField = 'IDUser'
@@ -353,16 +351,16 @@ object AddUserForm: TAddUserForm
     end
     object ckUserExpired: TCheckBox
       Left = 87
-      Height = 18
+      Height = 19
       Top = 194
-      Width = 174
-      Caption = 'Senha do usuбrio nгo expira'
+      Width = 177
+      Caption = 'User password does not expire'
       TabOrder = 6
       OnClick = ckUserExpiredClick
     end
     object SpinExpira: TSpinEdit
       Left = 86
-      Height = 19
+      Height = 23
       Top = 165
       Width = 241
       MaxValue = 100
@@ -372,10 +370,10 @@ object AddUserForm: TAddUserForm
     end
     object ComboStatus: TComboBox
       Left = 86
-      Height = 20
+      Height = 23
       Top = 104
       Width = 265
-      ItemHeight = 26
+      ItemHeight = 15
       Items.Strings = (
         'Ativo'
         'Inativo'

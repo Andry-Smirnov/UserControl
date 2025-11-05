@@ -6,7 +6,7 @@ unit uc_dataconnector;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   Classes,
@@ -19,8 +19,8 @@ type
     function UCGetSQLDataset(FSQL: String): TDataset; dynamic; abstract;
     function UCFindTable(const Tablename: String): Boolean; virtual; abstract;
     function UCFindDataConnection: Boolean; virtual; abstract;
-    function GetDBObjectName: String; virtual; abstract;
-    function GetTransObjectName: String; virtual; abstract;
+    function GetDBObjectName: string; virtual; abstract;
+    function GetTransObjectName: string; virtual; abstract;
   end;
 
 implementation

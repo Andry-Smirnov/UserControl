@@ -4,7 +4,7 @@ unit uc_selectcomponents;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   {$IFDEF DELPHI5_UP}

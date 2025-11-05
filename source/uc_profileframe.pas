@@ -2,7 +2,7 @@ unit uc_profileframe;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
 {$IFDEF WINDOWS}Windows,{$ELSE}LCLType,{$ENDIF}
@@ -79,7 +79,7 @@ end;
 
 procedure TProfileFrame.ActionBtPermissProfileDefault;
 var
-  TempCampos, TempCamposEX: String;
+  TempCampos, TempCamposEX: string;
 begin
   UserPermissions.FTempUserID := FDataSetPerfilUsuario.FieldByName('IdUser').AsInteger;
   with FUserControl do
@@ -183,7 +183,7 @@ procedure TProfileFrame.BtnExcPerClick(Sender: TObject);
 var
   TempID: Integer;
   CanDelete: Boolean;
-  ErrorMsg: String;
+  ErrorMsg: string;
   TempDS: TDataset;
 begin
   if FDataSetPerfilUsuario.IsEmpty then
@@ -241,7 +241,7 @@ end;
 destructor TProfileFrame.Destroy;
 begin
   // nada a destruir
-  // não destruir o FDataSetPerfilUsuario o USERCONTROL toma conta dele
+  // nï¿½o destruir o FDataSetPerfilUsuario o USERCONTROL toma conta dele
   inherited;
 end;
 

@@ -2,7 +2,7 @@ unit uc_loginwindow;
 
 interface
 
-{$I 'UserControl.inc'}
+{$I 'usercontrol.inc'}
 
 uses
   {$IFDEF DELPHI5_UP}

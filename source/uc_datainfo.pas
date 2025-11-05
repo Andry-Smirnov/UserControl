@@ -12,20 +12,20 @@ uses
 type
   TUCUsersTable = class(TPersistent)
   private
-    FEmail: String;
-    FTypeRec: String;
-    FUserID: String;
-    FPrivileged: String;
-    FUserName: String;
-    FTable: String;
-    FProfile: String;
-    FLogin: String;
-    FPassword: String;
-    FKey: String;
-    fDateExpired: String;
-    fUserExpired: String;
-    fFieldUserDaysSun: String;
-    fFieldUserInative: String;
+    FEmail: string;
+    FTypeRec: string;
+    FUserID: string;
+    FPrivileged: string;
+    FUserName: string;
+    FTable: string;
+    FProfile: string;
+    FLogin: string;
+    FPassword: string;
+    FKey: string;
+    fDateExpired: string;
+    fUserExpired: string;
+    fFieldUserDaysSun: string;
+    fFieldUserInative: string;
   public
     constructor Create(AOwner: TComponent);
     destructor Destroy; override;
@@ -40,25 +40,25 @@ type
     property FieldTypeRec: String read FTypeRec write FTypeRec;
     property FieldProfile: String read FProfile write FProfile;
     property FieldKey: String read FKey write FKey;
+    // By Vicente Barros Leonel
     property FieldDateExpired: String read fDateExpired write fDateExpired;
-    { By Vicente Barros Leonel }
+    // By vicente barros leonel
     property FieldUserExpired: String read fUserExpired write fUserExpired;
-    { By vicente barros leonel }
-    property FieldUserDaysSun: String read fFieldUserDaysSun
-      write fFieldUserDaysSun; { By vicente barros leonel }
-    property FieldUserInative: String read fFieldUserInative
-      write fFieldUserInative; { By vicente barros leonel }
+    // By vicente barros leonel
+    property FieldUserDaysSun: String read fFieldUserDaysSun write fFieldUserDaysSun;
+    // By vicente barros leonel
+    property FieldUserInative: string read fFieldUserInative write fFieldUserInative;
     property TableName: String read FTable write FTable;
   end;
 
   TUCTableRights = class(TPersistent)
   private
-    FUserID: String;
-    FFormName: String;
-    FModule: String;
-    FTable: String;
-    FComponentName: String;
-    FKey: String;
+    FUserID: string;
+    FFormName: string;
+    FModule: string;
+    FTable: string;
+    FComponentName: string;
+    FKey: string;
   protected
   public
     constructor Create(AOwner: TComponent);
@@ -76,12 +76,12 @@ type
 
   TUCTableUsersLogged = class(TPersistent)
   private
-    FTableName: String;
-    FData: String;
-    FApplicationID: String;
-    FUserID: String;
-    FLogonID: String;
-    FMachineName: String;
+    FTableName: string;
+    FData: string;
+    FApplicationID: string;
+    FUserID: string;
+    FLogonID: string;
+    FMachineName: string;
   protected
   public
     constructor Create(AOwner: TComponent);
@@ -98,16 +98,16 @@ type
 
   TUCTableHistorico = class(TPersistent)
   private
-    FTable: String;
-    FApplicationID: String;
-    FUserID: String;
-    fDateEvent: String;
-    fFieldForm: String;
-    fFieldEvent: String;
-    fFieldObs: String;
+    FTable: string;
+    FApplicationID: string;
+    FUserID: string;
+    fDateEvent: string;
+    fFieldForm: string;
+    fFieldEvent: string;
+    fFieldObs: string;
     fCaptionForm: string;
-    fEventTime: String;
-    fFieldTableName: String;
+    fEventTime: string;
+    fFieldTableName: string;
   protected
   public
     constructor Create(AOwner: TComponent);
