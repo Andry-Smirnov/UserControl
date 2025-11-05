@@ -4,16 +4,17 @@
 
 unit pckUserControlDesign;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  ucaboutucpfrm, UCEditorForm_U, UCIdle, UCReg, LazarusPackageIntf;
+  uc_about, uc_settingseditor, uc_idle, uc_reg, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
-  RegisterUnit('UCReg', @UCReg.Register);
+  RegisterUnit('uc_reg', @uc_reg.Register);
 end;
 
 initialization

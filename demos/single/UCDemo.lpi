@@ -28,19 +28,25 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-    <RequiredPackages Count="4">
+    <RequiredPackages Count="6">
       <Item1>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="zcomponentdesign"/>
       </Item1>
       <Item2>
-        <PackageName Value="pckSQLdbConn"/>
+        <PackageName Value="zcomponent"/>
       </Item2>
       <Item3>
-        <PackageName Value="pckUserControlRuntime"/>
+        <PackageName Value="SQLDBLaz"/>
       </Item3>
       <Item4>
-        <PackageName Value="LCL"/>
+        <PackageName Value="pckSQLdbConn"/>
       </Item4>
+      <Item5>
+        <PackageName Value="pckUserControlRuntime"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
     </RequiredPackages>
     <Units Count="2">
       <Unit0>

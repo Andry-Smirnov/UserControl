@@ -33,95 +33,92 @@
     <Description Value="UserControl for Lazarus/FPC"/>
     <License Value="GPL"/>
     <Version Major="2" Minor="33"/>
-    <Files Count="22">
+    <Files Count="21">
       <Item1>
-        <Filename Value="..\..\source\changeuserpassword.pas"/>
-        <UnitName Value="ChangeUserPassword"/>
+        <Filename Value="..\..\source\uc_base.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="uc_base"/>
       </Item1>
       <Item2>
-        <Filename Value="..\..\source\UCBase.pas"/>
-        <UnitName Value="UCBase"/>
+        <Filename Value="..\..\source\uc_changeuserpassword.pas"/>
+        <UnitName Value="uc_changeuserpassword"/>
       </Item2>
       <Item3>
-        <Filename Value="..\..\source\passwords.pas"/>
-        <UnitName Value="passwords"/>
+        <Filename Value="..\..\source\uc_password.pas"/>
+        <UnitName Value="uc_password"/>
       </Item3>
       <Item4>
-        <Filename Value="..\..\source\EnvMsgForm_U.pas"/>
-        <UnitName Value="EnvMsgForm_U"/>
+        <Filename Value="..\..\source\uc_newmessage.pas"/>
+        <UnitName Value="uc_newmessage"/>
       </Item4>
       <Item5>
-        <Filename Value="..\..\source\MsgRecForm_U.pas"/>
-        <UnitName Value="MsgRecForm_U"/>
+        <Filename Value="..\..\source\uc_receivedmessage.pas"/>
+        <UnitName Value="uc_receivedmessage"/>
       </Item5>
       <Item6>
-        <Filename Value="..\..\source\MsgsForm_U.pas"/>
-        <UnitName Value="MsgsForm_U"/>
+        <Filename Value="..\..\source\uc_systemmessage.pas"/>
+        <UnitName Value="uc_systemmessage"/>
       </Item6>
       <Item7>
-        <Filename Value="..\..\source\UCDataInfo.pas"/>
-        <UnitName Value="UCDataInfo"/>
+        <Filename Value="..\..\source\uc_messages.pas"/>
+        <UnitName Value="uc_messages"/>
       </Item7>
       <Item8>
-        <Filename Value="..\..\source\UCMessages.pas"/>
-        <UnitName Value="UCMessages"/>
+        <Filename Value="..\..\source\uc_userpermissions.pas"/>
+        <UnitName Value="uc_userpermissions"/>
       </Item8>
       <Item9>
-        <Filename Value="..\..\source\UserPermis_U.pas"/>
-        <UnitName Value="UserPermis_U"/>
+        <Filename Value="..\..\source\uc_loginwindow.pas"/>
+        <UnitName Value="uc_loginwindow"/>
       </Item9>
       <Item10>
-        <Filename Value="..\..\source\settings.pas"/>
-        <UnitName Value="settings"/>
+        <Filename Value="..\..\source\uc_language.pas"/>
+        <UnitName Value="uc_language"/>
       </Item10>
       <Item11>
-        <Filename Value="..\..\source\loginwindow.pas"/>
-        <UnitName Value="loginwindow"/>
+        <Filename Value="..\..\source\uc_tools.pas"/>
+        <UnitName Value="uc_tools"/>
       </Item11>
       <Item12>
-        <Filename Value="..\..\source\UcConsts_Language.pas"/>
-        <UnitName Value="UcConsts_Language"/>
+        <Filename Value="..\..\source\uc_userframe.pas"/>
+        <UnitName Value="uc_userframe"/>
       </Item12>
       <Item13>
-        <Filename Value="..\..\source\pUCGeral.pas"/>
-        <UnitName Value="pUCGeral"/>
+        <Filename Value="..\..\source\uc_profileframe.pas"/>
+        <UnitName Value="uc_profileframe"/>
       </Item13>
       <Item14>
-        <Filename Value="..\..\source\userframe.pas"/>
-        <UnitName Value="userframe"/>
+        <Filename Value="..\..\source\uc_logframe.pas"/>
+        <UnitName Value="uc_logframe"/>
       </Item14>
       <Item15>
-        <Filename Value="..\..\source\pUCFrame_Profile.pas"/>
-        <UnitName Value="pUCFrame_Profile"/>
+        <Filename Value="..\..\source\uc_frameuserslogged.pas"/>
+        <UnitName Value="uc_frameuserslogged"/>
       </Item15>
       <Item16>
-        <Filename Value="..\..\source\pUCFrame_Log.pas"/>
-        <UnitName Value="pUCFrame_Log"/>
+        <Filename Value="..\..\source\uc_mail.pas"/>
+        <UnitName Value="uc_mail"/>
       </Item16>
       <Item17>
-        <Filename Value="..\..\source\pUcFrame_UserLogged.pas"/>
-        <UnitName Value="pUcFrame_UserLogged"/>
+        <Filename Value="..\..\source\uc_emailsending.pas"/>
+        <UnitName Value="uc_emailsending"/>
       </Item17>
       <Item18>
-        <Filename Value="..\..\source\UCMail.pas"/>
-        <UnitName Value="UCMail"/>
+        <Filename Value="..\..\source\uc_adduser.pas"/>
+        <UnitName Value="uc_adduser"/>
       </Item18>
       <Item19>
-        <Filename Value="..\..\source\UCEMailForm_U.pas"/>
-        <UnitName Value="UCEMailForm_U"/>
+        <Filename Value="..\..\source\uc_addprofile.pas"/>
+        <UnitName Value="uc_addprofile"/>
       </Item19>
       <Item20>
-        <Filename Value="..\..\source\IncUser_U.pas"/>
-        <UnitName Value="IncUser_U"/>
-      </Item20>
-      <Item21>
-        <Filename Value="..\..\source\IncPerfil_U.pas"/>
-        <UnitName Value="IncPerfil_U"/>
-      </Item21>
-      <Item22>
         <Filename Value="..\..\source\UserControl.inc"/>
         <Type Value="Include"/>
-      </Item22>
+      </Item20>
+      <Item21>
+        <Filename Value="..\..\source\uc_settings.pas"/>
+        <UnitName Value="uc_settings"/>
+      </Item21>
     </Files>
     <CompatibilityMode Value="True"/>
     <RequiredPkgs Count="3">

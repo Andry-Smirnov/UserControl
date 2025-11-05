@@ -8,16 +8,17 @@ unit pckUserControlRuntime;
 interface
 
 uses
-  ChangeUserPassword, UCBase, passwords, EnvMsgForm_U, MsgRecForm_U, 
-  MsgsForm_U, UCDataInfo, UCMessages, UserPermis_U, settings, loginwindow, 
-  UcConsts_Language, pUCGeral, userframe, pUCFrame_Profile, pUCFrame_Log, 
-  pUcFrame_UserLogged, UCMail, UCEMailForm_U, IncUser_U, IncPerfil_U, 
-  LazarusPackageIntf;
+  uc_base, uc_changeuserpassword, uc_password, uc_newmessage, 
+  uc_receivedmessage, uc_systemmessage, uc_messages, uc_userpermissions, 
+  uc_loginwindow, uc_language, uc_tools, uc_userframe, uc_profileframe, 
+  uc_logframe, uc_frameuserslogged, uc_mail, uc_emailsending, uc_adduser, 
+  uc_addprofile, uc_settings, LazarusPackageIntf;
 
 implementation
 
 procedure Register;
 begin
+  RegisterUnit('uc_base', @uc_base.Register);
 end;
 
 initialization

@@ -37,21 +37,21 @@
     <Version Major="2" Minor="33"/>
     <Files Count="5">
       <Item1>
-        <Filename Value="..\..\source\ucaboutucpfrm.pas"/>
-        <UnitName Value="ucaboutucpfrm"/>
+        <Filename Value="..\..\source\uc_about.pas"/>
+        <UnitName Value="uc_about"/>
       </Item1>
       <Item2>
-        <Filename Value="..\..\source\UCEditorForm_U.pas"/>
-        <UnitName Value="UCEditorForm_U"/>
+        <Filename Value="..\..\source\uc_settingseditor.pas"/>
+        <UnitName Value="uc_settingseditor"/>
       </Item2>
       <Item3>
-        <Filename Value="..\..\source\UCIdle.pas"/>
-        <UnitName Value="UCIdle"/>
+        <Filename Value="..\..\source\uc_idle.pas"/>
+        <UnitName Value="uc_idle"/>
       </Item3>
       <Item4>
-        <Filename Value="..\..\source\UCReg.pas"/>
+        <Filename Value="..\..\source\uc_reg.pas"/>
         <HasRegisterProc Value="True"/>
-        <UnitName Value="UCReg"/>
+        <UnitName Value="uc_reg"/>
       </Item4>
       <Item5>
         <Filename Value="..\..\source\UserControl.inc"/>

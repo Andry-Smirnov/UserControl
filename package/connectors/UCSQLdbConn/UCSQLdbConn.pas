@@ -22,7 +22,7 @@ uses
   DB,
   SysUtils,
   LResources,
-  UCDataConnector,
+  uc_dataconnector,
   sqldb;
 
 type

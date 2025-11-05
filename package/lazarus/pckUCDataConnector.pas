@@ -4,10 +4,11 @@
 
 unit pckUCDataConnector;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  UCDataConnector, LazarusPackageIntf;
+  uc_dataconnector, LazarusPackageIntf;
 
 implementation
 

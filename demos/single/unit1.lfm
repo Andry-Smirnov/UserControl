@@ -1,12 +1,12 @@
 object Form1: TForm1
-  Left = 717
+  Left = 845
   Height = 292
-  Top = 377
+  Top = 381
   Width = 465
   Caption = 'Form1'
   Menu = MainMenu1
-  LCLVersion = '4.2.0.0'
   OnCreate = FormCreate
+  LCLVersion = '3.7.0.0'
   object UserControl1: TUserControl
     ApplicationID = 'ProjetoNovo'
     ControlRight.MainMenu = MainMenu1
@@ -55,15 +55,15 @@ object Form1: TForm1
   end
   object UCSQLdbConn1: TUCSQLdbConn
     Connection = SQLite3Connection1
-    Left = 144
-    Top = 48
+    Left = 136
+    Top = 40
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
     Action = caCommit
     Database = SQLite3Connection1
-    Left = 256
-    Top = 104
+    Left = 336
+    Top = 96
   end
   object MainMenu1: TMainMenu
     Left = 48
@@ -328,7 +328,15 @@ object Form1: TForm1
     Transaction = SQLTransaction1
     LogEvents = []
     AlwaysUseBigint = False
-    Left = 256
-    Top = 43
+    Left = 336
+    Top = 32
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    DisableSavepoints = False
+    Port = 0
+    Protocol = 'sqlite'
+    Left = 216
+    Top = 144
   end
 end

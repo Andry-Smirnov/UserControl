@@ -5,8 +5,21 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, IBConnection, sqldb, sqlite3conn, FileUtil, UCBase,
-  UCSettings, ucsqldbconn, Forms, Controls, Graphics, Dialogs, Menus;
+  Classes,
+  SysUtils,
+  IBConnection,
+  FileUtil,
+  Forms,
+  Controls,
+  Graphics,
+  Dialogs,
+  Menus, ZConnection,
+  sqldb,
+  sqlite3conn,
+  uc_base,
+  uc_settings,
+  ucsqldbconn
+  ;
 
 type
 
@@ -23,6 +36,7 @@ type
     UCSettings1: TUCSettings;
     UCSQLdbConn1: TUCSQLdbConn;
     UserControl1: TUserControl;
+    ZConnection1: TZConnection;
     procedure FormCreate(Sender: TObject);
   private
   public
@@ -33,6 +47,10 @@ var
 
 implementation
 
+uses
+  uc_language
+  ;
+
 {$R *.lfm}
 
 { TForm1 }
@@ -42,6 +60,7 @@ begin
   SQLite3Connection1.DatabaseName := '..\db\demo.db';
   SQLite3Connection1.Connected := True;
 
+  UserControl1.Language := ucRussian;
   UserControl1.Execute;
 end;
 
